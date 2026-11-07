@@ -1,0 +1,6 @@
+# Manual presentation overrides keyed by DOI or OpenAlex work ID.
+# Example:
+# https://doi.org/10.1016/j.energy.2026.142040:
+#   selected: true
+#   note: Representative work
+

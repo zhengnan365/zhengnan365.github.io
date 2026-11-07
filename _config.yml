@@ -1,50 +1,38 @@
-# Basic Information 
-title: Your Name
-position: Ph.D. Student
-affiliation: Your Affiliation
-email: yourname (at) example.edu
+# Personal academic homepage for Nan Zheng
+title: Nan Zheng
+title_zh: 郑楠
+position: Lecturer · Master’s Supervisor
+position_zh: 讲师 · 硕士生导师
+affiliation: Yangzhou University
+affiliation_zh: 扬州大学
+department: College of Electrical, Energy and Power Engineering
+department_zh: 电气与能源动力工程学院
+affiliation_link: https://www.yzu.edu.cn/
+email: zhengnan@yzu.edu.cn
 
-# Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light-theme.yliu.me/
+keywords: Nan Zheng, Zheng Nan, integrated energy systems, low-carbon energy, energy storage, Yangzhou University
+description: Nan Zheng is a lecturer at Yangzhou University working on low-carbon integrated energy systems, multi-energy complementarity, energy storage, and intelligent control.
+canonical: https://zhengnan365.github.io/
 
-# Links 
-# If you don't need one of them, you may delete the corresponding line.
-google_scholar: https://scholar.google.com/
-cv_link: assets/files/curriculum_vitae.pdf
-github_link: https://github.com/
-linkedin: https://www.linkedin.com/
-twitter: https://twitter.com/
+google_scholar: https://scholar.google.com/citations?user=8ls2RYsAAAAJ&hl=zh-CN
+cv_link: assets/files/Zheng-Nan-CV-2026.docx
+github_link: https://github.com/zhengnan365
+orcid: https://orcid.org/0000-0002-2066-1506
+scopus: https://www.scopus.com/authid/detail.uri?authorId=57478923000
+web_of_science: https://www.webofscience.com/wos/author/record/HJA-6964-2022
+researchgate: https://www.researchgate.net/profile/Nan-Zheng-32
+personal_link: https://scholar.znup.top
 
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
 avatar: ./assets/img/avatar.png
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
 
-# Footnote
-# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
-enable_footnote: true
-
-# Auto Dark Mode
-# You may use the option to disable the automatic dark theme
+enable_footnote: false
 auto_dark_mode: true
+font: "Sans Serif"
 
-# Font
-# You can use this option to choose between Serif or Sans Serif fonts.
-font: "Serif" # or "Sans Serif"
-
-# Google Analytics ID
-# Please remove this if you don't use Google Analytics
-google_analytics: UA-111540567-4
-
-# Use this project as a remote theme for GitHub Pages
-# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
 remote_theme: yaoyao-liu/minimal-light
 
-# The following files will be removed from the generated website.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -55,3 +43,5 @@ exclude:
   - LICENSE
   - minimal-light.gemspec
   - html_source_file/
+  - docs/
+  - scripts/

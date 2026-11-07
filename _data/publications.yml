@@ -1,22 +1,654 @@
 main:
-
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
-
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+- id: https://openalex.org/W7223672983
+  doi: https://doi.org/10.1016/j.applthermaleng.2026.133623
+  title: Dynamic performance and control mechanisms during the cold-state startup
+    to full-load operation in molten salt solar tower power plants
+  authors: Kaijun Jiang, Qiang Zhang, Zhipeng Cui, Guoxiong Zhu, Mianshan Cui, Qinghua
+    Wang, Nan Zheng, Yunxiu Ren
+  venue: Applied Thermal Engineering
+  year: 2026
+  date: '2026-10-26'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.applthermaleng.2026.133623
+  open_access: false
+- id: https://openalex.org/W7169858548
+  doi: https://doi.org/10.1016/j.energy.2026.142040
+  title: Design and thermodynamic analysis of a multi-generation solar-assisted liquid
+    carbon dioxide energy storage system with a new compression heat utilization method
+  authors: Yunqi Li, Qing Li, Weiwei Wang, Jiahao Wang, Xingqi Ding, Nan Zheng, Liqiang
+    Duan, Umberto Desideri
+  venue: Energy
+  year: 2026
+  date: '2026-07-21'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2026.142040
+  open_access: true
+- id: https://openalex.org/W7141300279
+  doi: https://doi.org/10.1016/j.est.2026.121781
+  title: Comprehensive sustainability assessment of a novel solar-assisted liquid
+    carbon dioxide energy storage system based on emergy and multi-criteria decision
+    analysis
+  authors: Xingqi Ding, Jiahao Wang, Qing Li, Yufei Zhou, Nan Zheng, Ming Yang, Liqiang
+    Duan, Umberto Desideri
+  venue: Journal of Energy Storage
+  year: 2026
+  date: '2026-03-27'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.est.2026.121781
+  open_access: false
+- id: https://openalex.org/W7120188520
+  doi: https://doi.org/10.1016/j.renene.2026.125212
+  title: Comprehensive sustainability assessment and emergy analysis of a combined
+    cooling, heating and power system integrated with high-temperature solar thermochemical
+    complementation and low-temperature solar thermal collection processes
+  authors: Qiushi Wang, Liqiang Duan, Chaoyun Yang, Haozeng Zhao, Luyao Liu, Hanfei
+    Zhang, Nan Zheng, Xingqi Ding
+  venue: Renewable Energy
+  year: 2026
+  date: '2026-01-09'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.renene.2026.125212
+  open_access: false
+- id: https://openalex.org/W7222490347
+  doi: https://doi.org/10.37155/2717-5197-0816-71
+  title: 超临界锅炉低负荷配煤掺烧与NOx协同控制技术应用
+  authors: Nan Zheng
+  venue: 机械与电子控制工程
+  year: 2026
+  date: '2026-01-01'
+  type: article
+  pdf: http://ojs.omniscient.sg/index.php/mece/article/download/85510/83798
+  url: https://doi.org/10.37155/2717-5197-0816-71
+  open_access: true
+- id: https://openalex.org/W7222594926
+  doi: https://doi.org/10.37155/2717-5316-0717-34
+  title: 锅炉燃烧器配风优化降低过热器再热器超温的试验研究
+  authors: Nan Zheng
+  venue: 工程学研究与实用
+  year: 2026
+  date: '2026-01-01'
+  type: article
+  pdf: http://ojs.omniscient.sg/index.php/esra/article/download/85933/84222
+  url: https://doi.org/10.37155/2717-5316-0717-34
+  open_access: true
+- id: https://openalex.org/W4417483727
+  doi: https://doi.org/10.1016/j.applthermaleng.2025.129518
+  title: 'Thermodynamic and environmental assessment of a solar-assisted Polygeneration
+    system: Integrating carbon-enriched chemical looping hydrogen and a dead-ended
+    solid oxide fuel cell with Cascade waste heat recovery'
+  authors: Haotian Qi, Nan Zheng, Ming De Yang, Yunxiu Ren, Qiang Zhang, Wen-Jiang
+    Zou, Zherui Ma, Tianchao Ai, Xingqi Ding, Qiushi Wang, Liqiang Duan
+  venue: Applied Thermal Engineering
+  year: 2025
+  date: '2025-12-19'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.applthermaleng.2025.129518
+  open_access: false
+- id: https://openalex.org/W7117573461
+  doi: https://doi.org/10.1063/5.0307365
+  title: Investigation of vortex-induced vibration of a circular cylinder near a wavy
+    wall with the local domain-free discretization method
+  authors: Haotian Qi, Zhijian Deng, Yang Zhang, Chunhua Zhou, Nan Zheng, Z.H. Zhou,
+    Tianmei Pu
+  venue: Physics of Fluids
+  year: 2025
+  date: '2025-12-01'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1063/5.0307365
+  open_access: false
+- id: https://openalex.org/W4414982195
+  doi: https://doi.org/10.1016/j.fuel.2025.137093
+  title: 4E-based performance evaluation of a solar-assisted SOFC–CCHP system integrating
+    zero-energy CO2 enrichment and cascade waste heat recovery
+  authors: Yunxiu Ren, Ming De Yang, Nan Zheng, Qiang Zhang, Zherui Ma, Wen-Jiang
+    Zou, Shaolong Wang, Xingqi Ding, Qiushi Wang, Yimin Li, Liqiang Duan
+  venue: Fuel
+  year: 2025
+  date: '2025-10-09'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.fuel.2025.137093
+  open_access: false
+- id: https://openalex.org/W4414239492
+  doi: https://doi.org/10.1063/5.0290970
+  title: Aerodynamic interactions between coaxial rotor and obstacle in hover
+  authors: Haotian Qi, Wenjun Du, Tianmei Pu, Nan Zheng, Weijun Zhu
+  venue: Physics of Fluids
+  year: 2025
+  date: '2025-09-01'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1063/5.0290970
+  open_access: false
+- id: https://openalex.org/W4414898460
+  doi: https://doi.org/10.1109/ceege66246.2025.11182491
+  title: Steam Molten Salt Heater - Dynamic Simulation of Sensible Heat Utilization
+  authors: Yijie Mao, Qiang Zhang, Yunxiu Ren, Nan Zheng, Jia Yu, Tao Jia, Kaijun
+    Jiang
+  venue: International Conference on Electrical Engineering and Green Energy (CEEGE)
+  year: 2025
+  date: '2025-07-04'
+  type: conference-paper
+  pdf: null
+  url: https://doi.org/10.1109/ceege66246.2025.11182491
+  open_access: false
+- id: https://openalex.org/W4411177103
+  doi: https://doi.org/10.1016/j.applthermaleng.2025.127196
+  title: Dynamic modelling and response characteristics of a solar-assisted liquid
+    air energy storage system with poly-generation
+  authors: Xingqi Ding, Liqiang Duan, Yufei Zhou, Nan Zheng, Qiushi Wang, Yuanhui
+    Wang
+  venue: Applied Thermal Engineering
+  year: 2025
+  date: '2025-06-10'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.applthermaleng.2025.127196
+  open_access: false
+- id: https://openalex.org/W4411045743
+  doi: https://doi.org/10.1007/s11431-024-2818-y
+  title: Progress and prospects of fundamental research on multi-energy complementary
+    distributed energy system
+  authors: Yongping Yang, Liqiang Duan, Qibin Liu, Xiaoze Du, Changying Zhao, Jiangjiang
+    Wang, Nan Zheng, Fan Jiao, Ligang Wang, Jian Sun, Chao Xu, Cui Liu, Jun Feng Yan
+  venue: Science China Technological Sciences
+  year: 2025
+  date: '2025-06-04'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1007/s11431-024-2818-y
+  open_access: false
+- id: https://openalex.org/W4410291883
+  doi: https://doi.org/10.1016/j.energy.2025.136547
+  title: Thermodynamic analysis of a novel SOFC-based CCHP system integrated supercritical
+    carbon dioxide and organic Rankine cycles for waste heat cascade utilization
+  authors: Nan Zheng, Qiang Zhang, Yunxiu Ren, Liqiang Duan, Qiushi Wang, Xingqi Ding,
+    Yufei Zhou, Xiaomeng Wang, Luyao Liu, Mingjia Sun, Weijia Jiao
+  venue: Energy
+  year: 2025
+  date: '2025-05-12'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2025.136547
+  open_access: false
+- id: https://openalex.org/W4409376242
+  doi: https://doi.org/10.1007/s11630-025-2118-1
+  title: Dynamic Response Characteristics of Multi-Generation System Integrated with
+    Gas and Heat Storage
+  authors: Xiaomeng Wang, Liqiang Duan, Nan Zheng, Qiushi Wang
+  venue: Journal of Thermal Science
+  year: 2025
+  date: '2025-04-11'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1007/s11630-025-2118-1
+  open_access: false
+- id: https://openalex.org/W4409003416
+  doi: https://doi.org/10.1016/j.renene.2025.123001
+  title: Active control method based on operation strategy for a novel combined cooling,
+    heating and power system integrated with solar thermochemical process
+  authors: Qiushi Wang, Liqiang Duan, Luyao Liu, Xiaoqing Fan, Hanfei Zhang, Nan Zheng,
+    Chaoyun Yang, Chu Wang
+  venue: Renewable Energy
+  year: 2025
+  date: '2025-03-31'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.renene.2025.123001
+  open_access: false
+- id: https://openalex.org/W4408360984
+  doi: https://doi.org/10.1016/j.renene.2025.122881
+  title: Conventional and advanced exergy analysis of a novel SOFC-MGT hybrid power
+    system coupled with external solar methane hydrogen production process
+  authors: Qiushi Wang, Liqiang Duan, Shangyou Huang, Xinlu Li, Luyao Liu, Chu Wang,
+    Xingqi Ding, Nan Zheng, Weijia Jiao
+  venue: Renewable Energy
+  year: 2025
+  date: '2025-03-12'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.renene.2025.122881
+  open_access: false
+- id: https://openalex.org/W4405432292
+  doi: https://doi.org/10.1016/j.apenergy.2024.125088
+  title: Proactive energy storage operation strategy and optimization of a solar polystorage
+    and polygeneration system based on day-ahead load forecasting
+  authors: Nan Zheng, Qiushi Wang, Xingqi Ding, Xiaomeng Wang, Hanfei Zhang, Liqiang
+    Duan, Umberto Desideri
+  venue: Applied Energy
+  year: 2024
+  date: '2024-12-16'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.apenergy.2024.125088
+  open_access: true
+- id: https://openalex.org/W4405322960
+  doi: https://doi.org/10.1016/j.rser.2024.115164
+  title: A systematic review on liquid air energy storage system
+  authors: Xingqi Ding, Liqiang Duan, Nan Zheng, Umberto Desideri, Yufei Zhou, Qiushi
+    Wang, Yuanhui Wang, Weijia Jiao
+  venue: Renewable and Sustainable Energy Reviews
+  year: 2024
+  date: '2024-12-11'
+  type: review
+  pdf: null
+  url: https://doi.org/10.1016/j.rser.2024.115164
+  open_access: true
+- id: https://openalex.org/W4401991413
+  doi: https://doi.org/10.1016/j.apenergy.2024.124288
+  title: Techno-economic analysis of a novel solar-based polygeneration system integrated
+    with vanadium redox flow battery and thermal energy storage considering robust
+    source-load response
+  authors: Nan Zheng, Qiushi Wang, Xingqi Ding, Hanfei Zhang, Liqiang Duan, Xiaomeng
+    Wang, Yufei Zhou, Mingjia Sun, Umberto Desideri
+  venue: Applied Energy
+  year: 2024
+  date: '2024-08-29'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.apenergy.2024.124288
+  open_access: true
+- id: https://openalex.org/W4400948352
+  doi: https://doi.org/10.1016/j.apenergy.2024.123938
+  title: 'Whole process dynamic performance analysis of a solar-aided liquid air energy
+    storage system: From single cycle to multi-cycle'
+  authors: Yufei Zhou, Hanfei Zhang, Shuaiyu Ji, Mingjia Sun, Xingqi Ding, Nan Zheng,
+    Liqiang Duan, Umberto Desideri
+  venue: Applied Energy
+  year: 2024
+  date: '2024-07-24'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.apenergy.2024.123938
+  open_access: true
+- id: https://openalex.org/W4400943708
+  doi: https://doi.org/10.1016/j.energy.2024.132581
+  title: Thermodynamic and economic analysis of a new CCHP system with active solar
+    energy storage and decoupling of power and cooling outputs
+  authors: Xiaomeng Wang, Liqiang Duan, Nan Zheng
+  venue: Energy
+  year: 2024
+  date: '2024-07-24'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2024.132581
+  open_access: false
+- id: https://openalex.org/W4394945506
+  doi: https://doi.org/10.1016/j.apenergy.2024.123249
+  title: Emergy analysis and comprehensive sustainability investigation of a solar-aided
+    liquid air energy storage system based on life cycle assessment
+  authors: Xingqi Ding, Yufei Zhou, Nan Zheng, Umberto Desideri, Liqiang Duan
+  venue: Applied Energy
+  year: 2024
+  date: '2024-04-18'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.apenergy.2024.123249
+  open_access: true
+- id: https://openalex.org/W4392505097
+  doi: https://doi.org/10.1016/j.enconman.2024.118262
+  title: Energy, exergy, and economic analyses of a novel liquid air energy storage
+    system with cooling, heating, power, hot water, and hydrogen cogeneration
+  authors: Xingqi Ding, Yufei Zhou, Nan Zheng, Yuanhui Wang, Ming De Yang, Liqiang
+    Duan
+  venue: Energy Conversion and Management
+  year: 2024
+  date: '2024-03-06'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.enconman.2024.118262
+  open_access: false
+- id: https://openalex.org/W4392363190
+  doi: https://doi.org/10.1016/j.energy.2024.130845
+  title: Thermodynamic performance evaluation of a novel solar-assisted multi-generation
+    system driven by ammonia-fueled SOFC with anode outlet gas recirculation
+  authors: Luyao Liu, Liqiang Duan, Nan Zheng, Qiushi Wang, Maotong Zhang, Dong Xue
+  venue: Energy
+  year: 2024
+  date: '2024-03-03'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2024.130845
+  open_access: false
+- id: https://openalex.org/W4390630077
+  doi: https://doi.org/10.1016/j.applthermaleng.2024.122339
+  title: Dynamic response characteristics and economic analyses of two solar-assisted
+    multi-generation systems
+  authors: Xingqi Ding, Libo Yang, Nan Zheng, Liqiang Duan, Yufei Zhou
+  venue: Applied Thermal Engineering
+  year: 2024
+  date: '2024-01-05'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.applthermaleng.2024.122339
+  open_access: false
+- id: https://openalex.org/W4389368702
+  doi: https://doi.org/10.1016/j.renene.2023.119780
+  title: Dynamic characteristics of a novel liquid air energy storage system coupled
+    with solar heat and waste heat recovery
+  authors: Xingqi Ding, Liqiang Duan, Da Li, Shuaiyu Ji, Libo Yang, Nan Zheng, Yufei
+    Zhou
+  venue: Renewable Energy
+  year: 2023
+  date: '2023-12-06'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.renene.2023.119780
+  open_access: false
+- id: https://openalex.org/W4387456712
+  doi: https://doi.org/10.1016/j.energy.2023.129306
+  title: Comprehensive performance investigation of a novel solar-assisted liquid
+    air energy storage system with different operating modes in different seasons
+  authors: Xingqi Ding, Yufei Zhou, Liqiang Duan, Da Li, Nan Zheng
+  venue: Energy
+  year: 2023
+  date: '2023-10-09'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2023.129306
+  open_access: false
+- id: https://openalex.org/W4386533134
+  doi: https://doi.org/10.1016/j.est.2023.108891
+  title: Dynamic performance analysis of the discharging process of a solar aided
+    liquid air energy storage system
+  authors: Yufei Zhou, Liqiang Duan, Xingqi Ding, Nan Zheng
+  venue: Journal of Energy Storage
+  year: 2023
+  date: '2023-09-08'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.est.2023.108891
+  open_access: false
+- id: https://openalex.org/W4386364806
+  doi: https://doi.org/10.1016/j.enconman.2023.117573
+  title: 'Dynamic-cycle simulation of power-to-methanol-to-power system with reversible
+    solid oxide cells: Multi-physics and techno-economic analysis'
+  authors: Nan Zheng, Hai-Tao Zhu, Gang Xiao, Meng Ni, Haoran Xu
+  venue: Energy Conversion and Management
+  year: 2023
+  date: '2023-09-01'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.enconman.2023.117573
+  open_access: false
+- id: https://openalex.org/W4385621180
+  doi: https://doi.org/10.1016/j.enconman.2023.117496
+  title: Dynamic modeling and response characteristics of a solar-driven polygeneration
+    system coupled with hydrogen and thermal energy storage
+  authors: Nan Zheng, Xingqi Ding, Yufei Zhou, Hanfei Zhang, Liqiang Duan, Maotong
+    Zhang
+  venue: Energy Conversion and Management
+  year: 2023
+  date: '2023-08-04'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.enconman.2023.117496
+  open_access: false
+- id: https://openalex.org/W4385247649
+  doi: https://doi.org/10.1016/j.enconman.2023.117429
+  title: Thermodynamic and economic analysis of a multi-energy complementary distributed
+    CCHP system coupled with solar thermochemistry and active energy storage regulation
+    process
+  authors: Qiushi Wang, Liqiang Duan, Ziyi Lu, Nan Zheng
+  venue: Energy Conversion and Management
+  year: 2023
+  date: '2023-07-25'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.enconman.2023.117429
+  open_access: false
+- id: https://openalex.org/W4366275557
+  doi: https://doi.org/10.1016/j.ijhydene.2023.03.389
+  title: Thermodynamic performance comparison of SOFC-MGT-CCHP systems coupled with
+    two different solar methane steam reforming processes
+  authors: Qiushi Wang, Liqiang Duan, Ziyi Lu, Nan Zheng
+  venue: International Journal of Hydrogen Energy
+  year: 2023
+  date: '2023-04-18'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.ijhydene.2023.03.389
+  open_access: false
+- id: https://openalex.org/W4365446266
+  doi: https://doi.org/10.1016/j.energy.2023.127498
+  title: 4E Analysis of a novel combined cooling, heating and power system coupled
+    with solar thermochemical process and energy storage
+  authors: Qiushi Wang, Liqiang Duan, Nan Zheng, Ziyi Lu
+  venue: Energy
+  year: 2023
+  date: '2023-04-13'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2023.127498
+  open_access: false
+- id: https://openalex.org/W4322502405
+  doi: https://doi.org/10.1016/j.renene.2023.02.127
+  title: Multi-criteria performance analysis and optimization of a solar-driven CCHP
+    system based on PEMWE, SOFC, TES, and novel PVT for hotel and office buildings
+  authors: Nan Zheng, Hanfei Zhang, Liqiang Duan, Xiaomeng Wang, Qiushi Wang, Luyao
+    Liu
+  venue: Renewable Energy
+  year: 2023
+  date: '2023-02-27'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.renene.2023.02.127
+  open_access: false
+- id: https://openalex.org/W4384571970
+  doi: https://doi.org/10.2139/ssrn.4512906
+  title: Thermodynamic Performance Evaluation of a Novel Solar-Assisted Multi-Generation
+    System Driven by Ammonia-Fueled Sofc with Anode Outlet Gas Recirculation
+  authors: Luyao Liu, Liqiang Duan, Nan Zheng, Qiushi Wang, Maotong Zhang, Dong Xue
+  venue: SSRN Electronic Journal
+  year: 2023
+  date: '2023-01-01'
+  type: preprint
+  pdf: null
+  url: https://doi.org/10.2139/ssrn.4512906
+  open_access: true
+- id: https://openalex.org/W4385845191
+  doi: https://doi.org/10.2139/ssrn.4541356
+  title: Thermodynamic Performance Evaluation of a Novel Solar-Assisted Multi-Generation
+    System Driven by Ammonia-Fueled Sofc with Anode Outlet Gas Recirculation
+  authors: Luyao Liu, Liqiang Duan, Nan Zheng, Qiushi Wang, Maotong Zhang, Dong Xue
+  venue: SSRN Electronic Journal
+  year: 2023
+  date: '2023-01-01'
+  type: preprint
+  pdf: null
+  url: https://doi.org/10.2139/ssrn.4541356
+  open_access: true
+- id: https://openalex.org/W4311091822
+  doi: https://doi.org/10.1016/j.energy.2022.126343
+  title: Comprehensive sustainability assessment of a novel solar-driven PEMEC-SOFC-based
+    combined cooling, heating, power, and storage (CCHPS) system based on life cycle
+    method
+  authors: Nan Zheng, Hanfei Zhang, Liqiang Duan, Qiushi Wang
+  venue: Energy
+  year: 2022
+  date: '2022-12-05'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2022.126343
+  open_access: false
+- id: https://openalex.org/W4310179087
+  doi: https://doi.org/10.1016/j.apenergy.2022.120400
+  title: Techno-economic analysis of a novel solar-driven PEMEC-SOFC-based multi-generation
+    system coupled parabolic trough photovoltaic thermal collector and thermal energy
+    storage
+  authors: Nan Zheng, Hanfei Zhang, Liqiang Duan, Qiushi Wang, Aldo Bischi, Umberto
+    Desideri
+  venue: Applied Energy
+  year: 2022
+  date: '2022-11-28'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.apenergy.2022.120400
+  open_access: true
+- id: https://openalex.org/W4309487580
+  doi: https://doi.org/10.1016/j.applthermaleng.2022.119648
+  title: Thermodynamic analysis of a novel tri-generation system integrated with a
+    solar energy storage and solid oxide fuel cell – Gas turbine
+  authors: Xiaomeng Wang, Liqiang Duan, Nan Zheng
+  venue: Applied Thermal Engineering
+  year: 2022
+  date: '2022-11-18'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.applthermaleng.2022.119648
+  open_access: false
+- id: https://openalex.org/W4307288859
+  doi: https://doi.org/10.1016/j.renene.2022.10.092
+  title: Energy, exergy, exergoeconomic and exergoenvironmental analysis and optimization
+    of a novel partially covered parabolic trough photovoltaic thermal collector based
+    on life cycle method
+  authors: Nan Zheng, Hanfei Zhang, Liqiang Duan, Xiaomeng Wang, Luyao Liu
+  venue: Renewable Energy
+  year: 2022
+  date: '2022-10-22'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.renene.2022.10.092
+  open_access: false
+- id: https://openalex.org/W4303579765
+  doi: https://doi.org/10.1016/j.enconman.2022.116310
+  title: Self-adaptive heat management of solid oxide electrolyzer cell under fluctuating
+    power supply
+  authors: Anwei Sun, Wei Shuai, Nan Zheng, Yu Han, Gang Xiao, Meng Ni, Haoran Xu
+  venue: Energy Conversion and Management
+  year: 2022
+  date: '2022-10-07'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.enconman.2022.116310
+  open_access: false
+- id: https://openalex.org/W4297473260
+  doi: https://doi.org/10.1016/j.energy.2022.125574
+  title: Numerical study on aerodynamic performance and noise of wind turbine airfoils
+    with serrated gurney flap
+  authors: Xuemin Ye, Jiami Hu, Nan Zheng, Chunxi Li
+  venue: Energy
+  year: 2022
+  date: '2022-09-28'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2022.125574
+  open_access: false
+- id: https://openalex.org/W4293685603
+  doi: https://doi.org/10.1016/j.energy.2022.125096
+  title: Solid oxide electrolysis cell under real fluctuating power supply with a
+    focus on thermal stress analysis
+  authors: Yi Fei Sun, Xiongfeng Hu, Jun Gao, Yu Han, Anwei Sun, Nan Zheng, Wei Shuai,
+    Gang Xiao, Meiting Guo, Meng Ni, Haoran Xu
+  venue: Energy
+  year: 2022
+  date: '2022-08-30'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2022.125096
+  open_access: false
+- id: https://openalex.org/W4281858891
+  doi: https://doi.org/10.1016/j.seta.2022.102344
+  title: Dynamic behavior of high-temperature CO2/H2O co-electrolysis coupled with
+    real fluctuating renewable power
+  authors: Yi Fei Sun, Wenjin Zheng, Shiyu Ji, Anwei Sun, Wei Shuai, Nan Zheng, Yu
+    Han, Gang Xiao, Meng Ni, Haoran Xu
+  venue: Sustainable Energy Technologies and Assessments
+  year: 2022
+  date: '2022-06-02'
+  type: article
+  pdf: https://www.sciencedirect.com/science/article/pii/S2213138822003964
+  url: https://doi.org/10.1016/j.seta.2022.102344
+  open_access: true
+- id: https://openalex.org/W4283165924
+  doi: https://doi.org/10.1007/s12206-022-0526-7
+  title: Effect of serrated trailing-edge blades on aerodynamic noise of an axial
+    fan
+  authors: Xuemin Ye, Nan Zheng, Rui-Xing Zhang, Chunxi Li
+  venue: Journal of Mechanical Science and Technology
+  year: 2022
+  date: '2022-06-01'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1007/s12206-022-0526-7
+  open_access: false
+- id: https://openalex.org/W4281260063
+  doi: https://doi.org/10.1016/j.enconman.2022.115770
+  title: Thermodynamic performance analysis of a novel PEMEC-SOFC-based poly-generation
+    system integrated mechanical compression and thermal energy storage
+  authors: Nan Zheng, Liqiang Duan, Xiaomeng Wang, Ziyi Lu, Hanfei Zhang
+  venue: Energy Conversion and Management
+  year: 2022
+  date: '2022-05-22'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.enconman.2022.115770
+  open_access: false
+- id: https://openalex.org/W4220687639
+  doi: https://doi.org/10.1016/j.enconman.2022.115560
+  title: Multi-objective optimizations of solid oxide co-electrolysis with intermittent
+    renewable power supply via multi-physics simulation and deep learning strategy
+  authors: Yi Fei Sun, Jiong Yuan Lu, Qiuhua Liu, Wei Shuai, Anwei Sun, Nan Zheng,
+    Yu Han, Gang Xiao, Jin Xuan, Meng Ni, Haoran Xu
+  venue: Energy Conversion and Management
+  year: 2022
+  date: '2022-04-01'
+  type: article
+  pdf: https://www.sciencedirect.com/science/article/pii/S0196890422003569
+  url: https://doi.org/10.1016/j.enconman.2022.115560
+  open_access: true
+- id: https://openalex.org/W4304759257
+  doi: https://doi.org/10.1016/j.energy.2022.125725
+  title: A New Sweeping Gas Strategy of a Reversible Solid Oxide Cell System for Efficient
+    H2 Production and Power Generation During Dynamic Operation
+  authors: Yi Fei Sun, Qian Tang, Jingdong Zhu, Nan Zheng, Yu Han, Gang Xiao, Meng
+    Ni, Haoran Xu
+  venue: Energy
+  year: 2022
+  date: '2022-01-01'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2022.125725
+  open_access: true
+- id: https://openalex.org/W4225633053
+  doi: https://doi.org/10.1016/j.energy.2022.124072
+  title: Numerical Investigation of the Benefits of Serrated Gurney Flaps on an Axial
+    Flow Fan
+  authors: Xuemin Ye, Nan Zheng, Jiami Hu, Chunxi Li, Zhanpu Xue
+  venue: Energy
+  year: 2021
+  date: '2021-01-01'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.energy.2022.124072
+  open_access: true
+- id: https://openalex.org/W2367407407
+  doi: null
+  title: Program Development for Enthalpy Calculation of Water and Steam Based on
+    IAPWS-IF97 and Complementary Equations
+  authors: Nan Zheng
+  venue: Journal of Chinese Society of Power Engineering
+  year: 2011
+  date: '2011-01-01'
+  type: article
+  pdf: null
+  url: https://openalex.org/W2367407407
+  open_access: false
+- id: https://openalex.org/W2068136613
+  doi: https://doi.org/10.1007/s10762-010-9642-z
+  title: A Comparison of the Attenuation of High-Order Mode in Coaxial Waveguide due
+    to Inner and Outer Conductor Losses
+  authors: Chongqing Jiao, Nan Zheng, Jirun Luo
+  venue: Journal of Infrared Millimeter and Terahertz Waves
+  year: 2010
+  date: '2010-04-16'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1007/s10762-010-9642-z
+  open_access: false
