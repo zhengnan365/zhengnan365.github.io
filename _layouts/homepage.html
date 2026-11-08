@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="zh-CN" data-lang="zh" data-theme="light">
   <head>
     <title>{{ site.title }} | {{site.affiliation}}</title>
 
@@ -26,31 +26,13 @@
     {% else %}
     <link rel="stylesheet" href="./assets/css/font.css">
     {% endif %}
-    {% if site.auto_dark_mode %}
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/publications.css">
-    {% else %}
-    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
-    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
-    {% endif %}
+    <link rel="stylesheet" href="./assets/css/pub.css">
+    <link rel="stylesheet" href="./assets/css/nav.css">
 
   </head>
   <body>
-    <nav class="global-nav" aria-label="Site navigation">
-      <div class="global-nav-inner">
-        <a class="nav-brand" href="#about">Nan Zheng</a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#patents">Patents</a>
-          <a href="#projects">Projects</a>
-          <a href="#students">Students</a>
-          <a href="#awards">Awards</a>
-          <a href="#news">News</a>
-        </div>
-      </div>
-    </nav>
+    {% include topnav.html %}
     <div class="wrapper">
       <header>
         
@@ -58,14 +40,14 @@
         <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
         {% endif %}
 
-        <h1>{{ site.title }}</h1>
+        <h1><span class="i18n-zh">{{ site.title_zh }}</span><span class="i18n-en">{{ site.title }}</span></h1>
 
         {% if site.position %}
-        <position style="font-size:1.10rem;">{{ site.position }}</position>
+        <position style="font-size:1.10rem;"><span class="i18n-zh">{{ site.position_zh }}</span><span class="i18n-en">{{ site.position }}</span></position>
         <br>
         {% endif %}
         {% if site.affiliation %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
+        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor><span class="i18n-zh">{{ site.affiliation_zh }}</span><span class="i18n-en">{{ site.affiliation }}</span></autocolor></a>
         <br>
         {% endif %}
         {% if site.email %}
@@ -77,13 +59,13 @@
         <div class="social-icons academic-links" aria-label="Academic profiles">
         {% if site.google_scholar %}
         <a title="Google Scholar" aria-label="Google Scholar" href="{{ site.google_scholar }}" target="_blank" rel="noopener">
-          <i class="ai ai-google-scholar" style="font-size:1.2rem"></i><span class="academic-label">GS</span>
+          <i class="fa-solid fa-graduation-cap" style="font-size:1.05rem"></i><span class="academic-label">GS</span>
         </a>  
         {% endif %}
 
         {% if site.cv_link %}
         <a title="CV" aria-label="CV" href="{{ site.cv_link }}">
-          <i class="ai ai-cv" style="font-size:1.3rem;"></i><span class="academic-label">CV</span>
+          <i class="fa-regular fa-file-lines" style="font-size:1.05rem;"></i><span class="academic-label">CV</span>
         </a>
         {% endif %}
 
@@ -142,6 +124,7 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script type="module" src="{{ '/assets/js/site-controls.mjs' | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

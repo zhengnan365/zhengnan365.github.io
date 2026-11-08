@@ -1,7 +1,14 @@
-<div class="publications"><ol class="bibliography">
-{% for link in site.data.publications.main %}
-{% if forloop.index == 9 %}<details class="older-publications"><summary>Show older publications</summary>{% endif %}
-<li><div class="pub-row"><div class="pub-year">{{ link.year }}</div><div class="pub-content"><div class="title"><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.title }}</a></div><div class="author">{{ link.authors }}</div><div class="periodical"><em>{{ link.venue }}{% if link.year %}, {{ link.year }}{% endif %}</em></div><div class="links">{% if link.pdf %}<a href="{{ link.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}{% if link.doi %}<a href="{{ link.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}{% if link.open_access %}<span class="oa-label">Open access</span>{% endif %}</div></div></div></li>
+<h2 class="pub-section-title"><span class="i18n-zh">论文</span><span class="i18n-en">Publications</span>{% if site.google_scholar %} <span class="pub-ext-links"><a href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a></span>{% endif %}</h2>
+<p class="section-note"><span class="i18n-zh">论文数据由 OpenAlex 定期同步，完整列表持续更新。</span><span class="i18n-en">Publication data is synced regularly from OpenAlex. The full list is updated on an ongoing basis.</span></p>
+
+<div class="publications">
+{% assign publications_by_year = site.data.publications.main | group_by: "year" | sort: "name" | reverse %}
+{% for year_group in publications_by_year %}
+  <h2 class="year">{{ year_group.name }}</h2>
+  <ol class="bibliography">
+  {% for link in year_group.items %}
+    {% include publication-item.html link=link %}
+  {% endfor %}
+  </ol>
 {% endfor %}
-{% if site.data.publications.main.size > 8 %}</details>{% endif %}
-</ol></div>
+</div>

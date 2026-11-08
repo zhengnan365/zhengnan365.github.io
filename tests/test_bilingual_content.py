@@ -11,6 +11,15 @@ PUBLICATIONS = ROOT / "_includes/publications.md"
 
 
 class BilingualContentTests(unittest.TestCase):
+    def test_profile_and_navigation_brand_follow_page_language(self):
+        layout = (ROOT / "_layouts/homepage.html").read_text(encoding="utf-8")
+        navigation = (ROOT / "_includes/topnav.html").read_text(encoding="utf-8")
+        self.assertIn('<html lang="zh-CN" data-lang="zh"', layout)
+        self.assertRegex(layout, r'<h1>\s*<span class="i18n-zh">{{ site.title_zh }}</span>\s*<span class="i18n-en">{{ site.title }}</span>\s*</h1>')
+        self.assertRegex(layout, r'<position[^>]*>\s*<span class="i18n-zh">{{ site.position_zh }}</span>\s*<span class="i18n-en">{{ site.position }}</span>\s*</position>')
+        self.assertRegex(layout, r'<autocolor>\s*<span class="i18n-zh">{{ site.affiliation_zh }}</span>\s*<span class="i18n-en">{{ site.affiliation }}</span>\s*</autocolor>')
+        self.assertRegex(navigation, r'<a class="topnav-brand"[^>]*>\s*<span class="i18n-zh">{{ site.title_zh }}</span>\s*<span class="i18n-en">{{ site.title }}</span>\s*</a>')
+
     def test_page_sections_have_bilingual_headings_and_content(self):
         page = PAGE.read_text(encoding="utf-8")
         for section_id in (

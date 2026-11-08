@@ -1,0 +1,4 @@
+{% comment %}Single-page navigation, driven by _data/navigation.yml.{% endcomment %}
+{% for link in site.data.navigation.main %}
+  <a class="normal" href="{{ link.url }}"><span class="i18n-zh">{{ link.title_zh }}</span><span class="i18n-en">{{ link.title_en }}</span></a>
+{% endfor %}

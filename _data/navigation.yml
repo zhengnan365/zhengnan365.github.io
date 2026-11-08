@@ -1,0 +1,25 @@
+main:
+  - title_zh: 关于
+    title_en: About
+    url: "#about"
+  - title_zh: 研究
+    title_en: Research
+    url: "#research"
+  - title_zh: 论文
+    title_en: Publications
+    url: "#publications"
+  - title_zh: 专利
+    title_en: Patents
+    url: "#patents"
+  - title_zh: 项目
+    title_en: Projects
+    url: "#projects"
+  - title_zh: 学生
+    title_en: Students
+    url: "#students"
+  - title_zh: 奖励
+    title_en: Awards
+    url: "#awards"
+  - title_zh: 动态
+    title_en: News
+    url: "#news"

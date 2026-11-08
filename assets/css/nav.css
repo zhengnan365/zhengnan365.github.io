@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;650&display=swap');
+
+/* Top navigation bar */
+.topnav {
+    background-color: #13294B;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.22);
+}
+
+.topnav::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.topnav #myLinks {
+    display: flex;
+    float: right;
+    margin-right: calc(50% - 480px);
+}
+
+.topnav button.icon {
+    display: none;
+}
+
+.topnav #myLinks[hidden] { display: none !important; }
+
+.topnav-controls {
+    position: absolute;
+    top: 5px;
+    right: max(16px, calc(50% - 480px));
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.topnav-controls button {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+    font: 600 15px 'Source Sans 3', sans-serif;
+    cursor: pointer;
+}
+
+.topnav-controls button:hover, .topnav-controls button:focus-visible {
+    border-color: #FF5F05;
+    background: rgba(255, 255, 255, .12);
+}
+
+.topnav #myLinks { margin-right: max(96px, calc(50% - 480px + 80px)); }
+
+/* Name mark — align left edge with the Minimal Light wrapper. */
+.topnav .topnav-brand {
+    float: left;
+    margin-left: calc(50% - 480px);
+    padding: 10px 0 9px;
+    color: #fff;
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 17px;
+    font-weight: 650;
+    letter-spacing: 0.02em;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a.normal {
+    float: none;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 11px 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.topnav a.normal::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: #FF5F05;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.topnav a.normal:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.topnav a.normal:hover::after,
+.topnav a.normal.active::after {
+    transform: scaleX(1);
+}
+
+.topnav a.normal.active {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* ─── Dropdown ─── */
+.topnav .dropdown {
+    float: right;
+    position: relative;
+}
+
+.topnav .dropdown .dropbtn {
+    display: block;
+    float: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.topnav .dropdown .dropdown-arrow {
+    font-size: 11px;
+    vertical-align: middle;
+    margin-left: 1px;
+}
+
+.topnav .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #13294B;
+    min-width: 130px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    border-top: 2px solid #FF5F05;
+    z-index: 1000;
+}
+
+.topnav .dropdown-content a {
+    color: #f2f2f2;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    white-space: nowrap;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.topnav .dropdown-content a:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,0.08);
+}
+
+.topnav .dropdown-content a.active {
+    color: #fff;
+    font-weight: 500;
+    box-shadow: inset 3px 0 0 #FF5F05;
+}
+
+.topnav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ─── Responsive: tablet / small desktop ─── */
+@media print, screen and (max-width: 1000px) {
+    .topnav .topnav-brand   { margin-left: 16px; }
+    .topnav #myLinks        { margin-right: 96px; }
+    .topnav a.normal        { padding: 11px 7px; }
+}
+
+/* ─── Responsive: mobile (hamburger menu) ─── */
+@media print, screen and (max-width: 960px) {
+
+    .topnav .topnav-brand {
+        margin-left: 28px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    .topnav a.normal::after { display: none; }
+
+    .topnav #myLinks {
+        display: flex;
+        float: none;
+        clear: both;
+        flex-direction: column;
+        margin-right: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-in-out;
+    }
+
+    .topnav-controls { right: 72px; }
+
+    .topnav #myLinks.open {
+        max-height: 600px;
+    }
+
+    .topnav a.normal {
+        color: white;
+        float: none;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+    }
+
+    .topnav button.icon {
+        color: white;
+        display: block;
+        padding: 10px 16px;
+        font-size: 17px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 5%;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .topnav button.icon .icon-wrap {
+        position: relative;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+    }
+
+    .topnav button.icon .icon-bars,
+    .topnav button.icon .icon-xmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .topnav button.icon .icon-bars  { opacity: 1; transform: rotate(0deg); }
+    .topnav button.icon .icon-xmark { opacity: 0; transform: rotate(-90deg); }
+
+    .topnav button.icon.active .icon-bars  { opacity: 0; transform: rotate(90deg); }
+    .topnav button.icon.active .icon-xmark { opacity: 1; transform: rotate(0deg); }
+
+    .topnav a.right {
+        color: white;
+        float: none;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        margin-right: 0;
+    }
+
+    .topnav .dropdown {
+        float: none;
+        width: 100%;
+    }
+
+    .topnav .dropdown .dropbtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 16px;
+    }
+
+    .topnav .dropdown .dropdown-arrow {
+        font-size: 13px;
+        transition: transform 0.25s ease;
+    }
+
+    .topnav .dropdown.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    .topnav .dropdown-content {
+        display: block;
+        position: static;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: none;
+        border-top: none;
+        background-color: transparent;
+        min-width: unset;
+    }
+
+    .topnav .dropdown.open .dropdown-content {
+        max-height: 200px;
+    }
+
+    .topnav .dropdown-content a {
+        padding: 10px 16px;
+        font-size: 15px;
+        color: rgba(242, 242, 242, 0.85);
+        text-align: center;
+    }
+
+    .topnav .dropdown-content a:hover {
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .topnav .dropdown-content a.active {
+        box-shadow: none;
+        color: #FF5F05;
+    }
+
+    .topnav a.normal.active {
+        color: #FF5F05;
+    }
+}

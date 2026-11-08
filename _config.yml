@@ -28,7 +28,7 @@ favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
 
 enable_footnote: false
-auto_dark_mode: true
+auto_dark_mode: false
 font: "Sans Serif"
 
 remote_theme: yaoyao-liu/minimal-light
