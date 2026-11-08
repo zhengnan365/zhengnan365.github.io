@@ -70,7 +70,7 @@ main:
   conference: Energy
   conference_short: Energy
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W7141300279
   stable_id: 10.1016/j.est.2026.121781
@@ -176,8 +176,8 @@ main:
     211-213. DOI: 10.37155/2717-5197-0816-71.'
   conference: 机械与电子控制工程
   conference_short: 机械与电子控制工程
-  pdf: null
-  open_access: false
+  pdf: http://ojs.omniscient.sg/index.php/mece/article/download/85510/83798
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W7222594926
   stable_id: 10.37155/2717-5316-0717-34
@@ -206,8 +206,8 @@ main:
     100-102. DOI: 10.37155/2717-5316-0717-34.'
   conference: 工程学研究与实用
   conference_short: 工程学研究与实用
-  pdf: null
-  open_access: false
+  pdf: http://ojs.omniscient.sg/index.php/esra/article/download/85933/84222
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4417483727
   stable_id: 10.1016/j.applthermaleng.2025.129518
@@ -660,7 +660,7 @@ main:
   conference: Applied Energy
   conference_short: Applied Energy
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4405322960
   stable_id: 10.1016/j.rser.2024.115164
@@ -695,7 +695,7 @@ main:
   conference: Renewable and Sustainable Energy Reviews
   conference_short: RSER
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4401991413
   stable_id: 10.1016/j.apenergy.2024.124288
@@ -745,7 +745,7 @@ main:
   conference: Applied Energy
   conference_short: Applied Energy
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4400948352
   stable_id: 10.1016/j.apenergy.2024.123938
@@ -793,7 +793,7 @@ main:
   conference: Applied Energy
   conference_short: Applied Energy
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4400943708
   stable_id: 10.1016/j.energy.2024.132581
@@ -873,7 +873,7 @@ main:
   conference: Applied Energy
   conference_short: Applied Energy
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4392505097
   stable_id: 10.1016/j.enconman.2024.118262
@@ -1324,7 +1324,7 @@ main:
   conference: SSRN Electronic Journal
   conference_short: Preprint
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4385845191
   stable_id: 10.2139/ssrn.4541356
@@ -1358,7 +1358,7 @@ main:
   conference: SSRN Electronic Journal
   conference_short: Preprint
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4311091822
   stable_id: 10.1016/j.energy.2022.126343
@@ -1443,7 +1443,7 @@ main:
   conference: Applied Energy
   conference_short: Applied Energy
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4309487580
   stable_id: 10.1016/j.applthermaleng.2022.119648
@@ -1652,8 +1652,8 @@ main:
     Energy Technologies and Assessments, 2022, 52: 102344. DOI: 10.1016/j.seta.2022.102344.'
   conference: Sustainable Energy Technologies and Assessments
   conference_short: SETA
-  pdf: null
-  open_access: false
+  pdf: https://www.sciencedirect.com/science/article/pii/S2213138822003964
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4283165924
   stable_id: 10.1007/s12206-022-0526-7
@@ -1757,8 +1757,8 @@ main:
     258: 115560. DOI: 10.1016/j.enconman.2022.115560.'
   conference: Energy Conversion and Management
   conference_short: ECM
-  pdf: null
-  open_access: false
+  pdf: https://www.sciencedirect.com/science/article/pii/S0196890422003569
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4304759257
   stable_id: 10.1016/j.energy.2022.125725
@@ -1794,7 +1794,7 @@ main:
   conference: Energy
   conference_short: Energy
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4225633053
   stable_id: 10.1016/j.energy.2022.124072
@@ -1828,7 +1828,7 @@ main:
   conference: Energy
   conference_short: Energy
   pdf: null
-  open_access: false
+  open_access: true
   image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W2367407407
   stable_id: W2367407407

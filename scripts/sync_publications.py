@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+import tempfile
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -37,6 +38,8 @@ SELECT_FIELDS = ",".join(
         "primary_location",
         "biblio",
         "cited_by_count",
+        "open_access",
+        "best_oa_location",
     ]
 )
 
@@ -130,20 +133,17 @@ def normalize(
     source = (work.get("primary_location") or {}).get("source") or {}
     venue = source.get("display_name") or ""
     work_type = work.get("type")
-    # These fields are optional in the exact OpenAlex select list.  Keeping
-    # them in the schema preserves the current Jekyll rendering contract.
+    # Keep the existing presentation fields until the publication component
+    # removes the legacy PDF/Open Access controls. Explicit override values
+    # retain precedence over these derived defaults.
     oa = work.get("open_access") or {}
     best_oa = work.get("best_oa_location") or {}
-    record.update(
-        {
-            "conference": venue,
-            "conference_short": venue_abbreviation(venue, work_type),
-            "pdf": best_oa.get("pdf_url"),
-            "url": record.get("doi") or best_oa.get("landing_page_url") or work.get("id"),
-            "open_access": bool(oa.get("is_oa")),
-            "image": "assets/img/pub-placeholder.svg",
-        }
-    )
+    record.setdefault("conference", venue)
+    record.setdefault("conference_short", venue_abbreviation(venue, work_type))
+    record.setdefault("pdf", best_oa.get("pdf_url"))
+    record.setdefault("url", record.get("doi") or best_oa.get("landing_page_url") or work.get("id"))
+    record.setdefault("open_access", bool(oa.get("is_oa")))
+    record.setdefault("image", "assets/img/pub-placeholder.svg")
     return record
 
 
@@ -187,15 +187,24 @@ def build_records(
         raise RuntimeError("OpenAlex returned no works; preserving previous generated data")
 
     unique: dict[str, dict] = {}
+    duplicate_count = 0
     for work in works:
         record = normalize(work, overrides, metrics)
         if record.pop("_exclude", False):
             continue
         key = record.get("stable_id")
         if key:
+            if key in unique:
+                duplicate_count += 1
+                print(
+                    f"Warning: skipping duplicate publication stable_id {key}",
+                    file=sys.stderr,
+                )
             unique[key] = record
     if not unique:
         raise RuntimeError("No valid publications remained after normalization")
+    if duplicate_count:
+        print(f"Warning: skipped {duplicate_count} duplicate publication(s)", file=sys.stderr)
     return sorted(
         unique.values(),
         key=lambda item: (item.get("year") or 0, item.get("date") or ""),
@@ -203,17 +212,67 @@ def build_records(
     )
 
 
-def atomic_write(path: Path, content: str) -> None:
-    """Replace a file atomically after writing it beside the destination."""
-
+def _stage_file(path: Path, content: str) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
+    descriptor, temporary_name = tempfile.mkstemp(
+        prefix=f".{path.name}.", suffix=".tmp", dir=path.parent
+    )
+    os.close(descriptor)
+    temporary = Path(temporary_name)
     try:
         temporary.write_text(content, encoding="utf-8")
-        temporary.replace(path)
+    except BaseException:
+        temporary.unlink(missing_ok=True)
+        raise
+    return temporary
+
+
+def atomic_write_batch(files: dict[Path, str]) -> None:
+    """Atomically replace several files, rolling back if any replacement fails."""
+
+    staged: list[tuple[Path, Path]] = []
+    transactions: list[tuple[Path, Path | None]] = []
+    try:
+        for path, content in files.items():
+            path = Path(path)
+            staged.append((path, _stage_file(path, content)))
+        for path, temporary in staged:
+            backup: Path | None = None
+            if path.exists():
+                descriptor, backup_name = tempfile.mkstemp(
+                    prefix=f".{path.name}.", suffix=".bak", dir=path.parent
+                )
+                os.close(descriptor)
+                backup = Path(backup_name)
+                backup.unlink(missing_ok=True)
+                os.replace(path, backup)
+            transactions.append((path, backup))
+            os.replace(temporary, path)
+    except BaseException:
+        # Restore every destination whose original was moved aside.  A
+        # destination with no original is removed if its replacement landed.
+        for path, backup in reversed(transactions):
+            try:
+                path.unlink(missing_ok=True)
+                if backup is not None and backup.exists():
+                    os.replace(backup, path)
+            except OSError:
+                # Preserve the original exception while making a best effort
+                # to restore the previous pair.
+                pass
+        raise
     finally:
-        if temporary.exists():
-            temporary.unlink()
+        for _, temporary in staged:
+            temporary.unlink(missing_ok=True)
+        for _, backup in transactions:
+            if backup is not None:
+                backup.unlink(missing_ok=True)
+
+
+def atomic_write(path: Path, content: str) -> None:
+    """Replace one file atomically (compatibility wrapper)."""
+
+    atomic_write_batch({Path(path): content})
 
 
 def _generated_at(records: list[dict], json_path: Path) -> str:
@@ -257,8 +316,7 @@ def write_outputs(records: list[dict], root: Path = ROOT) -> None:
     if parsed_json.get("publications") != records:
         raise ValueError("Generated JSON records failed validation")
 
-    atomic_write(yaml_path, yaml_content)
-    atomic_write(json_path, json_content)
+    atomic_write_batch({yaml_path: yaml_content, json_path: json_content})
 
 
 def main() -> int:

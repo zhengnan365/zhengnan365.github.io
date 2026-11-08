@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T02:47:45+00:00",
+  "generated_at": "2026-11-08T02:57:06+00:00",
   "source": "OpenAlex",
   "author_id": "A5001145059",
   "orcid": "0000-0002-2066-1506",
@@ -67,7 +67,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -164,8 +164,8 @@
       "citation_gbt7714": "Nan Zheng. 超临界锅炉低负荷配煤掺烧与NOx协同控制技术应用[J]. 机械与电子控制工程, 2026, 8(16): 211-213. DOI: 10.37155/2717-5197-0816-71.",
       "conference": "机械与电子控制工程",
       "conference_short": "机械与电子控制工程",
-      "pdf": null,
-      "open_access": false,
+      "pdf": "http://ojs.omniscient.sg/index.php/mece/article/download/85510/83798",
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -196,8 +196,8 @@
       "citation_gbt7714": "Nan Zheng. 锅炉燃烧器配风优化降低过热器再热器超温的试验研究[J]. 工程学研究与实用, 2026, 7(17): 100-102. DOI: 10.37155/2717-5316-0717-34.",
       "conference": "工程学研究与实用",
       "conference_short": "工程学研究与实用",
-      "pdf": null,
-      "open_access": false,
+      "pdf": "http://ojs.omniscient.sg/index.php/esra/article/download/85933/84222",
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -609,7 +609,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -642,7 +642,7 @@
       "conference": "Renewable and Sustainable Energy Reviews",
       "conference_short": "RSER",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -688,7 +688,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -734,7 +734,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -813,7 +813,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -1241,7 +1241,7 @@
       "conference": "SSRN Electronic Journal",
       "conference_short": "Preprint",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -1273,7 +1273,7 @@
       "conference": "SSRN Electronic Journal",
       "conference_short": "Preprint",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -1352,7 +1352,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -1549,8 +1549,8 @@
       "citation_gbt7714": "Yi Fei Sun, Wenjin Zheng, Shiyu Ji, Anwei Sun, Wei Shuai, Nan Zheng, Yu Han, Gang Xiao, Meng Ni, Haoran Xu. Dynamic behavior of high-temperature CO2/H2O co-electrolysis coupled with real fluctuating renewable power[J]. Sustainable Energy Technologies and Assessments, 2022, 52: 102344. DOI: 10.1016/j.seta.2022.102344.",
       "conference": "Sustainable Energy Technologies and Assessments",
       "conference_short": "SETA",
-      "pdf": null,
-      "open_access": false,
+      "pdf": "https://www.sciencedirect.com/science/article/pii/S2213138822003964",
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -1648,8 +1648,8 @@
       "citation_gbt7714": "Yi Fei Sun, Jiong Yuan Lu, Qiuhua Liu, Wei Shuai, Anwei Sun, Nan Zheng, Yu Han, Gang Xiao, Jin Xuan, Meng Ni, Haoran Xu. Multi-objective optimizations of solid oxide co-electrolysis with intermittent renewable power supply via multi-physics simulation and deep learning strategy[J]. Energy Conversion and Management, 2022, 258: 115560. DOI: 10.1016/j.enconman.2022.115560.",
       "conference": "Energy Conversion and Management",
       "conference_short": "ECM",
-      "pdf": null,
-      "open_access": false,
+      "pdf": "https://www.sciencedirect.com/science/article/pii/S0196890422003569",
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -1682,7 +1682,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
@@ -1715,7 +1715,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
+      "open_access": true,
       "image": "assets/img/pub-placeholder.svg"
     },
     {
