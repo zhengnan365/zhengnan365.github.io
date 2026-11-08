@@ -87,6 +87,23 @@ class PublicationDataTests(unittest.TestCase):
         record = normalize_work(work, AUTHOR_ID, {}, metrics)
         self.assertIsNone(record["metrics"])
 
+    def test_formats_complete_gbt7714_journal_citation(self):
+        record = normalize_work(sample_work(), AUTHOR_ID, {}, {})
+        self.assertEqual(
+            record["citation_gbt7714"],
+            "First Author, Nan Zheng. A representative energy paper[J]. Applied Energy, 2025, 350(1): 1-10. DOI: 10.1234/example.doi.",
+        )
+
+    def test_formats_partial_citation_without_empty_punctuation(self):
+        work = sample_work()
+        work["doi"] = None
+        work["biblio"] = {}
+        record = normalize_work(work, AUTHOR_ID, {}, {})
+        self.assertEqual(
+            record["citation_gbt7714"],
+            "First Author, Nan Zheng. A representative energy paper[J]. Applied Energy, 2025.",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -92,6 +92,38 @@ def match_metrics(
     return result
 
 
+def page_range(first_page: str | None, last_page: str | None) -> str | None:
+    """Return a compact page range, omitting duplicate or missing endpoints."""
+
+    if first_page and last_page and first_page != last_page:
+        return f"{first_page}-{last_page}"
+    return first_page or last_page
+
+
+def format_gbt7714(record: dict[str, Any]) -> str:
+    """Format a normalized record as a GB/T 7714-2015 journal citation."""
+
+    type_mark = "J" if record.get("type") in {"article", "review"} else "C"
+    parts = [f"{record['authors'].replace('*', '')}. {record['title']}[{type_mark}]."]
+    publication = record.get("venue") or ""
+    if record.get("year"):
+        publication += f", {record['year']}"
+    volume_issue = record.get("volume") or ""
+    if record.get("issue"):
+        volume_issue += f"({record['issue']})"
+    if volume_issue:
+        publication += f", {volume_issue}"
+    pages = page_range(record.get("first_page"), record.get("last_page"))
+    if pages:
+        publication += f": {pages}"
+    if publication:
+        parts.append(f" {publication}.")
+    normalized_doi = normalize_doi(record.get("doi"))
+    if normalized_doi:
+        parts.append(f" DOI: {normalized_doi}.")
+    return "".join(parts).replace("..", ".")
+
+
 def normalize_work(
     work: dict[str, Any],
     owner_author_id: str,
@@ -138,4 +170,5 @@ def normalize_work(
     override = overrides.get(normalized_doi or "") or overrides.get(work.get("id") or "") or {}
     record["_exclude"] = bool(override.get("exclude"))
     record.update({key: value for key, value in override.items() if key != "exclude"})
+    record["citation_gbt7714"] = record.get("citation_gbt7714") or format_gbt7714(record)
     return record
