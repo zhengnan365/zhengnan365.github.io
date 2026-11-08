@@ -187,6 +187,10 @@ class SyncPublicationTests(unittest.TestCase):
             sync_publications.validate_overrides({"doi:10.1234/example": {"exclude": True}})
         with self.assertRaises(ValueError):
             sync_publications.validate_overrides({"https://doi.org/10.1234/example": {"exclude": True}})
+        with self.assertRaises(ValueError):
+            sync_publications.validate_overrides({"https://openalex.org/A123": {"exclude": True}})
+        with self.assertRaises(ValueError):
+            sync_publications.validate_overrides({"https://openalex.org/S123": {"exclude": True}})
         sync_publications.validate_overrides(
             {
                 "10.1234/example": {"exclude": True},
@@ -220,6 +224,26 @@ class SyncPublicationTests(unittest.TestCase):
             ]
         )
         with patch("scripts.sync_publications.urllib.request.urlopen", side_effect=lambda *args, **kwargs: next(responses)):
+            with self.assertRaises(RuntimeError):
+                sync_publications.fetch_works()
+
+    def test_fetch_works_requires_result_count(self):
+        class Response:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self):
+                return json.dumps(
+                    {
+                        "meta": {"next_cursor": None},
+                        "results": [{"id": "https://openalex.org/W1"}],
+                    }
+                ).encode("utf-8")
+
+        with patch("scripts.sync_publications.urllib.request.urlopen", return_value=Response()):
             with self.assertRaises(RuntimeError):
                 sync_publications.fetch_works()
 

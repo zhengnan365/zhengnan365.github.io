@@ -122,11 +122,18 @@ def fetch_works() -> list[dict]:
         meta = payload.get("meta") or {}
         if not isinstance(meta, dict):
             raise RuntimeError("OpenAlex returned malformed pagination metadata")
-        if expected_count is None and meta.get("count") is not None:
-            try:
-                expected_count = int(meta["count"])
-            except (TypeError, ValueError) as error:
-                raise RuntimeError("OpenAlex returned an invalid result count") from error
+        if meta.get("count") is None:
+            raise RuntimeError("OpenAlex omitted its result count; preserving previous generated data")
+        try:
+            page_count = int(meta["count"])
+        except (TypeError, ValueError) as error:
+            raise RuntimeError("OpenAlex returned an invalid result count") from error
+        if page_count < 0:
+            raise RuntimeError("OpenAlex returned a negative result count")
+        if expected_count is None:
+            expected_count = page_count
+        elif page_count != expected_count:
+            raise RuntimeError("OpenAlex returned inconsistent result counts")
         results = payload.get("results")
         if not isinstance(results, list) or not results:
             raise RuntimeError(
@@ -164,7 +171,7 @@ def validate_overrides(overrides: dict[str, dict[str, Any]]) -> None:
             re.fullmatch(r"10\.\d{4,9}/\S+", identifier)
         )
         valid_openalex = bool(
-            re.fullmatch(r"https://openalex\.org/[A-Z]\d+", identifier)
+            re.fullmatch(r"https://openalex\.org/W\d+", identifier)
         )
         if not (valid_doi or valid_openalex):
             raise ValueError(
