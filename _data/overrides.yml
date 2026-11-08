@@ -1,6 +1,6 @@
-# Manual presentation overrides keyed by DOI or OpenAlex work ID.
-# Example:
-# https://doi.org/10.1016/j.energy.2026.142040:
-#   selected: true
-#   note: Representative work
-
+# Overrides are keyed by normalized DOI or full OpenAlex work ID.
+# "10.1000/example":
+#   exclude: true
+# "https://openalex.org/W1234567890":
+#   display_authors: "Author A, <strong>Nan Zheng</strong>*"
+#   has_corresponding_author: true

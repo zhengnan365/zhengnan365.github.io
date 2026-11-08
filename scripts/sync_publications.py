@@ -10,17 +10,58 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 import yaml
+
+try:
+    from scripts.publication_data import normalize_work, short_openalex_id
+except ModuleNotFoundError:  # pragma: no cover - supports direct script execution
+    from publication_data import normalize_work, short_openalex_id
 
 
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR_ID = os.environ.get("OPENALEX_AUTHOR_ID", "A5001145059")
 ORCID = os.environ.get("ORCID", "0000-0002-2066-1506")
 API_URL = "https://api.openalex.org/works"
+SELECT_FIELDS = ",".join(
+    [
+        "id",
+        "doi",
+        "title",
+        "publication_year",
+        "publication_date",
+        "type",
+        "authorships",
+        "corresponding_author_ids",
+        "primary_location",
+        "biblio",
+        "cited_by_count",
+    ]
+)
+
+VENUE_ABBREVIATIONS = {
+    "Applied Energy": "Applied Energy",
+    "Applied Thermal Engineering": "ATE",
+    "Energy": "Energy",
+    "Energy Conversion and Management": "ECM",
+    "Fuel": "Fuel",
+    "International Journal of Hydrogen Energy": "IJHE",
+    "Journal of Energy Storage": "JES",
+    "Journal of Mechanical Science and Technology": "JMST",
+    "Journal of Thermal Science": "JTS",
+    "Physics of Fluids": "PoF",
+    "Renewable Energy": "RE",
+    "Renewable and Sustainable Energy Reviews": "RSER",
+    "Science China Technological Sciences": "SCTS",
+    "SSRN Electronic Journal": "Preprint",
+    "Sustainable Energy Technologies and Assessments": "SETA",
+}
 
 
 def fetch_works() -> list[dict]:
+    """Fetch all works for the configured OpenAlex author."""
+
     works: list[dict] = []
     cursor = "*"
     while cursor:
@@ -30,7 +71,7 @@ def fetch_works() -> list[dict]:
                 "per-page": "100",
                 "sort": "publication_date:desc",
                 "cursor": cursor,
-                "select": "id,doi,title,publication_year,publication_date,type,authorships,primary_location,open_access,best_oa_location",
+                "select": SELECT_FIELDS,
             }
         )
         request = urllib.request.Request(
@@ -39,82 +80,192 @@ def fetch_works() -> list[dict]:
         )
         with urllib.request.urlopen(request, timeout=30) as response:
             payload = json.load(response)
-        for work in payload.get("results", []):
-            works.append(work)
+        results = payload.get("results") or []
+        works.extend(results)
         cursor = payload.get("meta", {}).get("next_cursor")
-        if not payload.get("results"):
+        if not results:
             break
     return works
 
 
-def stable_key(work: dict) -> str:
-    return (work.get("doi") or work.get("id") or work.get("title") or "").lower().strip()
+def venue_abbreviation(venue: str, work_type: str | None) -> str:
+    if venue in VENUE_ABBREVIATIONS:
+        return VENUE_ABBREVIATIONS[venue]
+    if work_type == "conference-paper":
+        return "Conference"
+    if work_type == "preprint":
+        return "Preprint"
+    return venue[:18] if venue else "Publication"
 
 
-def normalize(work: dict) -> dict:
+def normalize(
+    work: dict,
+    overrides: dict[str, dict[str, Any]] | None = None,
+    metrics: dict[str, dict[str, Any]] | None = None,
+) -> dict:
+    """Normalize a work and retain the site's existing presentation fields."""
+
+    # Some OpenAlex responses expose corresponding authors only through the
+    # work-level ``corresponding_author_ids`` list.  Fold that signal into the
+    # per-authorship shape consumed by publication_data without mutating the
+    # fetched payload.
+    corresponding_ids = {
+        short_openalex_id(value)
+        for value in (work.get("corresponding_author_ids") or [])
+        if value
+    }
+    if corresponding_ids:
+        normalized_work = dict(work)
+        normalized_authorships = []
+        for authorship in work.get("authorships") or []:
+            item = dict(authorship)
+            author = item.get("author") or {}
+            if short_openalex_id(author.get("id")) in corresponding_ids:
+                item["is_corresponding"] = True
+            normalized_authorships.append(item)
+        normalized_work["authorships"] = normalized_authorships
+    else:
+        normalized_work = work
+    record = normalize_work(normalized_work, AUTHOR_ID, overrides or {}, metrics or {})
     source = (work.get("primary_location") or {}).get("source") or {}
-    authors = []
-    for authorship in work.get("authorships") or []:
-        author = authorship.get("author") or {}
-        name = author.get("display_name") or authorship.get("raw_author_name")
-        if name:
-            authors.append(name)
+    venue = source.get("display_name") or ""
+    work_type = work.get("type")
+    # These fields are optional in the exact OpenAlex select list.  Keeping
+    # them in the schema preserves the current Jekyll rendering contract.
     oa = work.get("open_access") or {}
     best_oa = work.get("best_oa_location") or {}
-    return {
-        "id": work.get("id"),
-        "doi": work.get("doi"),
-        "title": work.get("title") or "Untitled work",
-        "authors": ", ".join(authors),
-        "venue": source.get("display_name") or "",
-        "year": work.get("publication_year"),
-        "date": work.get("publication_date"),
-        "type": work.get("type"),
-        "pdf": best_oa.get("pdf_url"),
-        "url": (work.get("doi") or best_oa.get("landing_page_url") or work.get("id")),
-        "open_access": bool(oa.get("is_oa")),
-    }
+    record.update(
+        {
+            "conference": venue,
+            "conference_short": venue_abbreviation(venue, work_type),
+            "pdf": best_oa.get("pdf_url"),
+            "url": record.get("doi") or best_oa.get("landing_page_url") or work.get("id"),
+            "open_access": bool(oa.get("is_oa")),
+            "image": "assets/img/pub-placeholder.svg",
+        }
+    )
+    return record
 
 
-def load_overrides() -> dict:
-    path = ROOT / "_data" / "overrides.yml"
+def _load_mapping(path: Path) -> dict[str, dict[str, Any]]:
     if not path.exists():
         return {}
-    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    payload = yaml.safe_load(path.read_text(encoding="utf-8"))
+    if payload is None:
+        return {}
+    if not isinstance(payload, dict):
+        raise ValueError(f"Expected a YAML mapping in {path}")
+    if any(not isinstance(value, dict) for value in payload.values()):
+        raise ValueError(f"Expected mapping values in {path}")
+    return payload
 
 
-def write_outputs(records: list[dict]) -> None:
+def load_overrides(root: Path = ROOT) -> dict[str, dict[str, Any]]:
+    """Load manually curated publication overrides."""
+
+    return _load_mapping(root / "_data" / "overrides.yml")
+
+
+def load_metrics(root: Path = ROOT) -> dict[str, dict[str, Any]]:
+    """Load curated journal metrics keyed by ISSN-L/ISSN."""
+
+    return _load_mapping(root / "_data" / "journal_metrics.yml")
+
+
+def build_records(
+    works: list[dict],
+    overrides: dict[str, dict[str, Any]],
+    metrics: dict[str, dict[str, Any]],
+) -> list[dict]:
+    """Normalize, filter, deduplicate, and sort fetched works.
+
+    An empty response is treated as a failed synchronization.  Raising before
+    output generation leaves the previous generated files untouched.
+    """
+
+    if not works:
+        raise RuntimeError("OpenAlex returned no works; preserving previous generated data")
+
+    unique: dict[str, dict] = {}
+    for work in works:
+        record = normalize(work, overrides, metrics)
+        if record.pop("_exclude", False):
+            continue
+        key = record.get("stable_id")
+        if key:
+            unique[key] = record
+    if not unique:
+        raise RuntimeError("No valid publications remained after normalization")
+    return sorted(
+        unique.values(),
+        key=lambda item: (item.get("year") or 0, item.get("date") or ""),
+        reverse=True,
+    )
+
+
+def atomic_write(path: Path, content: str) -> None:
+    """Replace a file atomically after writing it beside the destination."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    try:
+        temporary.write_text(content, encoding="utf-8")
+        temporary.replace(path)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
+
+
+def _generated_at(records: list[dict], json_path: Path) -> str:
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    data = {
+    if not json_path.exists():
+        return generated_at
+    try:
+        existing = json.loads(json_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return generated_at
+    if existing.get("publications") == records and existing.get("generated_at"):
+        return existing["generated_at"]
+    return generated_at
+
+
+def write_outputs(records: list[dict], root: Path = ROOT) -> None:
+    """Validate and atomically write identical YAML and JSON publication lists."""
+
+    root = Path(root)
+    yaml_path = root / "_data" / "publications.yml"
+    json_path = root / "assets" / "data" / "site-data.json"
+    generated_at = _generated_at(records, json_path)
+    payload = {
         "generated_at": generated_at,
         "source": "OpenAlex",
         "author_id": AUTHOR_ID,
         "orcid": ORCID,
         "publications": records,
     }
-    yaml_path = ROOT / "_data" / "publications.yml"
-    yaml_path.write_text(
-        yaml.safe_dump({"main": records}, allow_unicode=True, sort_keys=False),
-        encoding="utf-8",
+    yaml_content = yaml.safe_dump(
+        {"main": records}, allow_unicode=True, sort_keys=False
     )
-    json_path = ROOT / "assets" / "data" / "site-data.json"
-    json_path.parent.mkdir(parents=True, exist_ok=True)
-    json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    json_content = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+
+    # Parse and compare the serialized values before either destination is
+    # replaced.  This catches serializer regressions without touching data.
+    parsed_yaml = yaml.safe_load(yaml_content)
+    parsed_json = json.loads(json_content)
+    if not isinstance(parsed_yaml, dict) or parsed_yaml.get("main") != records:
+        raise ValueError("Generated YAML records failed validation")
+    if parsed_json.get("publications") != records:
+        raise ValueError("Generated JSON records failed validation")
+
+    atomic_write(yaml_path, yaml_content)
+    atomic_write(json_path, json_content)
 
 
 def main() -> int:
     works = fetch_works()
-    unique: dict[str, dict] = {}
-    for work in works:
-        key = stable_key(work)
-        if key:
-            unique[key] = normalize(work)
     overrides = load_overrides()
-    records = []
-    for record in sorted(unique.values(), key=lambda item: (item.get("year") or 0, item.get("date") or ""), reverse=True):
-        override = overrides.get(record.get("doi") or record.get("id") or "", {})
-        record.update(override)
-        records.append(record)
+    metrics = load_metrics()
+    records = build_records(works, overrides, metrics)
     write_outputs(records)
     print(f"Wrote {len(records)} publications for {AUTHOR_ID}")
     return 0
