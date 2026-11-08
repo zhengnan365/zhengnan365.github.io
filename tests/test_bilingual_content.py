@@ -1,3 +1,4 @@
+import re
 import unittest
 from pathlib import Path
 
@@ -48,18 +49,38 @@ class BilingualContentTests(unittest.TestCase):
                 for record in records:
                     self.assertTrue(record[f"{field}_zh"])
                     self.assertTrue(record[f"{field}_en"])
-                self.assertIn(f"{{{{ item.{field}_zh }}}}", page)
-                self.assertIn(f"{{{{ item.{field}_en }}}}", page)
+                section = re.search(
+                    rf'<section\b[^>]*\bid="{collection}"[^>]*>(.*?)</section>',
+                    page,
+                    re.DOTALL,
+                )
+                self.assertIsNotNone(section)
+                block = section.group(1)
+                self.assertIn(f"site.data.{collection}", block)
+                self.assertIn(f"{{{{ item.{field}_zh }}}}", block)
+                self.assertIn(f"{{{{ item.{field}_en }}}}", block)
         projects = yaml.safe_load((ROOT / "_data/projects.yml").read_text(encoding="utf-8"))
         for project in projects:
             self.assertTrue(project["role_zh"])
             self.assertTrue(project["role_en"])
             self.assertTrue(project["amount_zh"])
             self.assertTrue(project["amount_en"])
-        self.assertIn("{{ item.role_zh }}", page)
-        self.assertIn("{{ item.role_en }}", page)
-        self.assertIn("{{ item.amount_zh }}", page)
-        self.assertIn("{{ item.amount_en }}", page)
+        projects_block = re.search(
+            r'<section\b[^>]*\bid="projects"[^>]*>(.*?)</section>',
+            page,
+            re.DOTALL,
+        ).group(1)
+        for field in ("role_zh", "role_en", "amount_zh", "amount_en"):
+            self.assertIn("{{ item." + field + " }}", projects_block)
+
+    def test_project_translations_retain_research_mechanisms_and_control(self):
+        projects = yaml.safe_load((ROOT / "_data/projects.yml").read_text(encoding="utf-8"))
+        first = projects[0]["title_en"].lower()
+        second = projects[1]["title_en"].lower()
+        self.assertIn("coupling mechanisms", first)
+        self.assertIn("coordinated control", first)
+        self.assertIn("integration mechanisms", second)
+        self.assertIn("control optimization", second)
 
 
 if __name__ == "__main__":
