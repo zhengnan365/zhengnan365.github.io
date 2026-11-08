@@ -104,6 +104,36 @@ class SyncPublicationTests(unittest.TestCase):
             self.assertIn("Old", yaml_path.read_text(encoding="utf-8"))
             self.assertIn("Old", json_path.read_text(encoding="utf-8"))
 
+    def test_failed_rollback_preserves_backup_path(self):
+        records = [{"stable_id": "10.1/example", "title": "New", "year": 2025}]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            yaml_path = root / "_data/publications.yml"
+            json_path = root / "assets/data/site-data.json"
+            yaml_path.parent.mkdir(parents=True)
+            json_path.parent.mkdir(parents=True)
+            yaml_path.write_text("main:\n- title: Old\n", encoding="utf-8")
+            json_path.write_text('{"publications":[{"title":"Old"}]}', encoding="utf-8")
+            real_replace = sync_publications.os.replace
+            failures = 0
+
+            def fail_replace_and_restore(source, destination):
+                nonlocal failures
+                if Path(destination).name == "site-data.json" and failures < 2:
+                    failures += 1
+                    raise OSError("simulated replace and rollback failure")
+                return real_replace(source, destination)
+
+            with patch.object(
+                sync_publications.os, "replace", side_effect=fail_replace_and_restore
+            ):
+                with self.assertRaises(RuntimeError) as raised:
+                    sync_publications.write_outputs(records, root)
+            message = str(raised.exception)
+            self.assertIn("backup preserved at", message)
+            preserved = Path(message.split("backup preserved at ", 1)[1].split(" (", 1)[0])
+            self.assertTrue(preserved.exists())
+
     def test_overrides_keep_precedence_over_derived_fields(self):
         work = {
             "id": "https://openalex.org/W1",
@@ -132,6 +162,25 @@ class SyncPublicationTests(unittest.TestCase):
         self.assertEqual(record["conference"], "Manual venue")
         self.assertEqual(record["pdf"], "https://example.test/manual.pdf")
         self.assertTrue(record["open_access"])
+
+    def test_invalid_override_values_are_rejected_before_normalization(self):
+        work = {
+            "id": "https://openalex.org/W1",
+            "doi": "https://doi.org/10.1234/example",
+            "title": "Example",
+            "publication_year": 2025,
+            "type": "article",
+            "authorships": [],
+            "primary_location": {"source": {"display_name": "Journal"}},
+        }
+        with self.assertRaises(ValueError):
+            sync_publications.build_records(
+                [work], {"10.1234/example": {"exclude": "yes"}}, {}
+            )
+        with self.assertRaises(ValueError):
+            sync_publications.build_records(
+                [work], {"10.1234/example": {"unexpected": True}}, {}
+            )
 
 
 if __name__ == "__main__":

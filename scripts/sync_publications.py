@@ -61,6 +61,38 @@ VENUE_ABBREVIATIONS = {
     "Sustainable Energy Technologies and Assessments": "SETA",
 }
 
+OVERRIDE_TYPES: dict[str, tuple[type, ...]] = {
+    "exclude": (bool,),
+    "stable_id": (str,),
+    "id": (str,),
+    "doi": (str, type(None)),
+    "title": (str,),
+    "authors": (str,),
+    "display_authors": (str,),
+    "has_corresponding_author": (bool,),
+    "venue": (str,),
+    "issn_l": (str, type(None)),
+    "issns": (list, type(None)),
+    "year": (int, type(None)),
+    "date": (str, type(None)),
+    "type": (str, type(None)),
+    "volume": (str, type(None)),
+    "issue": (str, type(None)),
+    "first_page": (str, type(None)),
+    "last_page": (str, type(None)),
+    "url": (str, type(None)),
+    "openalex_url": (str, type(None)),
+    "citation_count": (int, type(None)),
+    "citation_source": (str,),
+    "citation_gbt7714": (str,),
+    "metrics": (dict, type(None)),
+    "conference": (str,),
+    "conference_short": (str,),
+    "pdf": (str, type(None)),
+    "open_access": (bool,),
+    "image": (str,),
+}
+
 
 def fetch_works() -> list[dict]:
     """Fetch all works for the configured OpenAlex author."""
@@ -99,6 +131,30 @@ def venue_abbreviation(venue: str, work_type: str | None) -> str:
     if work_type == "preprint":
         return "Preprint"
     return venue[:18] if venue else "Publication"
+
+
+def validate_overrides(overrides: dict[str, dict[str, Any]]) -> None:
+    """Reject unknown override fields and values with the wrong type."""
+
+    if not isinstance(overrides, dict):
+        raise ValueError("Publication overrides must be a YAML mapping")
+    for identifier, values in overrides.items():
+        if not isinstance(identifier, str) or not identifier.strip():
+            raise ValueError("Publication override keys must be non-empty strings")
+        if not isinstance(values, dict):
+            raise ValueError(f"Override {identifier!r} must be a mapping")
+        unknown = set(values) - set(OVERRIDE_TYPES)
+        if unknown:
+            names = ", ".join(sorted(unknown))
+            raise ValueError(f"Override {identifier!r} has unsupported field(s): {names}")
+        for field, value in values.items():
+            expected = OVERRIDE_TYPES[field]
+            invalid_bool_for_int = field in {"year", "citation_count"} and isinstance(value, bool)
+            if invalid_bool_for_int or not isinstance(value, expected):
+                names = ", ".join(item.__name__ for item in expected)
+                raise ValueError(
+                    f"Override {identifier!r} field {field!r} must be {names}"
+                )
 
 
 def normalize(
@@ -163,7 +219,9 @@ def _load_mapping(path: Path) -> dict[str, dict[str, Any]]:
 def load_overrides(root: Path = ROOT) -> dict[str, dict[str, Any]]:
     """Load manually curated publication overrides."""
 
-    return _load_mapping(root / "_data" / "overrides.yml")
+    overrides = _load_mapping(root / "_data" / "overrides.yml")
+    validate_overrides(overrides)
+    return overrides
 
 
 def load_metrics(root: Path = ROOT) -> dict[str, dict[str, Any]]:
@@ -185,6 +243,7 @@ def build_records(
 
     if not works:
         raise RuntimeError("OpenAlex returned no works; preserving previous generated data")
+    validate_overrides(overrides)
 
     unique: dict[str, dict] = {}
     duplicate_count = 0
@@ -197,14 +256,14 @@ def build_records(
             if key in unique:
                 duplicate_count += 1
                 print(
-                    f"Warning: skipping duplicate publication stable_id {key}",
+                    f"Warning: replacing duplicate publication stable_id {key}",
                     file=sys.stderr,
                 )
             unique[key] = record
     if not unique:
         raise RuntimeError("No valid publications remained after normalization")
     if duplicate_count:
-        print(f"Warning: skipped {duplicate_count} duplicate publication(s)", file=sys.stderr)
+        print(f"Warning: replaced {duplicate_count} duplicate publication(s)", file=sys.stderr)
     return sorted(
         unique.values(),
         key=lambda item: (item.get("year") or 0, item.get("date") or ""),
@@ -232,6 +291,7 @@ def atomic_write_batch(files: dict[Path, str]) -> None:
 
     staged: list[tuple[Path, Path]] = []
     transactions: list[tuple[Path, Path | None]] = []
+    rollback_failures: list[tuple[Path, Path, OSError]] = []
     try:
         for path, content in files.items():
             path = Path(path)
@@ -248,7 +308,7 @@ def atomic_write_batch(files: dict[Path, str]) -> None:
                 os.replace(path, backup)
             transactions.append((path, backup))
             os.replace(temporary, path)
-    except BaseException:
+    except BaseException as error:
         # Restore every destination whose original was moved aside.  A
         # destination with no original is removed if its replacement landed.
         for path, backup in reversed(transactions):
@@ -256,16 +316,23 @@ def atomic_write_batch(files: dict[Path, str]) -> None:
                 path.unlink(missing_ok=True)
                 if backup is not None and backup.exists():
                     os.replace(backup, path)
-            except OSError:
-                # Preserve the original exception while making a best effort
-                # to restore the previous pair.
-                pass
+            except OSError as rollback_error:
+                # Keep a failed backup on disk so the previous feed can be
+                # recovered manually, and surface its path to the caller.
+                if backup is not None:
+                    rollback_failures.append((path, backup, rollback_error))
+        if rollback_failures:
+            details = "; ".join(
+                f"{path}: backup preserved at {backup} ({rollback_error})"
+                for path, backup, rollback_error in rollback_failures
+            )
+            raise RuntimeError(f"Publication feed rollback failed; {details}") from error
         raise
     finally:
         for _, temporary in staged:
             temporary.unlink(missing_ok=True)
         for _, backup in transactions:
-            if backup is not None:
+            if backup is not None and all(item[1] != backup for item in rollback_failures):
                 backup.unlink(missing_ok=True)
 
 
