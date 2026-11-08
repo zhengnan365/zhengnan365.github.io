@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.publication_data import normalize_doi, normalize_work
+from scripts.publication_data import format_gbt7714, normalize_doi, normalize_work
 
 
 AUTHOR_ID = "A5001145059"
@@ -102,6 +102,47 @@ class PublicationDataTests(unittest.TestCase):
         self.assertEqual(
             record["citation_gbt7714"],
             "First Author, Nan Zheng. A representative energy paper[J]. Applied Energy, 2025.",
+        )
+
+    def test_formats_citation_without_authors_or_optional_metadata(self):
+        self.assertEqual(
+            format_gbt7714({"title": "Standalone title", "type": "article"}),
+            "Standalone title[J].",
+        )
+
+    def test_omits_issue_when_volume_is_missing(self):
+        work = sample_work()
+        work["biblio"] = {"issue": "2"}
+        record = normalize_work(work, AUTHOR_ID, {}, {})
+        self.assertEqual(
+            record["citation_gbt7714"],
+            "First Author, Nan Zheng. A representative energy paper[J]. Applied Energy, 2025. DOI: 10.1234/example.doi.",
+        )
+
+    def test_omits_missing_venue_year_and_pages(self):
+        work = sample_work()
+        work["primary_location"]["source"]["display_name"] = None
+        work["publication_year"] = None
+        work["biblio"] = {}
+        record = normalize_work(work, AUTHOR_ID, {}, {})
+        self.assertEqual(
+            record["citation_gbt7714"],
+            "First Author, Nan Zheng. A representative energy paper[J]. DOI: 10.1234/example.doi.",
+        )
+
+    def test_preserves_legitimate_double_periods(self):
+        self.assertEqual(
+            format_gbt7714(
+                {
+                    "authors": "A Author",
+                    "title": "A..B",
+                    "type": "article",
+                    "venue": "Journal",
+                    "year": 2025,
+                    "doi": "10.1234/foo..bar",
+                }
+            ),
+            "A Author. A..B[J]. Journal, 2025. DOI: 10.1234/foo..bar.",
         )
 
 

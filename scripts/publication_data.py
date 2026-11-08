@@ -92,36 +92,58 @@ def match_metrics(
     return result
 
 
+def _citation_text(value: Any) -> str:
+    return str(value).strip() if value is not None else ""
+
+
 def page_range(first_page: str | None, last_page: str | None) -> str | None:
     """Return a compact page range, omitting duplicate or missing endpoints."""
 
-    if first_page and last_page and first_page != last_page:
-        return f"{first_page}-{last_page}"
-    return first_page or last_page
+    first = _citation_text(first_page)
+    last = _citation_text(last_page)
+    if first and last and first != last:
+        return f"{first}-{last}"
+    return first or last
 
 
 def format_gbt7714(record: dict[str, Any]) -> str:
     """Format a normalized record as a GB/T 7714-2015 journal citation."""
 
     type_mark = "J" if record.get("type") in {"article", "review"} else "C"
-    parts = [f"{record['authors'].replace('*', '')}. {record['title']}[{type_mark}]."]
-    publication = record.get("venue") or ""
-    if record.get("year"):
-        publication += f", {record['year']}"
-    volume_issue = record.get("volume") or ""
-    if record.get("issue"):
-        volume_issue += f"({record['issue']})"
+    authors = _citation_text(record.get("authors")).replace("*", "").strip()
+    title = _citation_text(record.get("title")) or "Untitled work"
+    lead = f"{authors}. " if authors else ""
+    parts = [f"{lead}{title}[{type_mark}]."]
+
+    publication_segments: list[str] = []
+    venue = _citation_text(record.get("venue"))
+    if venue:
+        publication_segments.append(venue)
+    year = _citation_text(record.get("year"))
+    if year:
+        publication_segments.append(year)
+
+    volume = _citation_text(record.get("volume"))
+    issue = _citation_text(record.get("issue"))
+    volume_issue = volume
+    if volume and issue:
+        volume_issue += f"({issue})"
     if volume_issue:
-        publication += f", {volume_issue}"
+        publication_segments.append(volume_issue)
+
     pages = page_range(record.get("first_page"), record.get("last_page"))
     if pages:
-        publication += f": {pages}"
+        if publication_segments:
+            publication_segments[-1] += f": {pages}"
+        else:
+            publication_segments.append(pages)
+    publication = ", ".join(publication_segments)
     if publication:
         parts.append(f" {publication}.")
     normalized_doi = normalize_doi(record.get("doi"))
     if normalized_doi:
         parts.append(f" DOI: {normalized_doi}.")
-    return "".join(parts).replace("..", ".")
+    return "".join(parts)
 
 
 def normalize_work(
