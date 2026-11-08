@@ -33,6 +33,19 @@ test('copyCitation falls back to the selection copy command', async () => {
   assert.equal(removed, true);
 });
 
+test('copyCitation retries with the selection command when Clipboard API rejects', async () => {
+  let copied = false;
+  const area = { style: {}, setAttribute() {}, select() {}, remove() {} };
+  const doc = {
+    createElement() { return area; },
+    body: { appendChild() {} },
+    execCommand(command) { assert.equal(command, 'copy'); copied = true; return true; },
+  };
+  await copyCitation('citation text', { writeText: async () => { throw new Error('Denied'); } }, doc);
+  assert.equal(area.value, 'citation text');
+  assert.equal(copied, true);
+});
+
 test('controls restore saved preferences and persist toggles', () => {
   const listeners = {};
   const language = { addEventListener(type, listener) { listeners.language = listener; }, replaceChildren(value) { this.label = value; }, setAttribute(name, value) { this[name] = value; } };
@@ -56,4 +69,18 @@ test('controls restore saved preferences and persist toggles', () => {
   assert.equal(saved.get('site-theme'), 'light');
   assert.equal(root.lang, 'zh-CN');
   assert.match(theme.innerHTML, /fa-moon/);
+});
+
+test('controls initialize when the localStorage getter throws', () => {
+  const previous = Object.getOwnPropertyDescriptor(globalThis, 'localStorage');
+  Object.defineProperty(globalThis, 'localStorage', { configurable: true, get() { throw new Error('Storage blocked'); } });
+  try {
+    const root = { dataset: {} };
+    const doc = { documentElement: root, querySelector() { return null; }, querySelectorAll() { return []; } };
+    assert.doesNotThrow(() => initializeSiteControls(doc));
+    assert.deepEqual(root.dataset, { lang: 'zh', theme: 'light' });
+  } finally {
+    if (previous) Object.defineProperty(globalThis, 'localStorage', previous);
+    else delete globalThis.localStorage;
+  }
 });

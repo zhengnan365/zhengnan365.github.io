@@ -2,7 +2,12 @@ export const nextLanguage = language => language === 'en' ? 'zh' : 'en';
 export const nextTheme = theme => theme === 'dark' ? 'light' : 'dark';
 
 export async function copyCitation(text, clipboard = globalThis.navigator?.clipboard, doc = globalThis.document) {
-  if (clipboard?.writeText) return clipboard.writeText(text);
+  if (clipboard?.writeText) {
+    try {
+      await clipboard.writeText(text);
+      return;
+    } catch { /* The selection command may still be permitted. */ }
+  }
   const area = doc.createElement('textarea');
   area.value = text;
   area.setAttribute('readonly', '');
@@ -33,8 +38,11 @@ function updateControlLabels(doc) {
   themeButton?.setAttribute('aria-label', root.dataset.theme === 'dark' ? 'Switch to light theme' : '切换到深色模式');
 }
 
-export function initializeSiteControls(doc = document, storage = globalThis.localStorage) {
+export function initializeSiteControls(doc = document, storage) {
   const root = doc.documentElement;
+  if (storage === undefined) {
+    try { storage = globalThis.localStorage; } catch { storage = null; }
+  }
   const getSaved = key => { try { return storage?.getItem(key); } catch { return null; } };
   const save = (key, value) => { try { storage?.setItem(key, value); } catch { /* Browsing storage may be disabled. */ } };
   root.dataset.lang = getSaved('site-language') === 'en' ? 'en' : 'zh';
@@ -53,15 +61,20 @@ export function initializeSiteControls(doc = document, storage = globalThis.loca
   });
   doc.querySelectorAll('.citation-copy').forEach(button => {
     const original = button.innerHTML;
+    const status = button.nextElementSibling;
     let timer;
     button.addEventListener('click', async () => {
       const language = root.dataset.lang;
+      if (status?.classList.contains('citation-status')) status.textContent = '';
+      let message;
       try {
         await copyCitation(button.dataset.citation || '');
-        button.textContent = language === 'zh' ? '已复制' : 'Copied';
+        message = language === 'zh' ? '已复制' : 'Copied';
       } catch {
-        button.textContent = language === 'zh' ? '复制失败' : 'Copy failed';
+        message = language === 'zh' ? '复制失败' : 'Copy failed';
       }
+      button.textContent = message;
+      if (status?.classList.contains('citation-status')) status.textContent = message;
       clearTimeout(timer);
       timer = setTimeout(() => { button.innerHTML = original; }, 1600);
     });
