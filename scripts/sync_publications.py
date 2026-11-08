@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 import tempfile
 import urllib.parse
@@ -16,9 +17,9 @@ from typing import Any
 import yaml
 
 try:
-    from scripts.publication_data import normalize_work, short_openalex_id
+    from scripts.publication_data import normalize_doi, normalize_work, short_openalex_id
 except ModuleNotFoundError:  # pragma: no cover - supports direct script execution
-    from publication_data import normalize_work, short_openalex_id
+    from publication_data import normalize_doi, normalize_work, short_openalex_id
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -99,6 +100,7 @@ def fetch_works() -> list[dict]:
 
     works: list[dict] = []
     cursor = "*"
+    expected_count: int | None = None
     while cursor:
         query = urllib.parse.urlencode(
             {
@@ -115,11 +117,27 @@ def fetch_works() -> list[dict]:
         )
         with urllib.request.urlopen(request, timeout=30) as response:
             payload = json.load(response)
-        results = payload.get("results") or []
+        if not isinstance(payload, dict):
+            raise RuntimeError("OpenAlex returned a malformed page; preserving previous generated data")
+        meta = payload.get("meta") or {}
+        if not isinstance(meta, dict):
+            raise RuntimeError("OpenAlex returned malformed pagination metadata")
+        if expected_count is None and meta.get("count") is not None:
+            try:
+                expected_count = int(meta["count"])
+            except (TypeError, ValueError) as error:
+                raise RuntimeError("OpenAlex returned an invalid result count") from error
+        results = payload.get("results")
+        if not isinstance(results, list) or not results:
+            raise RuntimeError(
+                "OpenAlex returned an empty or malformed page; preserving previous generated data"
+            )
         works.extend(results)
-        cursor = payload.get("meta", {}).get("next_cursor")
-        if not results:
-            break
+        cursor = meta.get("next_cursor")
+    if expected_count is not None and len(works) != expected_count:
+        raise RuntimeError(
+            f"OpenAlex returned {len(works)} of {expected_count} works; preserving previous generated data"
+        )
     return works
 
 
@@ -141,6 +159,17 @@ def validate_overrides(overrides: dict[str, dict[str, Any]]) -> None:
     for identifier, values in overrides.items():
         if not isinstance(identifier, str) or not identifier.strip():
             raise ValueError("Publication override keys must be non-empty strings")
+        normalized_identifier = normalize_doi(identifier)
+        valid_doi = normalized_identifier == identifier and bool(
+            re.fullmatch(r"10\.\d{4,9}/\S+", identifier)
+        )
+        valid_openalex = bool(
+            re.fullmatch(r"https://openalex\.org/[A-Z]\d+", identifier)
+        )
+        if not (valid_doi or valid_openalex):
+            raise ValueError(
+                f"Override key {identifier!r} must be a normalized DOI or full OpenAlex work ID"
+            )
         if not isinstance(values, dict):
             raise ValueError(f"Override {identifier!r} must be a mapping")
         unknown = set(values) - set(OVERRIDE_TYPES)

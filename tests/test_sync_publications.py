@@ -182,6 +182,47 @@ class SyncPublicationTests(unittest.TestCase):
                 [work], {"10.1234/example": {"unexpected": True}}, {}
             )
 
+    def test_override_keys_must_be_normalized_doi_or_openalex_id(self):
+        with self.assertRaises(ValueError):
+            sync_publications.validate_overrides({"doi:10.1234/example": {"exclude": True}})
+        with self.assertRaises(ValueError):
+            sync_publications.validate_overrides({"https://doi.org/10.1234/example": {"exclude": True}})
+        sync_publications.validate_overrides(
+            {
+                "10.1234/example": {"exclude": True},
+                "https://openalex.org/W123": {"exclude": False},
+            }
+        )
+
+    def test_fetch_works_rejects_empty_later_page(self):
+        class Response:
+            def __init__(self, payload):
+                self.payload = payload
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self):
+                return json.dumps(self.payload).encode("utf-8")
+
+        responses = iter(
+            [
+                Response(
+                    {
+                        "meta": {"count": 2, "next_cursor": "next"},
+                        "results": [{"id": "https://openalex.org/W1"}],
+                    }
+                ),
+                Response({"meta": {"count": 2, "next_cursor": None}}),
+            ]
+        )
+        with patch("scripts.sync_publications.urllib.request.urlopen", side_effect=lambda *args, **kwargs: next(responses)):
+            with self.assertRaises(RuntimeError):
+                sync_publications.fetch_works()
+
 
 if __name__ == "__main__":
     unittest.main()
