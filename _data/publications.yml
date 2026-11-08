@@ -25,6 +25,19 @@ main:
   pdf: null
   url: https://doi.org/10.1016/j.energy.2026.142040
   open_access: true
+- id: https://openalex.org/W7160771008
+  doi: https://doi.org/10.1016/j.applthermaleng.2026.131414
+  title: Optimal configuration and performance analysis of a 300 MW molten-salt-based
+    trough-tower hybrid solar thermal power generation system
+  authors: Zihong Zheng, Liqiang Duan, Huanbo Li, Jiawei Cai, Zhaoran Xu, Yuanhui
+    Wang, Shuaiyu Ji, Yan Bo Zhang, Nan Zheng
+  venue: Applied Thermal Engineering
+  year: 2026
+  date: '2026-05-10'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.applthermaleng.2026.131414
+  open_access: false
 - id: https://openalex.org/W7141300279
   doi: https://doi.org/10.1016/j.est.2026.121781
   title: Comprehensive sustainability assessment of a novel solar-assisted liquid
@@ -53,28 +66,6 @@ main:
   pdf: null
   url: https://doi.org/10.1016/j.renene.2026.125212
   open_access: false
-- id: https://openalex.org/W7222490347
-  doi: https://doi.org/10.37155/2717-5197-0816-71
-  title: 超临界锅炉低负荷配煤掺烧与NOx协同控制技术应用
-  authors: Nan Zheng
-  venue: 机械与电子控制工程
-  year: 2026
-  date: '2026-01-01'
-  type: article
-  pdf: http://ojs.omniscient.sg/index.php/mece/article/download/85510/83798
-  url: https://doi.org/10.37155/2717-5197-0816-71
-  open_access: true
-- id: https://openalex.org/W7222594926
-  doi: https://doi.org/10.37155/2717-5316-0717-34
-  title: 锅炉燃烧器配风优化降低过热器再热器超温的试验研究
-  authors: Nan Zheng
-  venue: 工程学研究与实用
-  year: 2026
-  date: '2026-01-01'
-  type: article
-  pdf: http://ojs.omniscient.sg/index.php/esra/article/download/85933/84222
-  url: https://doi.org/10.37155/2717-5316-0717-34
-  open_access: true
 - id: https://openalex.org/W4417483727
   doi: https://doi.org/10.1016/j.applthermaleng.2025.129518
   title: 'Thermodynamic and environmental assessment of a solar-assisted Polygeneration
@@ -101,6 +92,19 @@ main:
   type: article
   pdf: null
   url: https://doi.org/10.1063/5.0307365
+  open_access: false
+- id: https://openalex.org/W4415899528
+  doi: https://doi.org/10.1016/j.tsep.2025.104281
+  title: Synthesis and thermal properties of PEG8000-CaCl2-SEBS/EG as novel flexible
+    composite phase change materials for thermal management
+  authors: Yunxiu Ren, Yi‐Ting Fang, Nan Zheng, Kangqun Yang, Liangyu Wu, Cheng Hai
+    Yu
+  venue: Thermal Science and Engineering Progress
+  year: 2025
+  date: '2025-11-05'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.tsep.2025.104281
   open_access: false
 - id: https://openalex.org/W4414982195
   doi: https://doi.org/10.1016/j.fuel.2025.137093
@@ -176,6 +180,18 @@ main:
   type: article
   pdf: null
   url: https://doi.org/10.1016/j.energy.2025.136547
+  open_access: false
+- id: https://openalex.org/W4410113824
+  doi: https://doi.org/10.1016/j.susmat.2025.e01440
+  title: Emerging porous supporting materials for form-stable organic phase change
+    materials
+  authors: Yunxiu Ren, Fei Jin, Laishun Yang, Qiang Zhang, Nan Zheng, Chao Xu
+  venue: Sustainable materials and technologies
+  year: 2025
+  date: '2025-05-06'
+  type: article
+  pdf: null
+  url: https://doi.org/10.1016/j.susmat.2025.e01440
   open_access: false
 - id: https://openalex.org/W4409376242
   doi: https://doi.org/10.1007/s11630-025-2118-1
@@ -628,18 +644,6 @@ main:
   pdf: null
   url: https://doi.org/10.1016/j.energy.2022.124072
   open_access: true
-- id: https://openalex.org/W2367407407
-  doi: null
-  title: Program Development for Enthalpy Calculation of Water and Steam Based on
-    IAPWS-IF97 and Complementary Equations
-  authors: Nan Zheng
-  venue: Journal of Chinese Society of Power Engineering
-  year: 2011
-  date: '2011-01-01'
-  type: article
-  pdf: null
-  url: https://openalex.org/W2367407407
-  open_access: false
 - id: https://openalex.org/W2068136613
   doi: https://doi.org/10.1007/s10762-010-9642-z
   title: A Comparison of the Attenuation of High-Order Mode in Coaxial Waveguide due
