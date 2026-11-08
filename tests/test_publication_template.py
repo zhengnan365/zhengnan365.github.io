@@ -25,7 +25,7 @@ class PublicationTemplateTests(unittest.TestCase):
 
     def test_each_metric_segment_is_guarded_independently(self):
         template = TEMPLATE.read_text(encoding="utf-8")
-        self.assertIn('class="metrics-bar"', template)
+        self.assertIn('class="metrics-bar" role="group" aria-label="Journal metrics"', template)
         for field in ("impact_factor", "cas_label_zh", "cas_label_en", "jcr_quartile"):
             self.assertRegex(
                 template,
@@ -36,6 +36,13 @@ class PublicationTemplateTests(unittest.TestCase):
         self.assertIn('[data-theme="dark"] .metrics-bar', styles)
         self.assertNotIn(".abbr", styles)
         self.assertNotIn(".teaser", styles)
+
+    def test_dark_theme_year_and_external_link_have_contrast(self):
+        styles = STYLESHEET.read_text(encoding="utf-8")
+        self.assertRegex(styles, r'\[data-theme="dark"\] \.publications h2\.year\s*\{[^}]*color:')
+        self.assertRegex(styles, r'\[data-theme="dark"\] \.pub-ext-links a\s*\{[^}]*color:')
+        self.assertRegex(styles, r'\[data-theme="dark"\] \.pub-ext-links a:hover[^{}]*\{[^}]*background:')
+        self.assertRegex(styles, r'\.publication-card \.btn\s*\{[^}]*min-height: 24px;')
 
 
 if __name__ == "__main__":

@@ -20,10 +20,14 @@ section > h2.pub-section-title:first-child { margin-top: 0; }
 .metrics-bar > span:first-child { border-radius: 4px 0 0 4px; }
 .metrics-bar > span:last-child { border-radius: 0 4px 4px 0; }
 .publication-card .links { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
-.publication-card .btn { display: inline-flex; align-items: center; gap: 3px; appearance: none; padding: 2px 8px; border: 1px solid #bbb; border-radius: 4px; background: transparent; color: #444; font: inherit; font-size: 11.5px; line-height: 1.5; text-decoration: none; cursor: pointer; transition: color .15s ease, background-color .15s ease, border-color .15s ease; }
+.publication-card .btn { display: inline-flex; align-items: center; gap: 3px; min-height: 24px; box-sizing: border-box; appearance: none; padding: 2px 8px; border: 1px solid #bbb; border-radius: 4px; background: transparent; color: #444; font: inherit; font-size: 11.5px; line-height: 1.5; text-decoration: none; cursor: pointer; transition: color .15s ease, background-color .15s ease, border-color .15s ease; }
 .publication-card .btn:hover, .publication-card .btn:focus-visible { border-color: var(--global-theme-color); background: var(--global-theme-color); color: #fff; text-decoration: none; }
 .publication-card .btn:focus-visible { outline: 2px solid var(--global-hover-color); outline-offset: 2px; }
 [data-theme="dark"] .publications ol.bibliography li.publication-item:hover { background: #1e2b39; }
+[data-theme="dark"] .publications h2.year { color: #b7d4f1; }
+[data-theme="dark"] .publications h2.year::after { background: rgba(183, 212, 241, .3); }
+[data-theme="dark"] .pub-ext-links a { color: #b7d4f1; border-color: #8eb5da; }
+[data-theme="dark"] .pub-ext-links a:hover, [data-theme="dark"] .pub-ext-links a:focus-visible { color: #fff; background: #31577a; border-color: #b7d4f1; }
 [data-theme="dark"] .publication-card .author { color: #c7d0dc; }
 [data-theme="dark"] .metrics-bar { background: #50647a; }
 [data-theme="dark"] .metrics-bar > span { background: #25364a; color: #e9eef5; }

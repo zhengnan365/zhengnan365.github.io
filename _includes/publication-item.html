@@ -4,7 +4,7 @@
     <div class="title"><a href="{{ link.url | escape }}" target="_blank" rel="noopener">{{ link.title | escape }}</a></div>
     <div class="author">{{ link.display_authors }}</div>
     {% if link.metrics.impact_factor or link.metrics.cas_label_zh or link.metrics.cas_label_en or link.metrics.jcr_quartile %}
-    <div class="metrics-bar" aria-label="Journal metrics">
+    <div class="metrics-bar" role="group" aria-label="Journal metrics">
       {% if link.metrics.impact_factor %}<span><span class="i18n-zh">影响因子</span><span class="i18n-en">Impact Factor</span> {{ link.metrics.impact_factor }}</span>{% endif %}
       {% if link.metrics.cas_label_zh %}<span class="i18n-zh">{{ link.metrics.cas_label_zh }}</span>{% endif %}
       {% if link.metrics.cas_label_en %}<span class="i18n-en">{{ link.metrics.cas_label_en }}</span>{% endif %}
