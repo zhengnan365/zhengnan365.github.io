@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/pub.css">
     <link rel="stylesheet" href="./assets/css/nav.css">
+    <link rel="stylesheet" href="./assets/css/site-overrides.css">
 
   </head>
   <body>
@@ -37,7 +38,7 @@
       <header>
         
         {% if site.avatar %}
-        <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        <a class="image avatar"><img src="{{ site.avatar }}" alt="{{ site.title }}" /></a>
         {% endif %}
 
         <h1><span class="i18n-zh">{{ site.title_zh }}</span><span class="i18n-en">{{ site.title }}</span></h1>
@@ -59,49 +60,49 @@
         <div class="social-icons academic-links" aria-label="Academic profiles">
         {% if site.google_scholar %}
         <a title="Google Scholar" aria-label="Google Scholar" href="{{ site.google_scholar }}" target="_blank" rel="noopener">
-          <i class="fa-solid fa-graduation-cap" style="font-size:1.05rem"></i><span class="academic-label">GS</span>
+          <i class="ai ai-google-scholar" aria-hidden="true"></i><span class="academic-label">GS</span>
         </a>  
         {% endif %}
 
         {% if site.cv_link %}
         <a title="CV" aria-label="CV" href="{{ site.cv_link }}">
-          <i class="fa-regular fa-file-lines" style="font-size:1.05rem;"></i><span class="academic-label">CV</span>
+          <i class="ai ai-cv" aria-hidden="true"></i><span class="academic-label">CV</span>
         </a>
         {% endif %}
 
         {% if site.github_link %}
         <a title="GitHub" aria-label="GitHub" href="{{ site.github_link }}" target="_blank" rel="noopener">
-          <i class="fab fa-github"></i><span class="academic-label">GH</span>
+          <i class="fab fa-github" aria-hidden="true"></i><span class="academic-label">GH</span>
         </a>
         {% endif %}
 
         {% if site.orcid %}
         <a title="ORCID" aria-label="ORCID" href="{{ site.orcid }}" target="_blank" rel="noopener">
-          <i class="fab fa-orcid"></i><span class="academic-label">ID</span>
+          <i class="fab fa-orcid" aria-hidden="true"></i><span class="academic-label">ID</span>
         </a>
         {% endif %}
 
         {% if site.scopus %}
         <a title="Scopus" aria-label="Scopus" href="{{ site.scopus }}" target="_blank" rel="noopener">
-          <i class="fa-solid fa-book-open"></i><span class="academic-label">Sc</span>
+          <i class="fa-solid fa-book-open" aria-hidden="true"></i><span class="academic-label">Sc</span>
         </a>
         {% endif %}
 
         {% if site.web_of_science %}
         <a title="Web of Science" aria-label="Web of Science" href="{{ site.web_of_science }}" target="_blank" rel="noopener">
-          <i class="fa-solid fa-chart-line"></i><span class="academic-label">WoS</span>
+          <i class="fa-solid fa-flask" aria-hidden="true"></i><span class="academic-label">WoS</span>
         </a>
         {% endif %}
 
         {% if site.researchgate %}
         <a title="ResearchGate" aria-label="ResearchGate" href="{{ site.researchgate }}" target="_blank" rel="noopener">
-          <i class="fab fa-researchgate"></i><span class="academic-label">RG</span>
+          <i class="ai ai-researchgate" aria-hidden="true"></i><span class="academic-label">RG</span>
         </a>
         {% endif %}
 
         {% if site.personal_link %}
         <a title="Personal profile" aria-label="Personal profile" href="{{ site.personal_link }}" target="_blank" rel="noopener">
-          <i class="fa-solid fa-globe"></i><span class="academic-label">Web</span>
+          <i class="fa-solid fa-globe" aria-hidden="true"></i><span class="academic-label">Web</span>
         </a>
         {% endif %}
         </div>

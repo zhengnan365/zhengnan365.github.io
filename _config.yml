@@ -29,7 +29,7 @@ favicon_dark: ./assets/img/favicon-dark.png
 
 enable_footnote: false
 auto_dark_mode: false
-font: "Sans Serif"
+font: "Serif"
 
 remote_theme: yaoyao-liu/minimal-light
 
