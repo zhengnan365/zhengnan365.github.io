@@ -1,0 +1,21 @@
+{% assign link = include.link %}
+<li class="publication-item">
+  <article class="publication-card">
+    <div class="title"><a href="{{ link.url | escape }}" target="_blank" rel="noopener">{{ link.title | escape }}</a></div>
+    <div class="author">{{ link.display_authors }}</div>
+    {% if link.metrics.impact_factor or link.metrics.cas_label_zh or link.metrics.cas_label_en or link.metrics.jcr_quartile %}
+    <div class="metrics-bar" aria-label="Journal metrics">
+      {% if link.metrics.impact_factor %}<span><span class="i18n-zh">影响因子</span><span class="i18n-en">Impact Factor</span> {{ link.metrics.impact_factor }}</span>{% endif %}
+      {% if link.metrics.cas_label_zh %}<span class="i18n-zh">{{ link.metrics.cas_label_zh }}</span>{% endif %}
+      {% if link.metrics.cas_label_en %}<span class="i18n-en">{{ link.metrics.cas_label_en }}</span>{% endif %}
+      {% if link.metrics.jcr_quartile %}<span>JCR {{ link.metrics.jcr_quartile }}</span>{% endif %}
+    </div>
+    {% endif %}
+    {% if link.venue or link.year %}<div class="periodical"><em>{{ link.venue | escape }}{% if link.venue and link.year %}, {% endif %}{{ link.year }}</em></div>{% endif %}
+    <div class="links">
+      {% if link.doi %}<a href="{{ link.doi | escape }}" class="btn" target="_blank" rel="noopener">DOI</a>{% endif %}
+      {% unless link.citation_count == nil %}<a href="{{ link.openalex_url | escape }}" class="btn" target="_blank" rel="noopener"><span class="i18n-zh">OpenAlex 引用 {{ link.citation_count }}</span><span class="i18n-en">{{ link.citation_count }} OpenAlex citations</span></a>{% endunless %}
+      <button type="button" class="btn citation-copy" data-citation="{{ link.citation_gbt7714 | escape }}"><i class="fa-solid fa-copy" aria-hidden="true"></i> <span class="i18n-zh">引用</span><span class="i18n-en">Cite</span></button>
+    </div>
+  </article>
+</li>
