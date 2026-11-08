@@ -68,6 +68,30 @@ def build_author_fields(
     return ", ".join(plain_names), ", ".join(display_names), has_corresponding
 
 
+def match_metrics(
+    source: dict[str, Any], metrics: dict[str, dict[str, Any]]
+) -> dict[str, Any] | None:
+    """Return the curated metric entry matching a journal source.
+
+    OpenAlex provides a stable ISSN-L plus one or more edition-specific ISSNs.
+    The ISSN-L is preferred so a journal's metric stays consistent when an
+    article is indexed under a print or electronic ISSN.  The edition ISSNs
+    are retained as a fallback for sources whose ISSN-L is missing or differs
+    from the curated key.
+    """
+
+    keys = [source.get("issn_l"), *(source.get("issn") or [])]
+    item = next((metrics[key] for key in keys if key and key in metrics), None)
+    if not item:
+        return None
+    result = dict(item)
+    zone = result.get("cas_zone")
+    if zone:
+        result["cas_label_zh"] = f"中科院 {zone}区" + (" TOP" if result.get("cas_top") else "")
+        result["cas_label_en"] = f"CAS Zone {zone}" + (" TOP" if result.get("cas_top") else "")
+    return result
+
+
 def normalize_work(
     work: dict[str, Any],
     owner_author_id: str,
@@ -76,10 +100,8 @@ def normalize_work(
 ) -> dict[str, Any]:
     """Normalize one OpenAlex work into the website publication schema.
 
-    ``overrides`` and ``metrics`` are accepted at this boundary so later
-    synchronization steps can enrich the same record without changing the
-    function signature.  Metric matching is intentionally handled by a later
-    task; this first extraction step only carries publication metadata.
+    ``overrides`` and ``metrics`` enrich the same normalized record before
+    it is returned to the synchronization layer.
     """
 
     source = (work.get("primary_location") or {}).get("source") or {}
@@ -111,6 +133,7 @@ def normalize_work(
         "openalex_url": work.get("id"),
         "citation_count": work.get("cited_by_count"),
         "citation_source": "OpenAlex",
+        "metrics": match_metrics(source, metrics),
     }
     override = overrides.get(normalized_doi or "") or overrides.get(work.get("id") or "") or {}
     record["_exclude"] = bool(override.get("exclude"))

@@ -56,6 +56,27 @@ class PublicationDataTests(unittest.TestCase):
         record = normalize_work(work, AUTHOR_ID, {}, {})
         self.assertEqual(record["citation_count"], 0)
 
+    def test_metrics_match_by_issn_l(self):
+        metrics = {
+            "0306-2619": {
+                "journal": "Applied Energy",
+                "metric_year": 2025,
+                "impact_factor": 11.2,
+                "cas_zone": 1,
+                "cas_top": True,
+                "jcr_quartile": "Q1",
+            }
+        }
+        record = normalize_work(sample_work(), AUTHOR_ID, {}, metrics)
+        self.assertEqual(record["metrics"]["impact_factor"], 11.2)
+        self.assertEqual(record["metrics"]["cas_label_zh"], "中科院 1区 TOP")
+
+    def test_unmatched_journal_has_no_metrics(self):
+        work = sample_work()
+        work["primary_location"]["source"]["issn_l"] = "0000-0000"
+        record = normalize_work(work, AUTHOR_ID, {}, {})
+        self.assertIsNone(record["metrics"])
+
 
 if __name__ == "__main__":
     unittest.main()
