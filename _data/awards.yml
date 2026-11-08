@@ -1,16 +1,24 @@
 - year: 2024
-  title: 北京市优秀毕业生
+  title_zh: 北京市优秀毕业生
+  title_en: Beijing Outstanding Graduate
 - year: 2024
-  title: 华北电力大学优秀博士论文
+  title_zh: 华北电力大学优秀博士论文
+  title_en: Outstanding Doctoral Dissertation, North China Electric Power University
 - year: 2023
-  title: 博士研究生国家奖学金
+  title_zh: 博士研究生国家奖学金
+  title_en: National Scholarship for Doctoral Students
 - year: 2023
-  title: 华北电力大学优秀博士奖学金
+  title_zh: 华北电力大学优秀博士奖学金
+  title_en: Outstanding Doctoral Student Scholarship, North China Electric Power University
 - year: 2023
-  title: 华北电力大学校长奖学金
+  title_zh: 华北电力大学校长奖学金
+  title_en: President's Scholarship, North China Electric Power University
 - year: 2022
-  title: 华北电力大学优秀研究生标兵
+  title_zh: 华北电力大学优秀研究生标兵
+  title_en: Exemplary Graduate Student, North China Electric Power University
 - year: 2021
-  title: 河北省冀青之星
+  title_zh: 河北省冀青之星
+  title_en: Hebei Rising Young Talent
 - year: 2020
-  title: 硕士研究生国家奖学金
+  title_zh: 硕士研究生国家奖学金
+  title_en: National Scholarship for Master's Students
