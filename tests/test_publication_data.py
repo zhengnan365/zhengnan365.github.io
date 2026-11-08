@@ -61,20 +61,30 @@ class PublicationDataTests(unittest.TestCase):
             "0306-2619": {
                 "journal": "Applied Energy",
                 "metric_year": 2025,
-                "impact_factor": 11.2,
+                "impact_factor": 12.2,
                 "cas_zone": 1,
                 "cas_top": True,
                 "jcr_quartile": "Q1",
-            }
+            },
+            "1872-9118": {"journal": "Wrong edition", "impact_factor": 99.9},
         }
         record = normalize_work(sample_work(), AUTHOR_ID, {}, metrics)
-        self.assertEqual(record["metrics"]["impact_factor"], 11.2)
+        self.assertEqual(record["metrics"]["impact_factor"], 12.2)
         self.assertEqual(record["metrics"]["cas_label_zh"], "中科院 1区 TOP")
+
+    def test_metrics_fall_back_to_issn(self):
+        work = sample_work()
+        work["primary_location"]["source"]["issn_l"] = "0000-0000"
+        metrics = {"1872-9118": {"journal": "Applied Energy", "impact_factor": 12.2}}
+        record = normalize_work(work, AUTHOR_ID, {}, metrics)
+        self.assertEqual(record["metrics"]["impact_factor"], 12.2)
 
     def test_unmatched_journal_has_no_metrics(self):
         work = sample_work()
         work["primary_location"]["source"]["issn_l"] = "0000-0000"
-        record = normalize_work(work, AUTHOR_ID, {}, {})
+        work["primary_location"]["source"]["issn"] = ["1111-1111"]
+        metrics = {"0306-2619": {"journal": "Applied Energy", "impact_factor": 12.2}}
+        record = normalize_work(work, AUTHOR_ID, {}, metrics)
         self.assertIsNone(record["metrics"])
 
 
