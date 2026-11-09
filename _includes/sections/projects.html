@@ -1,0 +1,9 @@
+<section id="projects">
+  <h2><span class="i18n-zh">项目承担</span><span class="i18n-en">Projects</span></h2>
+  <div class="timeline-list">{% for item in site.data.projects %}
+    <article class="timeline-item">
+      <h3><span class="i18n-zh">{{ item.title_zh }}</span><span class="i18n-en">{{ item.title_en }}</span></h3>
+      <p><span class="i18n-zh">· {{ item.amount_zh }} · {{ item.role_zh }}</span><span class="i18n-en">· {{ item.amount_en }} · {{ item.role_en }}</span></p>
+    </article>
+  {% endfor %}</div>
+</section>

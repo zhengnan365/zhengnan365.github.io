@@ -1,0 +1,18 @@
+# 教学：semesters 为学期列表；每学期 courses 下可复制 name_zh/name_en 增加课程。
+semesters:
+  - name_zh: 第五学期
+    name_en: Semester 5
+    courses:
+      - name_zh: 计算机辅助设计
+        name_en: Computer-Aided Design
+      - name_zh: 综合能源高效利用技术
+        name_en: Efficient Utilization of Integrated Energy
+  - name_zh: 第六学期
+    name_en: Semester 6
+    courses:
+      - name_zh: 光伏系统设计
+        name_en: Photovoltaic System Design
+      - name_zh: 能源互联网技术与应用-人工智能+
+        name_en: "Energy Internet Technology and Applications: AI+"
+      - name_zh: 新能源综合项目创新实践
+        name_en: Innovative Practice in Integrated New Energy Projects

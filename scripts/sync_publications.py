@@ -91,7 +91,6 @@ OVERRIDE_TYPES: dict[str, tuple[type, ...]] = {
     "conference_short": (str,),
     "pdf": (str, type(None)),
     "open_access": (bool,),
-    "image": (str,),
 }
 
 
@@ -225,9 +224,9 @@ def normalize(
     source = (work.get("primary_location") or {}).get("source") or {}
     venue = source.get("display_name") or ""
     work_type = work.get("type")
-    # Keep the existing presentation fields until the publication component
-    # removes the legacy PDF/Open Access controls. Explicit override values
-    # retain precedence over these derived defaults.
+    # Retain machine-readable publication metadata even when the current
+    # compact template does not display every field. Explicit overrides keep
+    # precedence over these derived defaults.
     oa = work.get("open_access") or {}
     best_oa = work.get("best_oa_location") or {}
     record.setdefault("conference", venue)
@@ -235,7 +234,6 @@ def normalize(
     record.setdefault("pdf", best_oa.get("pdf_url"))
     record.setdefault("url", record.get("doi") or best_oa.get("landing_page_url") or work.get("id"))
     record.setdefault("open_access", bool(oa.get("is_oa")))
-    record.setdefault("image", "assets/img/pub-placeholder.svg")
     return record
 
 

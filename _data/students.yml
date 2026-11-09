@@ -1,0 +1,42 @@
+# 指导学生：competitions 为竞赛；graduate 为研究生介绍；undergraduate 为本科生年级列表。
+# profiles 下的每位学生填写 name_zh/name_en 和 status_zh/status_en；无人时保留 []。
+competitions:
+  - year: 2026
+    title_zh: 江苏省大学生节能减排社会实践与科技竞赛特等奖
+    title_en: Grand Prize, Jiangsu College Students Energy Conservation and Emission Reduction Competition
+  - year: 2026
+    title_zh: 江苏省大学生节能减排社会实践与科技竞赛一等奖
+    title_en: First Prize, Jiangsu College Students Energy Conservation and Emission Reduction Competition
+  - year: 2026
+    title_zh: 全国大学生节能减排社会实践与科技竞赛三等奖
+    title_en: Third Prize, National College Students Energy Conservation and Emission Reduction Competition
+  - year: 2026
+    title_zh: 全国大学生节能减排社会实践与科技竞赛三等奖
+    title_en: Third Prize, National College Students Energy Conservation and Emission Reduction Competition
+  - year: 2025
+    title_zh: 中国研究生能源装备创新设计大赛三等奖
+    title_en: Third Prize, China Graduate Energy Equipment Innovation Design Competition
+  - year: 2025
+    title_zh: 国家级大学生创新训练计划（国家级大创）并结项
+    title_en: Completion of the National College Students Innovation and Entrepreneurship Training Program (National Innovation Training Program)
+graduate:
+  intro_zh: 欢迎新能源科学与工程、能源与动力工程及相关学科的硕士研究生加入课题组，围绕综合能源系统、储能系统和低碳能源技术开展科研
+  intro_en: Master's students in New Energy Science and Engineering, Energy and Power Engineering, and related fields are welcome to join the group and work on integrated energy systems, energy storage, and low-carbon energy technologies
+undergraduate:
+  - grade_zh: 2023 级
+    grade_en: Class of 2023
+    profiles:
+      - name_zh: 英笑
+        name_en: Ying Xiao
+        status_zh: 保研至河海大学
+        status_en: Recommended for postgraduate study at Hohai University
+      - name_zh: 庄宇跃
+        name_en: Zhuang Yuyue
+        status_zh: 保研至中国科学院大学工程热物理研究所
+        status_en: Recommended for postgraduate study at the Institute of Engineering Thermophysics, University of Chinese Academy of Sciences
+  - grade_zh: 2024 级
+    grade_en: Class of 2024
+    profiles: []
+  - grade_zh: 2025 级
+    grade_en: Class of 2025
+    profiles: []

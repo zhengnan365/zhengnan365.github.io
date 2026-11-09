@@ -1,3 +1,4 @@
+# 开源软件：每项填写 name、url、description_zh、description_en。
 - name: Researcher-Radar
   url: https://github.com/zhengnan365/Researcher-Radar
   description_zh: 跟踪期刊新论文，按研究方向和关键词推荐，并支持整理到 Zotero

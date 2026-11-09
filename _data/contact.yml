@@ -1,0 +1,5 @@
+# 联系：地址与办公室的中英文成对填写；邮箱在 _config.yml 的 email 字段维护。
+address_zh: 中国江苏省扬州市邗江区华扬西路196号，扬州大学扬子津校区
+address_en: Yangzijin Campus, Yangzhou University, 196 Huayang West Road, Hanjiang District, Yangzhou, Jiangsu, China
+office_zh: 知行楼 S529
+office_en: Room S529, Zhixing Building

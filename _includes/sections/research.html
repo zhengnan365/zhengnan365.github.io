@@ -1,0 +1,12 @@
+<section id="research">
+  <h2><span class="i18n-zh">研究方向</span><span class="i18n-en">Research Interests</span></h2>
+  <div class="topic-grid">
+    {% for item in site.data.research %}
+    <article class="topic-card">
+      <h3><span class="i18n-zh">{{ item.title_zh }}</span><span class="i18n-en">{{ item.title_en }}</span></h3>
+      <p class="i18n-zh">{{ item.description_zh }}</p>
+      <p class="i18n-en">{{ item.description_en }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>

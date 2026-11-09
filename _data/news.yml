@@ -1,3 +1,5 @@
+# 新闻动态：每项包含 date、text_zh、text_en；日期建议加引号，例如 '2026-11-09'。
+# 默认隐藏；在 navigation.yml 的 news 条目设置 enabled: true 即可启用。
 - date: 2025
   text_zh: 主持江苏省自然科学基金青年项目，研究太阳能双化学链协同驱动的零碳排分布式供能系统。
   text_en: Awarded a Jiangsu Natural Science Foundation Young Scientists Fund project on solar dual chemical-looping zero-carbon distributed energy systems.

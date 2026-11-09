@@ -44,7 +44,6 @@ main:
   conference_short: ATE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W7169858548
   stable_id: 10.1016/j.energy.2026.142040
   doi: https://doi.org/10.1016/j.energy.2026.142040
@@ -91,7 +90,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W7141300279
   stable_id: 10.1016/j.est.2026.121781
   doi: https://doi.org/10.1016/j.est.2026.121781
@@ -139,7 +137,6 @@ main:
   conference_short: JES
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W7120188520
   stable_id: 10.1016/j.renene.2026.125212
   doi: https://doi.org/10.1016/j.renene.2026.125212
@@ -188,7 +185,6 @@ main:
   conference_short: RE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W7222490347
   stable_id: 10.37155/2717-5197-0816-71
   doi: https://doi.org/10.37155/2717-5197-0816-71
@@ -218,7 +214,6 @@ main:
   conference_short: 机械与电子控制工程
   pdf: http://ojs.omniscient.sg/index.php/mece/article/download/85510/83798
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W7222594926
   stable_id: 10.37155/2717-5316-0717-34
   doi: https://doi.org/10.37155/2717-5316-0717-34
@@ -248,7 +243,6 @@ main:
   conference_short: 工程学研究与实用
   pdf: http://ojs.omniscient.sg/index.php/esra/article/download/85933/84222
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4417483727
   stable_id: 10.1016/j.applthermaleng.2025.129518
   doi: https://doi.org/10.1016/j.applthermaleng.2025.129518
@@ -298,7 +292,6 @@ main:
   conference_short: ATE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W7117573461
   stable_id: 10.1063/5.0307365
   doi: https://doi.org/10.1063/5.0307365
@@ -345,7 +338,6 @@ main:
   conference_short: PoF
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4414982195
   stable_id: 10.1016/j.fuel.2025.137093
   doi: https://doi.org/10.1016/j.fuel.2025.137093
@@ -393,7 +385,6 @@ main:
   conference_short: Fuel
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4414239492
   stable_id: 10.1063/5.0290970
   doi: https://doi.org/10.1063/5.0290970
@@ -437,7 +428,6 @@ main:
   conference_short: PoF
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4414898460
   stable_id: 10.1109/ceege66246.2025.11182491
   doi: https://doi.org/10.1109/ceege66246.2025.11182491
@@ -471,7 +461,6 @@ main:
   conference_short: Conference
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4411177103
   stable_id: 10.1016/j.applthermaleng.2025.127196
   doi: https://doi.org/10.1016/j.applthermaleng.2025.127196
@@ -517,7 +506,6 @@ main:
   conference_short: ATE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4411045743
   stable_id: 10.1007/s11431-024-2818-y
   doi: https://doi.org/10.1007/s11431-024-2818-y
@@ -569,7 +557,6 @@ main:
   conference_short: SCTS
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4410291883
   stable_id: 10.1016/j.energy.2025.136547
   doi: https://doi.org/10.1016/j.energy.2025.136547
@@ -617,7 +604,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4409376242
   stable_id: 10.1007/s11630-025-2118-1
   doi: https://doi.org/10.1007/s11630-025-2118-1
@@ -661,7 +647,6 @@ main:
   conference_short: JTS
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4409003416
   stable_id: 10.1016/j.renene.2025.123001
   doi: https://doi.org/10.1016/j.renene.2025.123001
@@ -707,7 +692,6 @@ main:
   conference_short: RE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4408360984
   stable_id: 10.1016/j.renene.2025.122881
   doi: https://doi.org/10.1016/j.renene.2025.122881
@@ -753,7 +737,6 @@ main:
   conference_short: RE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4405432292
   stable_id: 10.1016/j.apenergy.2024.125088
   doi: https://doi.org/10.1016/j.apenergy.2024.125088
@@ -801,7 +784,6 @@ main:
   conference_short: Applied Energy
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4405322960
   stable_id: 10.1016/j.rser.2024.115164
   doi: https://doi.org/10.1016/j.rser.2024.115164
@@ -846,7 +828,6 @@ main:
   conference_short: RSER
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4401991413
   stable_id: 10.1016/j.apenergy.2024.124288
   doi: https://doi.org/10.1016/j.apenergy.2024.124288
@@ -896,7 +877,6 @@ main:
   conference_short: Applied Energy
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4400948352
   stable_id: 10.1016/j.apenergy.2024.123938
   doi: https://doi.org/10.1016/j.apenergy.2024.123938
@@ -944,7 +924,6 @@ main:
   conference_short: Applied Energy
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4400943708
   stable_id: 10.1016/j.energy.2024.132581
   doi: https://doi.org/10.1016/j.energy.2024.132581
@@ -987,7 +966,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4394945506
   stable_id: 10.1016/j.apenergy.2024.123249
   doi: https://doi.org/10.1016/j.apenergy.2024.123249
@@ -1034,7 +1012,6 @@ main:
   conference_short: Applied Energy
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4392505097
   stable_id: 10.1016/j.enconman.2024.118262
   doi: https://doi.org/10.1016/j.enconman.2024.118262
@@ -1080,7 +1057,6 @@ main:
   conference_short: ECM
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4392363190
   stable_id: 10.1016/j.energy.2024.130845
   doi: https://doi.org/10.1016/j.energy.2024.130845
@@ -1125,7 +1101,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4390630077
   stable_id: 10.1016/j.applthermaleng.2024.122339
   doi: https://doi.org/10.1016/j.applthermaleng.2024.122339
@@ -1169,7 +1144,6 @@ main:
   conference_short: ATE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4389368702
   stable_id: 10.1016/j.renene.2023.119780
   doi: https://doi.org/10.1016/j.renene.2023.119780
@@ -1215,7 +1189,6 @@ main:
   conference_short: RE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4387456712
   stable_id: 10.1016/j.energy.2023.129306
   doi: https://doi.org/10.1016/j.energy.2023.129306
@@ -1259,7 +1232,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4386533134
   stable_id: 10.1016/j.est.2023.108891
   doi: https://doi.org/10.1016/j.est.2023.108891
@@ -1302,7 +1274,6 @@ main:
   conference_short: JES
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4386364806
   stable_id: 10.1016/j.enconman.2023.117573
   doi: https://doi.org/10.1016/j.enconman.2023.117573
@@ -1347,7 +1318,6 @@ main:
   conference_short: ECM
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4385621180
   stable_id: 10.1016/j.enconman.2023.117496
   doi: https://doi.org/10.1016/j.enconman.2023.117496
@@ -1393,7 +1363,6 @@ main:
   conference_short: ECM
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4385247649
   stable_id: 10.1016/j.enconman.2023.117429
   doi: https://doi.org/10.1016/j.enconman.2023.117429
@@ -1438,7 +1407,6 @@ main:
   conference_short: ECM
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4366275557
   stable_id: 10.1016/j.ijhydene.2023.03.389
   doi: https://doi.org/10.1016/j.ijhydene.2023.03.389
@@ -1482,7 +1450,6 @@ main:
   conference_short: IJHE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4365446266
   stable_id: 10.1016/j.energy.2023.127498
   doi: https://doi.org/10.1016/j.energy.2023.127498
@@ -1525,7 +1492,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4322502405
   stable_id: 10.1016/j.renene.2023.02.127
   doi: https://doi.org/10.1016/j.renene.2023.02.127
@@ -1571,7 +1537,6 @@ main:
   conference_short: RE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4384571970
   stable_id: 10.2139/ssrn.4512906
   doi: https://doi.org/10.2139/ssrn.4512906
@@ -1605,7 +1570,6 @@ main:
   conference_short: Preprint
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4385845191
   stable_id: 10.2139/ssrn.4541356
   doi: https://doi.org/10.2139/ssrn.4541356
@@ -1639,7 +1603,6 @@ main:
   conference_short: Preprint
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4311091822
   stable_id: 10.1016/j.energy.2022.126343
   doi: https://doi.org/10.1016/j.energy.2022.126343
@@ -1685,7 +1648,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4310179087
   stable_id: 10.1016/j.apenergy.2022.120400
   doi: https://doi.org/10.1016/j.apenergy.2022.120400
@@ -1734,7 +1696,6 @@ main:
   conference_short: Applied Energy
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4309487580
   stable_id: 10.1016/j.applthermaleng.2022.119648
   doi: https://doi.org/10.1016/j.applthermaleng.2022.119648
@@ -1778,7 +1739,6 @@ main:
   conference_short: ATE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4307288859
   stable_id: 10.1016/j.renene.2022.10.092
   doi: https://doi.org/10.1016/j.renene.2022.10.092
@@ -1824,7 +1784,6 @@ main:
   conference_short: RE
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4303579765
   stable_id: 10.1016/j.enconman.2022.116310
   doi: https://doi.org/10.1016/j.enconman.2022.116310
@@ -1869,7 +1828,6 @@ main:
   conference_short: ECM
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4297473260
   stable_id: 10.1016/j.energy.2022.125574
   doi: https://doi.org/10.1016/j.energy.2022.125574
@@ -1912,7 +1870,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4293685603
   stable_id: 10.1016/j.energy.2022.125096
   doi: https://doi.org/10.1016/j.energy.2022.125096
@@ -1958,7 +1915,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4281858891
   stable_id: 10.1016/j.seta.2022.102344
   doi: https://doi.org/10.1016/j.seta.2022.102344
@@ -2004,7 +1960,6 @@ main:
   conference_short: SETA
   pdf: https://www.sciencedirect.com/science/article/pii/S2213138822003964
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4283165924
   stable_id: 10.1007/s12206-022-0526-7
   doi: https://doi.org/10.1007/s12206-022-0526-7
@@ -2047,7 +2002,6 @@ main:
   conference_short: JMST
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4281260063
   stable_id: 10.1016/j.enconman.2022.115770
   doi: https://doi.org/10.1016/j.enconman.2022.115770
@@ -2092,7 +2046,6 @@ main:
   conference_short: ECM
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4220687639
   stable_id: 10.1016/j.enconman.2022.115560
   doi: https://doi.org/10.1016/j.enconman.2022.115560
@@ -2139,7 +2092,6 @@ main:
   conference_short: ECM
   pdf: https://www.sciencedirect.com/science/article/pii/S0196890422003569
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4304759257
   stable_id: 10.1016/j.energy.2022.125725
   doi: https://doi.org/10.1016/j.energy.2022.125725
@@ -2185,7 +2137,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W4225633053
   stable_id: 10.1016/j.energy.2022.124072
   doi: https://doi.org/10.1016/j.energy.2022.124072
@@ -2229,7 +2180,6 @@ main:
   conference_short: Energy
   pdf: null
   open_access: true
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W2367407407
   stable_id: W2367407407
   doi: null
@@ -2260,7 +2210,6 @@ main:
   conference_short: Journal of Chinese
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg
 - id: https://openalex.org/W2068136613
   stable_id: 10.1007/s10762-010-9642-z
   doi: https://doi.org/10.1007/s10762-010-9642-z
@@ -2304,4 +2253,3 @@ main:
   conference_short: Journal of Infrare
   pdf: null
   open_access: false
-  image: assets/img/pub-placeholder.svg

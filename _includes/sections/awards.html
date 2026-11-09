@@ -1,0 +1,6 @@
+<section id="awards" class="section-divider">
+  <h2><span class="i18n-zh">奖励荣誉</span><span class="i18n-en">Awards</span></h2>
+  <ul class="award-list">{% for item in site.data.awards %}
+    <li><span>{{ item.year }}</span><div class="i18n-zh" style="display:inline">{{ item.title_zh }}</div><div class="i18n-en" style="display:inline">{{ item.title_en }}</div></li>
+  {% endfor %}</ul>
+</section>

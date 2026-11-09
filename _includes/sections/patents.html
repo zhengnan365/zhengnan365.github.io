@@ -1,0 +1,26 @@
+<section id="patents" class="patent-section-divider">
+  <h2><span class="i18n-zh">专利</span><span class="i18n-en">Patents</span><small class="pub-total"><span class="i18n-zh">（共{{ site.data.patents.size }}项）</span><span class="i18n-en">({{ site.data.patents.size }} total)</span></small></h2>
+  {% assign sorted_patents = site.data.patents | sort: "display_date" | reverse %}
+  {% assign remaining_patents = sorted_patents | slice: 5, 999 %}
+  <div class="patent-list compact-list">{% for item in sorted_patents limit: 5 %}
+    <article class="patent-item">
+      <h3 class="title"><span class="i18n-zh">{{ item.title_zh }}</span><span class="i18n-en">{{ item.title_en }}</span></h3>
+      <div class="publication-badges"><span class="pub-badge"><span class="i18n-zh">{{ item.patent_type_zh }}</span><span class="i18n-en">{{ item.patent_type_en }}</span></span><span class="pub-badge"><span class="i18n-zh">{{ item.status_zh }}</span><span class="i18n-en">{{ item.status_en }}</span></span><span class="pub-badge"><span class="i18n-zh">{{ item.display_number_label_zh }} {{ item.display_number }}</span><span class="i18n-en">{{ item.display_number_label_en }} {{ item.display_number }}</span></span></div>
+      <p class="author patent-inventors"><span class="i18n-zh">发明人：{% for inventor in item.inventors %}{% unless forloop.first %}、{% endunless %}{% if inventor == "郑楠" %}<strong>{{ inventor }}</strong>{% else %}{{ inventor }}{% endif %}{% endfor %}</span><span class="i18n-en">Inventors: {% for inventor in item.inventors %}{% unless forloop.first %}, {% endunless %}{% if inventor == "郑楠" %}<strong>Nan Zheng</strong>{% else %}{{ inventor }}{% endif %}{% endfor %}</span></p>
+      <p class="patent-key-meta"><span class="i18n-zh">{{ item.display_date_label_zh }}：{{ item.display_date }}</span><span class="i18n-en">{{ item.display_date_label_en }}: {{ item.display_date }}</span></p>
+    </article>
+  {% endfor %}</div>
+  {% if remaining_patents.size > 0 %}
+  <details class="older-patents">
+    <summary><span class="i18n-zh">更多</span><span class="i18n-en">More</span></summary>
+    <div class="patent-list compact-list patent-list-older">{% for item in remaining_patents %}
+      <article class="patent-item">
+        <h3 class="title"><span class="i18n-zh">{{ item.title_zh }}</span><span class="i18n-en">{{ item.title_en }}</span></h3>
+        <div class="publication-badges"><span class="pub-badge"><span class="i18n-zh">{{ item.patent_type_zh }}</span><span class="i18n-en">{{ item.patent_type_en }}</span></span><span class="pub-badge"><span class="i18n-zh">{{ item.status_zh }}</span><span class="i18n-en">{{ item.status_en }}</span></span><span class="pub-badge"><span class="i18n-zh">{{ item.display_number_label_zh }} {{ item.display_number }}</span><span class="i18n-en">{{ item.display_number_label_en }} {{ item.display_number }}</span></span></div>
+        <p class="author patent-inventors"><span class="i18n-zh">发明人：{% for inventor in item.inventors %}{% unless forloop.first %}、{% endunless %}{% if inventor == "郑楠" %}<strong>{{ inventor }}</strong>{% else %}{{ inventor }}{% endif %}{% endfor %}</span><span class="i18n-en">Inventors: {% for inventor in item.inventors %}{% unless forloop.first %}, {% endunless %}{% if inventor == "郑楠" %}<strong>Nan Zheng</strong>{% else %}{{ inventor }}{% endif %}{% endfor %}</span></p>
+        <p class="patent-key-meta"><span class="i18n-zh">{{ item.display_date_label_zh }}：{{ item.display_date }}</span><span class="i18n-en">{{ item.display_date_label_en }}: {{ item.display_date }}</span></p>
+      </article>
+    {% endfor %}</div>
+  </details>
+  {% endif %}
+</section>

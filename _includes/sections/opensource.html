@@ -1,0 +1,6 @@
+<section id="opensource">
+  <h2><span class="i18n-zh">开源软件</span><span class="i18n-en">Open Source</span></h2>
+  <ul class="software-list">{% for item in site.data.opensource %}
+    <li><a href="{{ item.url }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> {{ item.name }}</a><span class="i18n-zh">{{ item.description_zh }}</span><span class="i18n-en">{{ item.description_en }}</span></li>
+  {% endfor %}</ul>
+</section>

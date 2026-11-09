@@ -1,0 +1,9 @@
+# 研究方向：每项包含 title_zh/title_en 和 description_zh/description_en。
+- title_zh: 多能互补综合能源系统
+  title_en: Integrated Multi-Energy Systems
+  description_zh: 围绕风光地热、氢氨醇、冷热电和多元储能协同，开展系统建模、集成设计与协同运行策略研究
+  description_en: System modeling, integrated design, and coordinated operation of wind, solar, and geothermal energy; hydrogen, ammonia, and methanol; combined cooling, heating, and power; and energy storage
+- title_zh: 低碳能源系统优化运行与智能调控
+  title_en: Low-Carbon Optimization and Intelligent Control
+  description_zh: 针对可再生能源出力波动及复杂运行条件，开展多目标优化、不确定性分析、随机与鲁棒优化以及智能调控研究
+  description_en: Multi-objective optimization, uncertainty analysis, stochastic and robust optimization, and intelligent control for fluctuating renewable energy and complex operating conditions

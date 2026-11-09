@@ -45,8 +45,7 @@
       "conference": "Applied Thermal Engineering",
       "conference_short": "ATE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W7169858548",
@@ -89,8 +88,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W7141300279",
@@ -133,8 +131,7 @@
       "conference": "Journal of Energy Storage",
       "conference_short": "JES",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W7120188520",
@@ -177,8 +174,7 @@
       "conference": "Renewable Energy",
       "conference_short": "RE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W7222490347",
@@ -209,8 +205,7 @@
       "conference": "机械与电子控制工程",
       "conference_short": "机械与电子控制工程",
       "pdf": "http://ojs.omniscient.sg/index.php/mece/article/download/85510/83798",
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W7222594926",
@@ -241,8 +236,7 @@
       "conference": "工程学研究与实用",
       "conference_short": "工程学研究与实用",
       "pdf": "http://ojs.omniscient.sg/index.php/esra/article/download/85933/84222",
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4417483727",
@@ -285,8 +279,7 @@
       "conference": "Applied Thermal Engineering",
       "conference_short": "ATE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W7117573461",
@@ -330,8 +323,7 @@
       "conference": "Physics of Fluids",
       "conference_short": "PoF",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4414982195",
@@ -374,8 +366,7 @@
       "conference": "Fuel",
       "conference_short": "Fuel",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4414239492",
@@ -419,8 +410,7 @@
       "conference": "Physics of Fluids",
       "conference_short": "PoF",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4414898460",
@@ -449,8 +439,7 @@
       "conference": "International Conference on Electrical Engineering and Green Energy (CEEGE)",
       "conference_short": "Conference",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4411177103",
@@ -493,8 +482,7 @@
       "conference": "Applied Thermal Engineering",
       "conference_short": "ATE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4411045743",
@@ -541,8 +529,7 @@
       "conference": "Science China Technological Sciences",
       "conference_short": "SCTS",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4410291883",
@@ -585,8 +572,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4409376242",
@@ -629,8 +615,7 @@
       "conference": "Journal of Thermal Science",
       "conference_short": "JTS",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4409003416",
@@ -673,8 +658,7 @@
       "conference": "Renewable Energy",
       "conference_short": "RE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4408360984",
@@ -717,8 +701,7 @@
       "conference": "Renewable Energy",
       "conference_short": "RE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4405432292",
@@ -763,8 +746,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4405322960",
@@ -807,8 +789,7 @@
       "conference": "Renewable and Sustainable Energy Reviews",
       "conference_short": "RSER",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4401991413",
@@ -853,8 +834,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4400948352",
@@ -899,8 +879,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4400943708",
@@ -943,8 +922,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4394945506",
@@ -989,8 +967,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4392505097",
@@ -1033,8 +1010,7 @@
       "conference": "Energy Conversion and Management",
       "conference_short": "ECM",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4392363190",
@@ -1077,8 +1053,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4390630077",
@@ -1121,8 +1096,7 @@
       "conference": "Applied Thermal Engineering",
       "conference_short": "ATE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4389368702",
@@ -1165,8 +1139,7 @@
       "conference": "Renewable Energy",
       "conference_short": "RE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4387456712",
@@ -1209,8 +1182,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4386533134",
@@ -1253,8 +1225,7 @@
       "conference": "Journal of Energy Storage",
       "conference_short": "JES",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4386364806",
@@ -1297,8 +1268,7 @@
       "conference": "Energy Conversion and Management",
       "conference_short": "ECM",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4385621180",
@@ -1341,8 +1311,7 @@
       "conference": "Energy Conversion and Management",
       "conference_short": "ECM",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4385247649",
@@ -1385,8 +1354,7 @@
       "conference": "Energy Conversion and Management",
       "conference_short": "ECM",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4366275557",
@@ -1429,8 +1397,7 @@
       "conference": "International Journal of Hydrogen Energy",
       "conference_short": "IJHE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4365446266",
@@ -1473,8 +1440,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4322502405",
@@ -1517,8 +1483,7 @@
       "conference": "Renewable Energy",
       "conference_short": "RE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4384571970",
@@ -1549,8 +1514,7 @@
       "conference": "SSRN Electronic Journal",
       "conference_short": "Preprint",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4385845191",
@@ -1581,8 +1545,7 @@
       "conference": "SSRN Electronic Journal",
       "conference_short": "Preprint",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4311091822",
@@ -1625,8 +1588,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4310179087",
@@ -1671,8 +1633,7 @@
       "conference": "Applied Energy",
       "conference_short": "Applied Energy",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4309487580",
@@ -1715,8 +1676,7 @@
       "conference": "Applied Thermal Engineering",
       "conference_short": "ATE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4307288859",
@@ -1759,8 +1719,7 @@
       "conference": "Renewable Energy",
       "conference_short": "RE",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4303579765",
@@ -1803,8 +1762,7 @@
       "conference": "Energy Conversion and Management",
       "conference_short": "ECM",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4297473260",
@@ -1847,8 +1805,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4293685603",
@@ -1891,8 +1848,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4281858891",
@@ -1935,8 +1891,7 @@
       "conference": "Sustainable Energy Technologies and Assessments",
       "conference_short": "SETA",
       "pdf": "https://www.sciencedirect.com/science/article/pii/S2213138822003964",
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4283165924",
@@ -1979,8 +1934,7 @@
       "conference": "Journal of Mechanical Science and Technology",
       "conference_short": "JMST",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4281260063",
@@ -2023,8 +1977,7 @@
       "conference": "Energy Conversion and Management",
       "conference_short": "ECM",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W4220687639",
@@ -2067,8 +2020,7 @@
       "conference": "Energy Conversion and Management",
       "conference_short": "ECM",
       "pdf": "https://www.sciencedirect.com/science/article/pii/S0196890422003569",
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4304759257",
@@ -2111,8 +2063,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W4225633053",
@@ -2155,8 +2106,7 @@
       "conference": "Energy",
       "conference_short": "Energy",
       "pdf": null,
-      "open_access": true,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": true
     },
     {
       "id": "https://openalex.org/W2367407407",
@@ -2185,8 +2135,7 @@
       "conference": "Journal of Chinese Society of Power Engineering",
       "conference_short": "Journal of Chinese",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     },
     {
       "id": "https://openalex.org/W2068136613",
@@ -2229,8 +2178,7 @@
       "conference": "Journal of Infrared Millimeter and Terahertz Waves",
       "conference_short": "Journal of Infrare",
       "pdf": null,
-      "open_access": false,
-      "image": "assets/img/pub-placeholder.svg"
+      "open_access": false
     }
   ]
 }

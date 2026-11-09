@@ -31,8 +31,8 @@ personal_link: https://scholar.znup.top
 faculty_profile: https://dnxy.yzu.edu.cn/info/1017/3288.htm
 
 avatar: ./assets/img/avatar.png
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
+favicon: ./assets/img/favicon.svg
+favicon_dark: ./assets/img/favicon-dark.svg
 
 enable_footnote: false
 font: "Serif"

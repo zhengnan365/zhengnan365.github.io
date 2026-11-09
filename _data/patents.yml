@@ -1,3 +1,5 @@
+# 专利：完整新增模板和受理/公开/授权的填写规则见 docs/CONTENT_GUIDE.md。
+# 页面自动按 display_date 倒序显示；显示编号、日期与各语言标签应保持一致。
 - title_zh: 一种换热器管板焊缝在线寿命监测方法及系统
   title_en: Online life monitoring method and system for heat-exchanger tube-sheet
     welds

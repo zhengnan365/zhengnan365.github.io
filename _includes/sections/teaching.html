@@ -1,0 +1,11 @@
+<section id="teaching">
+  <h2><span class="i18n-zh">教学</span><span class="i18n-en">Teaching</span></h2>
+  {% for semester in site.data.teaching.semesters %}
+  <div class="teaching-semester">
+    <h3><span class="i18n-zh">{{ semester.name_zh }}</span><span class="i18n-en">{{ semester.name_en }}</span></h3>
+    <ul>{% for course in semester.courses %}
+      <li><span class="i18n-zh">{{ course.name_zh }}</span><span class="i18n-en">{{ course.name_en }}</span></li>
+    {% endfor %}</ul>
+  </div>
+  {% endfor %}
+</section>

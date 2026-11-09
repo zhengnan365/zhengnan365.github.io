@@ -1,3 +1,5 @@
+# 项目：复制一个列表项填写 period、title_zh/title_en、role_zh/role_en、amount_zh/amount_en。
+# period 是保留的起止时间元数据；目前页面仅展示标题、金额与角色。
 - period: 2027.01–2029.12
   title_zh: 国家自然科学基金青年项目：太阳能热驱动双化学链的分布式供能系统能-质-碳耦合机理与协同调控
   title_en: National Natural Science Foundation of China Young Scientists Fund — Energy–mass–carbon coupling mechanisms and coordinated control in a distributed energy system driven by solar thermal dual chemical looping

@@ -1,0 +1,10 @@
+<div class="hero-intro" id="about">
+  <p class="eyebrow"><span class="i18n-zh">低碳能源系统 · 综合能源 · 智能调控</span><span class="i18n-en">LOW-CARBON ENERGY SYSTEMS · INTEGRATED ENERGY · INTELLIGENT CONTROL</span></p>
+  <h2><span class="i18n-zh">个人简介</span><span class="i18n-en">Profile</span></h2>
+  <div class="i18n-zh">{% for item in site.data.profile.paragraphs %}
+    <p>{{ item.text_zh }}</p>
+  {% endfor %}</div>
+  <div class="i18n-en">{% for item in site.data.profile.paragraphs %}
+    <p>{{ item.text_en }}</p>
+  {% endfor %}</div>
+</div>

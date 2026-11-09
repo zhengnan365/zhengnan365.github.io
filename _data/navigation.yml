@@ -1,31 +1,70 @@
+# 栏目总开关和显示顺序：移动整个条目即可调整正文和导航顺序。
+# enabled: true 显示；enabled: false 同时隐藏正文和导航。必须使用布尔值，不加引号。
+# key 是页面锚点，template 是 _includes/sections/ 内的模板名，通常不需要修改。
 main:
-  - title_zh: 个人简介
+  - key: about
+    template: about
+    enabled: true
+    title_zh: 个人简介
     title_en: Profile
     url: "#about"
-  - title_zh: 研究方向
+  - key: research
+    template: research
+    enabled: true
+    title_zh: 研究方向
     title_en: Research Interests
     url: "#research"
-  - title_zh: 项目承担
+  - key: projects
+    template: projects
+    enabled: true
+    title_zh: 项目承担
     title_en: Projects
     url: "#projects"
-  - title_zh: 论文
+  - key: publications
+    template: publications
+    enabled: true
+    title_zh: 论文
     title_en: Publications
     url: "#publications"
-  - title_zh: 专利
+  - key: patents
+    template: patents
+    enabled: true
+    title_zh: 专利
     title_en: Patents
     url: "#patents"
-  - title_zh: 获奖
+  - key: awards
+    template: awards
+    enabled: true
+    title_zh: 获奖
     title_en: Awards
     url: "#awards"
-  - title_zh: 教学
+  - key: teaching
+    template: teaching
+    enabled: true
+    title_zh: 教学
     title_en: Teaching
     url: "#teaching"
-  - title_zh: 指导学生
+  - key: students
+    template: students
+    enabled: true
+    title_zh: 指导学生
     title_en: Students
     url: "#students"
-  - title_zh: 开源软件
+  - key: opensource
+    template: opensource
+    enabled: true
+    title_zh: 开源软件
     title_en: Open Source
     url: "#opensource"
-  - title_zh: 联系
+  - key: contact
+    template: contact
+    enabled: true
+    title_zh: 联系
     title_en: Contact
     url: "#contact"
+  - key: news
+    template: news
+    enabled: false
+    title_zh: 新闻动态
+    title_en: News
+    url: "#news"

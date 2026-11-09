@@ -119,6 +119,8 @@ html[data-theme="dark"] .project p { color: #b7bac3; }
 .news-list li,
 .awards li,
 .news li { margin: 0 0 .4rem; list-style: disc; }
+.student-award-list li,
+.student-award-list li > span,
 .student-award-list li > span.i18n-zh,
 .student-award-list li > span.i18n-en { font-weight: 400 !important; }
 .award-list span,
@@ -142,6 +144,8 @@ html[data-theme="dark"] .project p { color: #b7bac3; }
   padding: 1px 6px;
   font-size: 11px;
 }
+.older-patents { margin-top: 1rem; }
+.older-patents summary { cursor: pointer; color: #043361; font-weight: 600; }
 .pub-list { padding: 0; list-style: none; }
 .pub-item { margin: 0 0 .5rem; padding: 12px 0; }
 .pub-title { margin-bottom: 3px; font-size: 1em; font-weight: 400; line-height: 1.4; }
@@ -233,6 +237,7 @@ html[data-theme="dark"] .patent-item .author { color: #c7d0dc; }
 html[data-theme="dark"] .patent-item .author strong { color: #f0f3f7; }
 html[data-theme="dark"] .patent-key-meta,
 html[data-theme="dark"] .pub-total { color: #aeb5c0; }
+html[data-theme="dark"] .older-patents summary { color: #b7d4f1; }
 html[data-theme="dark"] .pub-year { color: #b7d4f1; }
 html[data-theme="dark"] .pub-year::after { background: #50647a; }
 html[data-theme="dark"] .pub-authors { color: #c7d0dc; }
