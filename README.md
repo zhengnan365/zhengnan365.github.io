@@ -1,20 +1,15 @@
 # 郑楠个人学术主页
 
-这是郑楠的个人学术主页，基于 Jekyll 和 GitHub Pages 构建。网站默认中文，支持中英文切换、浅色/深色模式、论文自动同步、专利、项目、获奖、教学、指导学生、开源软件和联系方式展示。
+这是郑楠的个人学术主页，基于 Jekyll 构建。网站默认中文，支持中英文切换、浅色/深色模式、论文自动同步以及科研信息展示。`main` 分支推送后，同一份静态网站会发布到 GitHub Pages，并可选同步到阿里云 ECS。
 
 ## 网站地址
 
 - GitHub Pages：[https://zhengnan365.github.io/](https://zhengnan365.github.io/)
-- 自定义域名：[https://scholar.znup.top/](https://scholar.znup.top/)
-- 自定义域名由根目录的 CNAME 文件管理。
+- 当前不绑定 GitHub Pages 自定义域名。
+- 个人网站入口：[https://zn.znup.top/](https://zn.znup.top/)
 
 ## 修改文字应该编辑哪里
 
-请优先修改正式源码目录：
-
-    D:\\00Keyan\\WorkSpace\\zhengnan365.github.io
-
-D:\\00Keyan\\18-课题组\\个人网站 是当前的本地静态预览副本。直接修改其中的 index.html 只会改变本地预览，不会更新 GitHub Pages。
 
 | 要修改的内容 | 编辑文件 | 备注 |
 | --- | --- | --- |
@@ -98,6 +93,55 @@ D:\\00Keyan\\18-课题组\\个人网站 是当前的本地静态预览副本。�
 
 GitHub Actions 每周一自动运行，也可以在仓库 Actions 页面手动运行 Sync publications。
 
+## 阿里云 ECS 自动部署
+
+当前服务器环境：
+
+| 项目 | 配置 |
+| --- | --- |
+| 云服务器 | 阿里云 ECS，华东 1（杭州） |
+| 公网 IP | `101.37.28.13` |
+| 操作系统 | Debian 12 64 位 |
+| 管理面板 | 小皮面板 |
+| 网站域名 | `zn.znup.top` |
+| 网站目录 | `/xp/www/zn.znup.top` |
+
+网站只维护一套 Jekyll 源码。推送 `main` 后，工作流构建一次 `_site`，默认发布到 GitHub Pages；启用服务器部署后，同一份 `_site` 通过 SSH 和 rsync 同步到阿里云 ECS，不需要维护 `html_source_file` 或手工复制网页。
+
+小皮面板负责站点、Web 服务和 HTTPS。服务器需要启用 SSH 并安装 rsync；小皮中创建纯静态站点 `zn.znup.top`，站点根目录为：
+
+    /xp/www/zn.znup.top
+
+在仓库 `Settings → Secrets and variables → Actions` 中设置以下 Secrets：
+
+| 名称 | 内容 |
+| --- | --- |
+| `SERVER_HOST` | `101.37.28.13` |
+| `SERVER_PORT` | ECS 实际 SSH 端口，默认 `22` |
+| `SERVER_USER` | 建议使用专用用户 `deploy` |
+| `SERVER_SSH_KEY` | 部署用户对应的 SSH 私钥 |
+| `SERVER_KNOWN_HOSTS` | 在可信环境执行 `ssh-keyscan -H 服务器地址` 得到的主机公钥记录 |
+| `SERVER_DEPLOY_PATH` | `/xp/www/zn.znup.top` |
+
+然后在 Actions 的 Variables 中新增：
+
+    ENABLE_SERVER_DEPLOY=true
+
+只有该变量严格等于 `true` 时才会运行服务器部署任务。尚未配置服务器时不要启用，GitHub Pages 发布不会受到影响。部署使用 `rsync --delete`，服务器网站目录会与 `_site` 保持一致，因此不要在部署目录中直接手工修改文件。
+
+日常更新流程：
+
+    git add -A
+    git commit -m "Update website"
+    git push origin main
+
+推送后在仓库的 `Actions → Deploy Jekyll site` 中检查 `Deploy to GitHub Pages` 和 `Deploy to personal server`。两项都显示绿色对勾后，检查以下地址：
+
+    https://zhengnan365.github.io
+    https://zn.znup.top
+
+论文同步工作流提交新数据到 `main` 后，也会自动触发相同的双端发布流程。
+
 ## 本地预览
 
 正式 Jekyll 预览需要 Ruby、Bundler 和 Python：
@@ -107,16 +151,8 @@ GitHub Actions 每周一自动运行，也可以在仓库 Actions 页面手动�
 
 然后打开 http://localhost:4000/。
 
-当前任务中使用的静态预览地址是：
-
-    http://127.0.0.1:8765/
-
-修改源码后，需要重新构建或让我同步静态预览副本；不要把 8765 目录中的 index.html 当作 GitHub Pages 的源码。
-
 ## 提交前检查
 
-    python -m unittest discover -s tests -p "test_*.py" -v
-    node --test tests/site-controls.test.mjs
     bundle exec jekyll build
 
 确认本地页面正常后，再提交并推送 main 分支。GitHub Pages 工作流成功后，检查中英文切换、明暗模式、移动端导航、论文数据和折叠栏目。
@@ -134,7 +170,6 @@ GitHub Actions 每周一自动运行，也可以在仓库 Actions 页面手动�
     assets/img/                 头像和图标
     assets/files/               可下载文件
     scripts/                    OpenAlex 同步脚本
-    tests/                      自动化测试
     .github/workflows/          Pages 部署和论文同步
     docs/CONTENT_GUIDE.md       内容填写指南
     docs/TECHNICAL.md           技术维护文档

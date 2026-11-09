@@ -21,13 +21,7 @@
 
     D:\\00Keyan\\WorkSpace\\zhengnan365.github.io
 
-本地 8765 预览目录：
-
-    D:\\00Keyan\\18-课题组\\个人网站
-
-GitHub Pages 只读取正式源码仓库。8765 目录是静态预览副本，便于检查当前效果；修改正式源码后需要重新生成或同步预览副本。
-
-不要把预览目录中的 index.html 复制回仓库作为源码。源码中的 Liquid 模板和 _data 数据需要由 Jekyll 构建。
+本地预览应直接在正式源码目录运行 `bundle exec jekyll serve --livereload`，浏览 `http://localhost:4000/`。不要另行维护静态 HTML 副本；源码中的 Liquid 模板和 `_data` 数据需要由 Jekyll 构建。
 
 ## 3. 页面内容维护
 
@@ -130,12 +124,12 @@ enabled 为 false 时，_includes/navigation.html 不输出该导航项，index.
 
 仓库 Settings → Pages → Build and deployment 的来源应设置为 GitHub Actions。
 
+同一个 Pages 工作流还会把 `_site` 上传为 `jekyll-site` artifact。当仓库变量 `ENABLE_SERVER_DEPLOY` 为 `true` 时，`deploy-server` 任务下载该 artifact，并使用 SSH 与 `rsync --delete` 同步到个人服务器。使用小皮面板时，建议目标目录为 `/xp/www/zn.znup.top`，由面板负责站点 Web 服务和 HTTPS。服务器连接信息只保存在 Actions Secrets 中，不写入仓库。配置项目和操作步骤见 README 的“同步到个人服务器”。
+
 ## 7. 本地检查
 
 建议在提交前运行：
 
-    python -m unittest discover -s tests -p "test_*.py" -v
-    node --test tests/site-controls.test.mjs
     bundle exec jekyll build
 
 重点检查：
@@ -163,7 +157,7 @@ enabled 为 false 时，_includes/navigation.html 不输出该导航项，index.
 
 ### 本地预览仍是旧样式
 
-强制刷新浏览器；确认 site-overrides.css 已同步到预览目录；必要时重新启动 127.0.0.1:8765 的静态服务。
+强制刷新浏览器；确认修改位于正式源码目录，必要时重新启动 `bundle exec jekyll serve --livereload`。
 
 ### 导航跳转不正确
 

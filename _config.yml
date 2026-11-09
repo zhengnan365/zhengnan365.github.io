@@ -27,7 +27,7 @@ orcid: https://orcid.org/0000-0002-2066-1506
 scopus: https://www.scopus.com/authid/detail.uri?authorId=57478923000
 web_of_science: https://www.webofscience.com/wos/author/record/HJA-6964-2022
 researchgate: https://www.researchgate.net/profile/Nan-Zheng-32
-personal_link: https://scholar.znup.top
+personal_link: https://zn.znup.top
 faculty_profile: https://dnxy.yzu.edu.cn/info/1017/3288.htm
 
 avatar: ./assets/img/avatar.png
@@ -46,7 +46,5 @@ exclude:
   - LICENSE
   - docs/
   - scripts/
-  - tests/
-  - requirements-dev.txt
   - vendor/
   - node_modules/

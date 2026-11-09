@@ -96,17 +96,18 @@
         </a>
         {% endif %}
 
+        {% if site.personal_link %}
+        <a title="个人网站" aria-label="个人网站" href="{{ site.personal_link }}" target="_blank" rel="noopener">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i><span class="academic-label">Web</span>
+        </a>
+        {% endif %}
+
         {% if site.github_link %}
         <a title="GitHub" aria-label="GitHub" href="{{ site.github_link }}" target="_blank" rel="noopener">
           <i class="fab fa-github" aria-hidden="true"></i><span class="academic-label">GH</span>
         </a>
         {% endif %}
 
-        {% if site.personal_link %}
-        <a title="Personal profile" aria-label="Personal profile" href="{{ site.personal_link }}" target="_blank" rel="noopener">
-          <i class="fa-solid fa-globe" aria-hidden="true"></i><span class="academic-label">Web</span>
-        </a>
-        {% endif %}
         </div>
         <br>
 
