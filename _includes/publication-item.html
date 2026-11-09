@@ -1,7 +1,7 @@
 {% assign link = include.link %}
 <li class="publication-item">
   <article class="publication-card">
-    <div class="title">{{ link.title | escape }}</div>
+    <div class="title"><span class="i18n-zh">{{ link.title | escape }}</span><span class="i18n-en">{{ link.title_en | default: link.title | escape }}</span></div>
     <div class="publication-badges">
       {% if link.doi %}<a class="pub-badge doi-badge" href="{{ link.doi | escape }}" target="_blank" rel="noopener" title="DOI" aria-label="DOI: {{ link.title | escape }}"><i class="fa-solid fa-link" aria-hidden="true"></i> DOI</a>{% endif %}
       {% if link.metrics.cas_label_zh or link.metrics.cas_label_en %}<span class="pub-badge" title="CAS"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> <span class="i18n-zh">{{ link.metrics.cas_label_zh }}</span><span class="i18n-en">{{ link.metrics.cas_label_en }}</span></span>{% endif %}
@@ -10,6 +10,6 @@
       {% unless link.citation_count == nil %}<button type="button" class="pub-badge citation-copy" data-citation="{{ link.citation_gbt7714 | escape }}" title="复制国标引用 / Copy GB/T citation" aria-label="复制国标引用，OpenAlex 引用 {{ link.citation_count }} 次"><i class="fa-solid fa-quote-right" aria-hidden="true"></i> {{ link.citation_count }}</button><span class="citation-status visually-hidden" role="status" aria-live="polite"></span>{% endunless %}
     </div>
     <div class="author">{{ link.display_authors }}</div>
-    {% if link.venue or link.year %}<div class="periodical"><em>{{ link.venue | escape }}{% if link.venue and link.year %}, {% endif %}{{ link.year }}</em></div>{% endif %}
+    {% if link.venue or link.year %}<div class="periodical"><em><span class="i18n-zh">{{ link.venue | escape }}</span><span class="i18n-en">{{ link.venue_en | default: link.venue | escape }}</span>{% if link.venue and link.year %}, {% endif %}{{ link.year }}</em></div>{% endif %}
   </article>
 </li>

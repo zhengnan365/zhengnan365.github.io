@@ -189,10 +189,13 @@ main:
   stable_id: 10.37155/2717-5197-0816-71
   doi: https://doi.org/10.37155/2717-5197-0816-71
   title: 超临界锅炉低负荷配煤掺烧与NOx协同控制技术应用
+  title_en: Application of coordinated coal-blending combustion and NOx control technology
+    for a supercritical boiler at low load
   authors: Nan Zheng*
   display_authors: <strong>Nan Zheng</strong>*
   has_corresponding_author: true
   venue: 机械与电子控制工程
+  venue_en: Mechanical and Electronic Control Engineering
   issn_l: 2717-5197
   issns:
   - 2717-5197
@@ -218,10 +221,13 @@ main:
   stable_id: 10.37155/2717-5316-0717-34
   doi: https://doi.org/10.37155/2717-5316-0717-34
   title: 锅炉燃烧器配风优化降低过热器再热器超温的试验研究
+  title_en: Experimental study on burner air-distribution optimization to reduce superheater
+    and reheater overtemperature
   authors: Nan Zheng*
   display_authors: <strong>Nan Zheng</strong>*
   has_corresponding_author: true
   venue: 工程学研究与实用
+  venue_en: Engineering Research and Application
   issn_l: 2717-5316
   issns:
   - 2717-5316
