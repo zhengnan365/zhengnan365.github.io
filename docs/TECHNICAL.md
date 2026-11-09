@@ -124,7 +124,7 @@ enabled 为 false 时，_includes/navigation.html 不输出该导航项，index.
 
 仓库 Settings → Pages → Build and deployment 的来源应设置为 GitHub Actions。
 
-同一个 Pages 工作流还会把 `_site` 上传为 `jekyll-site` artifact。当仓库变量 `ENABLE_SERVER_DEPLOY` 为 `true` 时，`deploy-server` 任务下载该 artifact，并使用 SSH 与 `rsync --delete` 同步到个人服务器。使用小皮面板时，建议目标目录为 `/xp/www/zn.znup.top`，由面板负责站点 Web 服务和 HTTPS。服务器连接信息只保存在 Actions Secrets 中，不写入仓库。配置项目和操作步骤见 README 的“同步到个人服务器”。
+同一个 Pages 工作流还会把 `_site` 上传为 `jekyll-site` artifact。当仓库变量 `ENABLE_SERVER_DEPLOY` 为 `true` 时，`deploy-server` 任务下载该 artifact，并使用 SSH 与 `rsync --delete` 同步到个人服务器。工作流按 `SERVER_HOST` 和 `SERVER_PORT` 自动执行 `ssh-keyscan` 生成本次部署的 `known_hosts`。使用小皮面板时，建议目标目录为 `/xp/www/zn.znup.top`，由面板负责站点 Web 服务和 HTTPS。服务器连接信息只保存在 Actions Secrets 中，不写入仓库。配置项目和操作步骤见 README 的“同步到个人服务器”。
 
 ## 7. 本地检查
 

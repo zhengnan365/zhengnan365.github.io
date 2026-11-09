@@ -120,7 +120,6 @@ GitHub Actions 每周一自动运行，也可以在仓库 Actions 页面手动�
 | `SERVER_PORT` | ECS 实际 SSH 端口，默认 `22` |
 | `SERVER_USER` | 建议使用专用用户 `deploy` |
 | `SERVER_SSH_KEY` | 部署用户对应的 SSH 私钥 |
-| `SERVER_KNOWN_HOSTS` | 在可信环境执行 `ssh-keyscan -H 服务器地址` 得到的主机公钥记录 |
 | `SERVER_DEPLOY_PATH` | `/xp/www/zn.znup.top` |
 
 然后在 Actions 的 Variables 中新增：
@@ -128,6 +127,8 @@ GitHub Actions 每周一自动运行，也可以在仓库 Actions 页面手动�
     ENABLE_SERVER_DEPLOY=true
 
 只有该变量严格等于 `true` 时才会运行服务器部署任务。尚未配置服务器时不要启用，GitHub Pages 发布不会受到影响。部署使用 `rsync --delete`，服务器网站目录会与 `_site` 保持一致，因此不要在部署目录中直接手工修改文件。
+
+部署任务会根据 `SERVER_HOST` 和 `SERVER_PORT` 自动读取 SSH 主机公钥，不需要手工配置 `SERVER_KNOWN_HOSTS`。如果 ECS 更换系统或 SSH 主机密钥，下一次部署会读取新的主机公钥。
 
 日常更新流程：
 
