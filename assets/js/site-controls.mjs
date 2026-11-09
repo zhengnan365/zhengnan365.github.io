@@ -32,7 +32,7 @@ function updateControlLabels(doc) {
   const themeButton = doc.querySelector('[data-theme-toggle]');
   if (themeButton) {
     themeButton.innerHTML = root.dataset.theme === 'dark'
-      ? '<i class="fa-regular fa-sun" aria-hidden="true"></i>'
+      ? '<i class="fa-solid fa-sun" aria-hidden="true"></i>'
       : '<i class="fa-regular fa-moon" aria-hidden="true"></i>';
   }
   themeButton?.setAttribute('aria-label', root.dataset.theme === 'dark' ? 'Switch to light theme' : '切换到深色模式');

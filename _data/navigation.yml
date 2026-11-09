@@ -1,25 +1,31 @@
 main:
-  - title_zh: 关于
-    title_en: About
+  - title_zh: 个人简介
+    title_en: Profile
     url: "#about"
-  - title_zh: 研究
-    title_en: Research
+  - title_zh: 研究方向
+    title_en: Research Interests
     url: "#research"
+  - title_zh: 项目承担
+    title_en: Projects
+    url: "#projects"
   - title_zh: 论文
     title_en: Publications
     url: "#publications"
   - title_zh: 专利
     title_en: Patents
     url: "#patents"
-  - title_zh: 项目
-    title_en: Projects
-    url: "#projects"
-  - title_zh: 学生
-    title_en: Students
-    url: "#students"
-  - title_zh: 奖励
+  - title_zh: 获奖
     title_en: Awards
     url: "#awards"
-  - title_zh: 动态
-    title_en: News
-    url: "#news"
+  - title_zh: 教学
+    title_en: Teaching
+    url: "#teaching"
+  - title_zh: 指导学生
+    title_en: Students
+    url: "#students"
+  - title_zh: 开源软件
+    title_en: Open Source
+    url: "#opensource"
+  - title_zh: 联系
+    title_en: Contact
+    url: "#contact"

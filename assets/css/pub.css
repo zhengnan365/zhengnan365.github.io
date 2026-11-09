@@ -37,3 +37,49 @@ section > h2.pub-section-title:first-child { margin-top: 0; }
   h2.pub-section-title { flex-wrap: wrap; }
   .publications ol.bibliography li.publication-item { padding: 12px 0; }
 }
+
+h2.pub-section-title { gap: 5px; margin: 0 0 8px; }
+.pub-total { color: #6a6a6a; font-size: .72em; font-weight: 400; }
+.publications { margin-top: .5rem; }
+.publications h3.year {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 1.5rem 0 .6rem;
+  color: #043361;
+  font-size: 1.2rem;
+}
+.publications h3.year::after { content: ""; height: 1px; flex: 1; background: #d3dce5; }
+.publications ol.bibliography li.publication-item { padding: 10px 0 14px; border-radius: 0; }
+.publication-card .title { color: #043361; font-size: 1.08em; }
+.publication-card .author { color: #555; font-size: .98em; }
+.publication-card .author strong { color: #222; font-weight: 700; }
+.publication-badges { display: flex; flex-wrap: wrap; gap: 5px; margin: 6px 0; }
+.publication-badges .pub-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 25px;
+  box-sizing: border-box;
+  border: 1px solid #d6dce3;
+  border-radius: 3px;
+  padding: 2px 7px;
+  background: #f2f4f7;
+  color: #294464;
+  font: 600 12px/1.4 'Source Sans 3', sans-serif;
+  text-decoration: none;
+}
+.publication-badges .doi-badge { color: #294464; background: #f2f4f7; border-color: #d6dce3; }
+.publication-badges button.pub-badge { cursor: pointer; }
+.publication-badges .doi-badge:hover,
+.publication-badges button.pub-badge:hover { color: #fff; background: #0b67a3; border-color: #0b67a3; }
+.older-publications { margin-top: 1rem; }
+.older-publications summary { cursor: pointer; color: #043361; font-weight: 600; }
+p.publication-source { margin: 1.5rem 0 0; color: #777; font-size: .78rem; line-height: 1.4; text-align: right; }
+.publication-source a { color: inherit; text-decoration: underline; }
+[data-theme="dark"] .publications h3.year,
+[data-theme="dark"] .older-publications summary { color: #b7d4f1; }
+[data-theme="dark"] .publications h3.year::after { background: #50647a; }
+[data-theme="dark"] .publication-card .author { color: #c7d0dc; }
+[data-theme="dark"] .publication-card .author strong { color: #f0f3f7; }
+[data-theme="dark"] .publication-badges .pub-badge { color: #e9eef5; background: #25364a; border-color: #50647a; }

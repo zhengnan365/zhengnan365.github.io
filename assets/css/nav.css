@@ -32,18 +32,18 @@
 .topnav-controls {
     position: absolute;
     top: 5px;
-    right: max(16px, calc(50% - 480px));
+    right: 18px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 7px;
 }
 
 .topnav-controls button {
-    width: 36px;
+    min-width: 32px;
     height: 36px;
-    padding: 0;
-    border: 1px solid rgba(255, 255, 255, .35);
-    border-radius: 4px;
+    padding: 0 4px;
+    border: 0;
+    border-radius: 0;
     background: transparent;
     color: #fff;
     font: 600 15px 'Source Sans 3', sans-serif;
@@ -51,11 +51,11 @@
 }
 
 .topnav-controls button:hover, .topnav-controls button:focus-visible {
-    border-color: #FF5F05;
-    background: rgba(255, 255, 255, .12);
+    color: #FFB81C;
+    background: transparent;
 }
 
-.topnav #myLinks { margin-right: max(96px, calc(50% - 480px + 80px)); }
+.topnav #myLinks { margin-right: 112px; }
 
 /* Name mark — align left edge with the Minimal Light wrapper. */
 .topnav .topnav-brand {
@@ -173,7 +173,7 @@
 /* ─── Responsive: tablet / small desktop ─── */
 @media print, screen and (max-width: 1000px) {
     .topnav .topnav-brand   { margin-left: 16px; }
-    .topnav #myLinks        { margin-right: 96px; }
+    .topnav #myLinks        { margin-right: 112px; }
     .topnav a.normal        { padding: 11px 7px; }
 }
 

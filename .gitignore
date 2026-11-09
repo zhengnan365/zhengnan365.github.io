@@ -5,3 +5,9 @@ Gemfile.lock
 .DS_Store
 .jekyll-cache
 git-update.sh
+__pycache__/
+*.py[cod]
+.bundle/
+vendor/
+node_modules/
+.venv/

@@ -8,6 +8,8 @@
 
 **Tech Stack:** Jekyll/Minimal Light, Markdown/Liquid, SCSS, vanilla JavaScript, Python standard library plus PyYAML, GitHub Actions, OpenAlex REST API.
 
+**2026-11-07 visual revision:** Keep Minimal Light as the page shell. Reuse the fixed navy navigation implementation and the year-grouped publication components from `yaoyao-liu/personal-website`; do not use the earlier custom translucent navigation or the “latest eight + collapsed older papers” presentation.
+
 ---
 
 ### Task 1: Populate the Jekyll site configuration and single-page content

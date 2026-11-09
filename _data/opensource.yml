@@ -1,0 +1,12 @@
+- name: Researcher-Radar
+  url: https://github.com/zhengnan365/Researcher-Radar
+  description_zh: 跟踪期刊新论文，按研究方向和关键词推荐，并支持整理到 Zotero
+  description_en: Tracks new papers, recommends them by research interests and keywords, and organizes references with Zotero
+- name: SlideClocker
+  url: https://github.com/zhengnan365/SlideClocker
+  description_zh: 为 PPT 和 PDF 全屏放映提供自动计时的悬浮窗口
+  description_en: A floating timer that starts automatically during full-screen PPT and PDF presentations
+- name: DeskHoper
+  url: https://github.com/zhengnan365/DeskHoper
+  description_zh: 通过局域网在两台 Windows 电脑间切换显示器输入、传输文件并共享键盘鼠标
+  description_en: Switches display input, transfers files, and shares keyboard and mouse between two Windows computers on a local network

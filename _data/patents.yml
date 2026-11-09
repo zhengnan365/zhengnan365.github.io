@@ -1,18 +1,455 @@
-- text_zh: 郑楠等. 集成氢气储能的固体氧化物燃料电池联供系统，CN114639853A，2022-06-17。
-  text_en: Nan Zheng et al. Solid oxide fuel cell combined energy supply system integrated with hydrogen storage, CN114639853A, 2022-06-17.
-- text_zh: 郑楠等. 一种自动称重智能给料系统，CN113942813A，2022-01-18。
-  text_en: Nan Zheng et al. Automatic weighing and intelligent feeding system, CN113942813A, 2022-01-18.
-- text_zh: 郑楠等. 一种集成光伏-光热、液流电池储电和热储能的联供系统，2023109228510，2023-10-24。
-  text_en: Nan Zheng et al. Combined energy supply system integrating photovoltaic and solar thermal energy, flow battery storage, and thermal storage, 2023109228510, 2023-10-24.
-- text_zh: 郑楠等. 一种集成太阳能、氢储能和热储能的冷热电联供系统，2023110077070，2023-12-01。
-  text_en: Nan Zheng et al. Combined cooling, heating, and power system integrating solar energy, hydrogen storage, and thermal storage, 2023110077070, 2023-12-01.
-- text_zh: 郑楠等. 一种增功降噪叶片结构，2021-07-20。
-  text_en: Nan Zheng et al. Blade structure for increased power and reduced noise, 2021-07-20.
-- text_zh: 郑楠等. 一种内嵌式轴承拆卸装置，2021-01-08。
-  text_en: Nan Zheng et al. Embedded bearing removal device, 2021-01-08.
-- text_zh: 胡佳密等. 一种带仿生气动弹片的风力机翼型结构，2022-08-26。
-  text_en: Jiaomi Hu et al. Wind turbine airfoil structure with a biomimetic aerodynamic flap, 2022-08-26.
-- text_zh: 卢紫艺等. 一种集成燃料电池与太阳能的联合循环冷热电联供系统，CN115000454A，2022-11-25。
-  text_en: Ziyi Lu et al. Combined-cycle cooling, heating, and power system integrating fuel cells and solar energy, CN115000454A, 2022-11-25.
-- text_zh: 叶学民等. 一种仿生学降噪叶片结构，2021-02-05。
-  text_en: Xuemin Ye et al. Biomimetic noise-reducing blade structure, 2021-02-05.
+- title_zh: 一种换热器管板焊缝在线寿命监测方法及系统
+  title_en: Online life monitoring method and system for heat-exchanger tube-sheet
+    welds
+  text_zh: 郑楠等．一种换热器管板焊缝在线寿命监测方法及系统
+  text_en: Nan Zheng et al. Online life monitoring method and system for heat-exchanger
+    tube-sheet welds
+  publication_number: CN122693515A
+  application_number: CN202610758333.3
+  application_date: '2026-05-29'
+  publication_date: '2026-09-04'
+  status_zh: 已公开
+  status_en: Published
+  inventors:
+  - 张强
+  - 周志宇
+  - 任云秀
+  - 郑楠
+  - 于加
+  - 贾涛
+  - 苏亦杰
+  source_url: https://patents.google.com/patent/CN122693515A/zh
+  verification: user_provided_record
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: published
+  display_number_label_zh: 公开号
+  display_number_label_en: Publication no.
+  display_number: CN122693515A
+  display_date_label_zh: 公开日
+  display_date_label_en: Published
+  display_date: '2026-09-04'
+- title_zh: 一种太阳能耦合生物质气化与化学链燃烧的 SOFC 冷热电联供系统
+  title_en: SOFC combined cooling, heating, and power system coupled with solar biomass gasification and chemical looping combustion
+  text_zh: 郑楠、王天琪、英笑、庄宇跃、姜欣蕊、王孝义、任云秀．一种太阳能耦合生物质气化与化学链燃烧的 SOFC 冷热电联供系统
+  text_en: Nan Zheng et al. SOFC combined cooling, heating, and power system coupled with solar biomass gasification and chemical looping combustion
+  publication_number: CN122148400A
+  application_number: CN202610447105.4
+  application_date: '2026-04-07'
+  publication_date: '2026-06-05'
+  status_zh: 已公开
+  status_en: Published
+  inventors:
+  - 郑楠
+  - 王天琪
+  - 英笑
+  - 庄宇跃
+  - 姜欣蕊
+  - 王孝义
+  - 任云秀
+  source_url: https://patents.google.com/patent/CN122148400A/zh
+  verification: google_patents
+  verified_on: '2026-11-09'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: published
+  display_number_label_zh: 公开号
+  display_number_label_en: Publication no.
+  display_number: CN122148400A
+  display_date_label_zh: 公开日
+  display_date_label_en: Published
+  display_date: '2026-06-05'
+- title_zh: 一种光热电站蒸汽发生系统在线寿命监测方法及系统
+  title_en: Online life monitoring method and system for a solar thermal power station's
+    steam generation system
+  text_zh: 郑楠等．一种光热电站蒸汽发生系统在线寿命监测方法及系统
+  text_en: Nan Zheng et al. Online life monitoring method and system for a solar thermal
+    power station's steam generation system
+  application_number: CN202610609130.8
+  application_date: '2026-05-06'
+  status_zh: 已受理
+  status_en: Application accepted
+  inventors:
+  - 张强
+  - 周志宇
+  - 任云秀
+  - 郑楠
+  - 于加
+  - 贾涛
+  - 苏亦杰
+  verification: user_provided_record
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: accepted
+  display_number_label_zh: 申请号
+  display_number_label_en: Application no.
+  display_number: CN202610609130.8
+  display_date_label_zh: 申请日
+  display_date_label_en: Filed
+  display_date: '2026-05-06'
+- title_zh: 一种光热电站熔盐蒸汽发生系统防凝结给水加热装置及控制方法
+  title_en: Feedwater heating device and control method for preventing condensation
+    in a solar thermal power station's molten-salt steam generation system
+  text_zh: 郑楠等．一种光热电站熔盐蒸汽发生系统防凝结给水加热装置及控制方法
+  text_en: Nan Zheng et al. Feedwater heating device and control method for preventing
+    condensation in a solar thermal power station's molten-salt steam generation system
+  application_number: CN202610453050.8
+  application_date: '2026-04-08'
+  status_zh: 已受理
+  status_en: Application accepted
+  inventors:
+  - 张强
+  - 任云秀
+  - 郑楠
+  - 于加
+  - 贾涛
+  - 周志宇
+  - 苏亦杰
+  verification: user_provided_record
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: accepted
+  display_number_label_zh: 申请号
+  display_number_label_en: Application no.
+  display_number: CN202610453050.8
+  display_date_label_zh: 申请日
+  display_date_label_en: Filed
+  display_date: '2026-04-08'
+- title_zh: 一种集成太阳能生物质气化与 CO2 捕集资源化的冷热电醇多联产系统
+  title_en: Integrated solar biomass gasification and CO2 capture and utilization system for combined cooling, heating, power, and methanol production
+  text_zh: 郑楠、庄宇跃、王天琪、英笑、姜欣蕊、王孝义、任云秀．一种集成太阳能生物质气化与 CO2 捕集资源化的冷热电醇多联产系统
+  text_en: Nan Zheng et al. Integrated solar biomass gasification and CO2 capture and utilization system for combined cooling, heating, power, and methanol production
+  application_number: CN202610401562.X
+  application_date: '2026-03-30'
+  status_zh: 已受理
+  status_en: Application accepted
+  inventors:
+  - 郑楠
+  - 庄宇跃
+  - 王天琪
+  - 英笑
+  - 姜欣蕊
+  - 王孝义
+  - 任云秀
+  verification: user_provided_record
+  verified_on: '2026-11-09'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: accepted
+  display_number_label_zh: 申请号
+  display_number_label_en: Application no.
+  display_number: CN202610401562.X
+  display_date_label_zh: 申请日
+  display_date_label_en: Filed
+  display_date: '2026-03-30'
+- title_zh: 集成太阳能辅助化学链重整与燃料电池的分布式供能系统
+  title_en: Distributed energy supply system integrating solar-assisted chemical looping reforming and fuel cells
+  text_zh: 郑楠、英笑、王天琪、庄宇跃、姜欣蕊、王孝义、任云秀．集成太阳能辅助化学链重整与燃料电池的分布式供能系统
+  text_en: Nan Zheng et al. Distributed energy supply system integrating solar-assisted chemical looping reforming and fuel cells
+  application_number: CN202610265066.6
+  application_date: '2026-03-05'
+  status_zh: 已受理
+  status_en: Application accepted
+  inventors:
+  - 郑楠
+  - 英笑
+  - 王天琪
+  - 庄宇跃
+  - 姜欣蕊
+  - 王孝义
+  - 任云秀
+  verification: user_provided_record
+  verified_on: '2026-11-09'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: accepted
+  display_number_label_zh: 申请号
+  display_number_label_en: Application no.
+  display_number: CN202610265066.6
+  display_date_label_zh: 申请日
+  display_date_label_en: Filed
+  display_date: '2026-03-05'
+- title_zh: 集成氢气储能的固体氧化物燃料电池联供系统及运行策略
+  title_en: Solid oxide fuel cell cogeneration system with integrated hydrogen storage
+    and its operation strategy
+  text_zh: 郑楠、段立强、王肖梦、卢紫艺、蒋潇甫、邓超平．集成氢气储能的固体氧化物燃料电池联供系统及运行策略
+  text_en: Nan Zheng et al. Solid oxide fuel cell cogeneration system with integrated
+    hydrogen storage and its operation strategy
+  publication_number: CN114639853A
+  grant_number: CN114639853B
+  application_number: CN202210358345.9
+  application_date: '2022-03-27'
+  publication_date: '2022-06-17'
+  status_zh: 已授权
+  status_en: Granted
+  inventors:
+  - 郑楠
+  - 段立强
+  - 王肖梦
+  - 卢紫艺
+  - 蒋潇甫
+  - 邓超平
+  source_url: https://patents.google.com/patent/CN114639853A/zh
+  pdf_url: https://patentimages.storage.googleapis.com/47/83/2f/74d722007303a5/CN114639853A.pdf
+  verification: matched_publication
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: granted
+  grant_date: '2025-12-23'
+  display_number_label_zh: 授权公告号
+  display_number_label_en: Grant no.
+  display_number: CN114639853B
+  display_date_label_zh: 授权日
+  display_date_label_en: Granted
+  display_date: '2025-12-23'
+- title_zh: 一种集成燃料电池与太阳能的联合循环冷热电联供系统
+  title_en: Combined-cycle cooling, heating, and power system integrating fuel cells
+    and solar energy
+  text_zh: 卢紫艺、段立强、王秋实、郑楠、李智诚、熊嘉丽．一种集成燃料电池与太阳能的联合循环冷热电联供系统
+  text_en: Ziyi Lu et al. Combined-cycle cooling, heating, and power system integrating
+    fuel cells and solar energy
+  publication_number: CN115000454A
+  grant_number: CN115000454B
+  application_number: CN202210775298.8
+  application_date: '2022-07-01'
+  publication_date: '2022-09-02'
+  status_zh: 已授权
+  status_en: Granted
+  inventors:
+  - 卢紫艺
+  - 段立强
+  - 王秋实
+  - 郑楠
+  - 李智诚
+  - 熊嘉丽
+  source_url: https://patents.google.com/patent/CN115000454A/zh
+  pdf_url: https://patentimages.storage.googleapis.com/3e/30/dc/e8fd77aa83b3f5/CN115000454A.pdf
+  verification: matched_publication
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: granted
+  grant_date: '2025-09-02'
+  display_number_label_zh: 授权公告号
+  display_number_label_en: Grant no.
+  display_number: CN115000454B
+  display_date_label_zh: 授权日
+  display_date_label_en: Granted
+  display_date: '2025-09-02'
+- title_zh: 一种仿生学降噪叶片结构
+  title_en: Biomimetic noise-reducing blade structure
+  text_zh: 叶学民、郑楠、李春曦、胡佳密、杨天康．一种仿生学降噪叶片结构
+  text_en: Xuemin Ye et al. Biomimetic noise-reducing blade structure
+  publication_number: CN112324631A
+  grant_number: CN112324631B
+  application_number: CN202011383796.5
+  application_date: '2020-11-24'
+  publication_date: '2021-02-05'
+  status_zh: 已授权
+  status_en: Granted
+  inventors:
+  - 叶学民
+  - 郑楠
+  - 李春曦
+  - 胡佳密
+  - 杨天康
+  source_url: https://patents.google.com/patent/CN112324631A/zh
+  pdf_url: https://patentimages.storage.googleapis.com/4e/d4/78/cd1d6783ef5afd/CN112324631A.pdf
+  verification: matched_publication
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: granted
+  grant_date: '2025-06-24'
+  display_number_label_zh: 授权公告号
+  display_number_label_en: Grant no.
+  display_number: CN112324631B
+  display_date_label_zh: 授权日
+  display_date_label_en: Granted
+  display_date: '2025-06-24'
+- title_zh: 一种集成太阳能、氢储能和热储能的冷热电联供系统
+  title_en: Combined cooling, heating, and power system integrating solar energy,
+    hydrogen storage, and thermal storage
+  text_zh: 郑楠、蒋潇甫、段立强、张伟骏、李智诚、高统彤．一种集成太阳能、氢储能和热储能的冷热电联供系统
+  text_en: Nan Zheng et al. Combined cooling, heating, and power system integrating
+    solar energy, hydrogen storage, and thermal storage
+  publication_number: CN117146449A
+  application_number: CN202311007707.0
+  application_date: '2023-08-10'
+  publication_date: '2023-12-01'
+  status_zh: 实质审查中
+  status_en: Examination pending
+  inventors:
+  - 郑楠
+  - 蒋潇甫
+  - 段立强
+  - 张伟骏
+  - 李智诚
+  - 高统彤
+  source_url: https://patents.google.com/patent/CN117146449A/zh
+  pdf_url: https://patentimages.storage.googleapis.com/2d/4c/40/fac5ad207eae9e/CN117146449A.pdf
+  verification: matched_publication
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: examining
+  display_number_label_zh: 公开号
+  display_number_label_en: Publication no.
+  display_number: CN117146449A
+  display_date_label_zh: 公开日
+  display_date_label_en: Published
+  display_date: '2023-12-01'
+- title_zh: 一种集成光伏-光热、液流电池储电和热储能的联供系统
+  title_en: Combined energy supply system integrating photovoltaic and solar thermal
+    energy, flow battery storage, and thermal storage
+  text_zh: 郑楠、段立强、丁兴起、周宇飞、王秋实、王肖梦、刘路尧．一种集成光伏-光热、液流电池储电和热储能的联供系统
+  text_en: Nan Zheng et al. Combined energy supply system integrating photovoltaic
+    and solar thermal energy, flow battery storage, and thermal storage
+  publication_number: CN116937762A
+  application_number: CN202310922851.0
+  application_date: '2023-07-26'
+  publication_date: '2023-10-24'
+  status_zh: 实质审查中
+  status_en: Examination pending
+  inventors:
+  - 郑楠
+  - 段立强
+  - 丁兴起
+  - 周宇飞
+  - 王秋实
+  - 王肖梦
+  - 刘路尧
+  source_url: https://patents.google.com/patent/CN116937762A/zh
+  pdf_url: https://patentimages.storage.googleapis.com/eb/db/c9/e0c394798782cc/CN116937762A.pdf
+  verification: matched_publication
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: examining
+  display_number_label_zh: 公开号
+  display_number_label_en: Publication no.
+  display_number: CN116937762A
+  display_date_label_zh: 公开日
+  display_date_label_en: Published
+  display_date: '2023-10-24'
+- title_zh: 一种带仿生气动弹片的风力机翼型结构
+  title_en: Wind turbine airfoil structure with a biomimetic aerodynamic flap
+  text_zh: 胡佳密、叶学民、李春曦、吴英明、郑楠．一种带仿生气动弹片的风力机翼型结构
+  text_en: Jiaomi Hu et al. Wind turbine airfoil structure with a biomimetic aerodynamic
+    flap
+  publication_number: CN217300761U
+  application_number: CN202123151886.4
+  application_date: '2021-12-10'
+  publication_date: '2022-08-26'
+  status_zh: 已授权
+  status_en: Granted
+  inventors:
+  - 胡佳密
+  - 叶学民
+  - 李春曦
+  - 吴英明
+  - 郑楠
+  source_url: https://patents.google.com/patent/CN217300761U/zh
+  pdf_url: https://patentimages.storage.googleapis.com/d2/d0/5e/0b812e5ac34c63/CN217300761U.pdf
+  verification: matched_publication
+  verified_on: '2026-11-08'
+  patent_type_zh: 实用新型
+  patent_type_en: Utility model
+  status_key: granted
+  grant_number: CN217300761U
+  grant_date: '2022-08-26'
+  display_number_label_zh: 授权公告号
+  display_number_label_en: Grant no.
+  display_number: CN217300761U
+  display_date_label_zh: 授权日
+  display_date_label_en: Granted
+  display_date: '2022-08-26'
+- title_zh: 一种自动称重智能给料系统
+  title_en: Automatic weighing and intelligent feeding system
+  text_zh: 郑楠、段立强、周宇飞．一种自动称重智能给料系统
+  text_en: Nan Zheng et al. Automatic weighing and intelligent feeding system
+  publication_number: CN113942813A
+  application_number: CN202111280231.9
+  application_date: '2021-10-26'
+  publication_date: '2022-01-18'
+  status_zh: 实质审查中
+  status_en: Examination pending
+  inventors:
+  - 郑楠
+  - 段立强
+  - 周宇飞
+  source_url: https://patents.google.com/patent/CN113942813A/zh
+  pdf_url: https://patentimages.storage.googleapis.com/01/07/24/8352b35da78a0a/CN113942813A.pdf
+  verification: matched_publication
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: examining
+  display_number_label_zh: 公开号
+  display_number_label_en: Publication no.
+  display_number: CN113942813A
+  display_date_label_zh: 公开日
+  display_date_label_en: Published
+  display_date: '2022-01-18'
+- title_zh: 一种增功降噪叶片结构
+  title_en: Blade structure for increased power and reduced noise
+  text_zh: 郑楠、叶学民、李春曦、江蕊、郭馨声．一种增功降噪叶片结构
+  text_en: Nan Zheng et al. Blade structure for increased power and reduced noise
+  publication_number: CN213743835U
+  application_number: CN202022512083.6
+  application_date: '2020-10-30'
+  publication_date: '2021-07-20'
+  status_zh: 已授权
+  status_en: Granted
+  inventors:
+  - 郑楠
+  - 叶学民
+  - 李春曦
+  - 江蕊
+  - 郭馨声
+  source_url: https://patents.google.com/patent/CN213743835U/zh
+  pdf_url: https://patentimages.storage.googleapis.com/b6/15/1d/29646342f0bc80/CN213743835U.pdf
+  verification: matched_publication
+  verified_on: '2026-11-08'
+  patent_type_zh: 实用新型
+  patent_type_en: Utility model
+  status_key: granted
+  grant_number: CN213743835U
+  grant_date: '2021-07-20'
+  display_number_label_zh: 授权公告号
+  display_number_label_en: Grant no.
+  display_number: CN213743835U
+  display_date_label_zh: 授权日
+  display_date_label_en: Granted
+  display_date: '2021-07-20'
+- title_zh: 一种内嵌式轴承拆卸装置
+  title_en: Embedded bearing removal device
+  text_zh: 郑楠、叶学民、李春曦．一种内嵌式轴承拆卸装置
+  text_en: Nan Zheng et al. Embedded bearing removal device
+  publication_number: CN112192511A
+  application_number: CN202011127789.9
+  application_date: '2020-10-14'
+  publication_date: '2021-01-08'
+  status_zh: 实质审查中
+  status_en: Examination pending
+  inventors:
+  - 郑楠
+  - 叶学民
+  - 李春曦
+  source_url: https://patents.google.com/patent/CN112192511A/zh
+  pdf_url: https://patentimages.storage.googleapis.com/af/79/42/95462b7c60e5c0/CN112192511A.pdf
+  verification: matched_publication
+  verified_on: '2026-11-08'
+  patent_type_zh: 发明专利
+  patent_type_en: Invention patent
+  status_key: examining
+  display_number_label_zh: 公开号
+  display_number_label_en: Publication no.
+  display_number: CN112192511A
+  display_date_label_zh: 公开日
+  display_date_label_en: Published
+  display_date: '2021-01-08'

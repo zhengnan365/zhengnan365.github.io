@@ -8,11 +8,17 @@ affiliation_zh: 扬州大学
 department: College of Electrical, Energy and Power Engineering
 department_zh: 电气与能源动力工程学院
 affiliation_link: https://www.yzu.edu.cn/
+department_link: https://dnxy.yzu.edu.cn/
+institute: Institute of Carbon Neutrality Technology
+institute_zh: 碳中和技术研究院
+institute_link: https://yztzh.yzu.edu.cn/
 email: zhengnan@yzu.edu.cn
 
 keywords: Nan Zheng, Zheng Nan, integrated energy systems, low-carbon energy, energy storage, Yangzhou University
 description: Nan Zheng is a lecturer at Yangzhou University working on low-carbon integrated energy systems, multi-energy complementarity, energy storage, and intelligent control.
 canonical: https://zhengnan365.github.io/
+url: https://zhengnan365.github.io
+baseurl: ""
 
 google_scholar: https://scholar.google.com/citations?user=8ls2RYsAAAAJ&hl=zh-CN
 cv_link: assets/files/Zheng-Nan-CV-2026.docx
@@ -22,26 +28,25 @@ scopus: https://www.scopus.com/authid/detail.uri?authorId=57478923000
 web_of_science: https://www.webofscience.com/wos/author/record/HJA-6964-2022
 researchgate: https://www.researchgate.net/profile/Nan-Zheng-32
 personal_link: https://scholar.znup.top
+faculty_profile: https://dnxy.yzu.edu.cn/info/1017/3288.htm
 
 avatar: ./assets/img/avatar.png
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
 
 enable_footnote: false
-auto_dark_mode: false
 font: "Serif"
 
-remote_theme: yaoyao-liu/minimal-light
+# Layouts, Sass and assets are maintained locally; no remote theme is needed.
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - README_zh_Hans.md
-  - README_zh_Hant.md
-  - README_de.md
   - LICENSE
-  - minimal-light.gemspec
-  - html_source_file/
   - docs/
   - scripts/
+  - tests/
+  - requirements-dev.txt
+  - vendor/
+  - node_modules/

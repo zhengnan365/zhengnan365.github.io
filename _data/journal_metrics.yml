@@ -9,3 +9,129 @@
   source_url: "https://www.sciencedirect.com/journal/applied-energy/about/insights"
   jcr_source_url: "https://www.iit.comillas.edu/publicacion/info_revista/en/226/applied-energy"
   cas_source_url: "https://www.sci365.cn/journals/applied-energy-03062619/"
+"0360-5442":
+  journal: Energy
+  metric_year: 2025
+  impact_factor: 10.1
+  cas_edition: 2025
+  cas_zone: 1
+  cas_top: true
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/energy-03605442/"
+"0196-8904":
+  journal: Energy Conversion and Management
+  metric_year: 2025
+  impact_factor: 11.8
+  cas_edition: 2025
+  cas_zone: 1
+  cas_top: true
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/energy-conversion-and-management-01968904/"
+"0960-1481":
+  journal: Renewable Energy
+  metric_year: 2025
+  impact_factor: 9.1
+  cas_edition: 2025
+  cas_zone: 1
+  cas_top: true
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/renewable-energy-09601481/"
+"1359-4311":
+  journal: Applied Thermal Engineering
+  metric_year: 2025
+  impact_factor: 7.5
+  cas_edition: 2025
+  cas_zone: 2
+  cas_top: true
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/applied-thermal-engineering-13594311/"
+"2352-152X":
+  journal: Journal of Energy Storage
+  metric_year: 2025
+  impact_factor: 10.7
+  cas_edition: 2025
+  cas_zone: 2
+  cas_top: false
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/journal-of-energy-storage-2352152X/"
+"1070-6631":
+  journal: Physics of Fluids
+  metric_year: 2025
+  impact_factor: 3.8
+  cas_edition: 2025
+  cas_zone: 2
+  cas_top: false
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/physics-of-fluids-10706631/"
+"1364-0321":
+  journal: Renewable and Sustainable Energy Reviews
+  metric_year: 2025
+  impact_factor: 18.0
+  cas_edition: 2025
+  cas_zone: 1
+  cas_top: true
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/renewable-sustainable-energy-reviews-13640321/"
+"0016-2361":
+  journal: Fuel
+  metric_year: 2025
+  impact_factor: 7.8
+  cas_edition: 2025
+  cas_zone: 2
+  cas_top: true
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/fuel-00162361/"
+"1869-1900":
+  journal: Science China Technological Sciences
+  metric_year: 2025
+  impact_factor: 5.1
+  cas_edition: 2025
+  cas_zone: 1
+  cas_top: true
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/science-china-technological-sciences-16747321/"
+"1003-2169":
+  journal: Journal of Thermal Science
+  metric_year: 2025
+  impact_factor: 3.2
+  cas_edition: 2025
+  cas_zone: 4
+  cas_top: false
+  jcr_quartile: Q2
+  source_url: "https://www.sci365.cn/journals/journal-of-thermal-science-10032169/"
+"0360-3199":
+  journal: International Journal of Hydrogen Energy
+  metric_year: 2025
+  impact_factor: 9.2
+  cas_edition: 2025
+  cas_zone: 2
+  cas_top: false
+  jcr_quartile: Q1
+  source_url: "https://www.sci365.cn/journals/international-journal-of-hydrogen-energy-03603199/"
+"2213-1388":
+  journal: Sustainable Energy Technologies and Assessments
+  metric_year: 2025
+  impact_factor: 7.4
+  cas_edition: 2025
+  cas_zone: 2
+  cas_top: false
+  jcr_quartile: Q2
+  source_url: "https://www.sci365.cn/journals/sustainable-energy-technologies-and-assessments-22131388/"
+"1738-494X":
+  journal: Journal of Mechanical Science and Technology
+  metric_year: 2025
+  impact_factor: 2.2
+  cas_edition: 2025
+  cas_zone: 4
+  cas_top: false
+  jcr_quartile: Q3
+  source_url: "https://www.sci365.cn/journals/journal-of-mechanical-science-and-technology-1738494X/"
+"1866-6892":
+  journal: Journal of Infrared Millimeter and Terahertz Waves
+  metric_year: 2025
+  impact_factor: 3.1
+  cas_edition: 2025
+  cas_zone: 4
+  cas_top: false
+  jcr_quartile: Q2
+  source_url: "https://www.sci365.cn/journals/journal-of-infrared-millimeter-and-terahertz-waves-18666892/"

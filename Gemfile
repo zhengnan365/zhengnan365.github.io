@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.8.5"
+# Match the dependency set used by actions/jekyll-build-pages.
+gem "github-pages", group: :jekyll_plugins
 
 gem "webrick", "~> 1.8"
