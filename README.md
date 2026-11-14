@@ -16,14 +16,14 @@
 | 姓名、职称、学校、学院、邮箱、各类主页链接 | _config.yml | 中英文站点信息和链接集中在这里 |
 | 个人简介 | _data/profile.yml | 修改 paragraphs 中的 text_zh/text_en |
 | 研究方向 | _data/research.yml | 修改每个方向的标题和介绍 |
-| 项目承担 | _data/projects.yml | 每个项目同时填写中文和英文 |
+| 科研项目 | _data/projects.yml | 每个项目同时填写中文和英文 |
 | 论文 | OpenAlex 自动同步 | 不要直接修改生成的论文数据 |
 | 论文作者、排除某篇论文 | _data/overrides.yml | 按 DOI 或 OpenAlex ID 添加人工修正 |
 | 期刊影响因子、分区、TOP | _data/journal_metrics.yml | 按 ISSN-L 维护指标 |
 | 专利 | _data/patents.yml | 修改标题、发明人、类型、状态、编号和日期 |
 | 个人荣誉 | _data/awards.yml | 按年份增加或调整奖项 |
 | 教学课程 | _data/teaching.yml | 修改学期和 courses |
-| 指导学生和竞赛 | _data/students.yml | 修改 competitions、graduate、undergraduate |
+| 人才培养 | _data/students.yml | 修改 competition_awards 和 students |
 | 开源软件 | _data/opensource.yml | 修改项目名称、链接和中英文介绍 |
 | 新闻动态 | _data/news.yml | 修改 date、text_zh、text_en；默认隐藏 |
 | 联系方式中的地址、办公室 | _data/contact.yml | 修改地址和办公室的中英文内容 |

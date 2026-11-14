@@ -91,6 +91,14 @@ header .profile-affiliations a:focus-visible autocolor { color: #069; }
 .student-subsection { margin: 0 0 1.4rem; padding-top: 1.1rem; border-top: 1px solid #e2e6eb; }
 .student-subsection:first-of-type { padding-top: 0; border-top: 0; }
 .student-subsection > h3 { margin: 0 0 .65rem; }
+.student-subsection-dot { display: inline-block; margin-right: .55em; font-size: .52em; vertical-align: .16em; }
+.student-competition-list { margin: 0; padding-left: 1.65rem; }
+.student-competition-list li { margin: 0 0 .45rem; font-weight: 400; }
+.student-person-list { margin: 0; padding-left: 1.65rem; }
+.student-person { margin: 0 0 1rem; padding-left: .15rem; }
+.student-person-title { margin: 0 0 .35rem; font-weight: 600; }
+.student-achievement-list { margin: 0; padding-left: 1.35rem; }
+.student-achievement-list li { margin: 0 0 .3rem; font-weight: 400; }
 .student-group p { margin: 0 0 .45rem; }
 .student-group h4 { margin: 0 0 .35rem; font-size: 1em; }
 .student-year { margin: .7rem 0 .25rem; font-size: .92em; color: #043361; }

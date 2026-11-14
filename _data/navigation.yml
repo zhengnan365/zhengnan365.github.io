@@ -17,8 +17,8 @@ main:
   - key: projects
     template: projects
     enabled: true
-    title_zh: 项目承担
-    title_en: Projects
+    title_zh: 科研项目
+    title_en: Research Projects
     url: "#projects"
   - key: publications
     template: publications
@@ -47,8 +47,8 @@ main:
   - key: students
     template: students
     enabled: true
-    title_zh: 指导学生
-    title_en: Students
+    title_zh: 人才培养
+    title_en: Student Mentoring
     url: "#students"
   - key: opensource
     template: opensource

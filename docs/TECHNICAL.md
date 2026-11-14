@@ -35,12 +35,12 @@ index.md 现在只负责遍历 _data/navigation.yml 并按 template 字段调用
 | --- | --- | --- |
 | 个人简介 | _data/profile.yml | _includes/sections/about.html |
 | 研究方向 | _data/research.yml | _includes/sections/research.html |
-| 项目承担 | _data/projects.yml | _includes/sections/projects.html |
+| 科研项目 | _data/projects.yml | _includes/sections/projects.html |
 | 论文 | _data/publications.yml 和 _data/overrides.yml | _includes/publications.md |
 | 专利 | _data/patents.yml | _includes/sections/patents.html |
 | 获奖 | _data/awards.yml | _includes/sections/awards.html |
 | 教学 | _data/teaching.yml | _includes/sections/teaching.html |
-| 指导学生、竞赛 | _data/students.yml | _includes/sections/students.html |
+| 人才培养 | _data/students.yml | _includes/sections/students.html |
 | 新闻动态 | _data/news.yml | _includes/sections/news.html |
 | 开源软件 | _data/opensource.yml | _includes/sections/opensource.html |
 | 联系 | _data/contact.yml 和 _config.yml | _includes/sections/contact.html |
@@ -51,7 +51,7 @@ index.md 现在只负责遍历 _data/navigation.yml 并按 template 字段调用
 
 以下栏目由 _data 目录中的 YAML 文件渲染：
 
-- 项目承担：_data/projects.yml
+- 科研项目：_data/projects.yml
 - 专利：_data/patents.yml
 - 个人荣誉：_data/awards.yml
 - 开源软件：_data/opensource.yml

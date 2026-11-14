@@ -1,30 +1,22 @@
 <section id="students">
-  <h2><span class="i18n-zh">指导学生</span><span class="i18n-en">Students</span></h2>
+  <h2><span class="i18n-zh">人才培养</span><span class="i18n-en">Student Mentoring</span></h2>
+
   <div class="student-subsection">
-    <h3><span class="i18n-zh">竞赛</span><span class="i18n-en">Competitions</span></h3>
-    <ul class="award-list student-award-list">{% for item in site.data.students.competitions %}
-      <li><span>{{ item.year }}</span><span class="i18n-zh">{{ item.title_zh }}</span><span class="i18n-en">{{ item.title_en }}</span></li>
-    {% endfor %}</ul>
+    <h3><span class="i18n-zh"><span class="student-subsection-dot" aria-hidden="true">●</span>竞赛获奖</span><span class="i18n-en"><span class="student-subsection-dot" aria-hidden="true">●</span>Competition Awards</span></h3>
+    <ol class="student-competition-list">{% for item in site.data.students.competition_awards %}
+      <li><span>{{ item.year }}</span> <span class="i18n-zh">{{ item.title_zh }}{% if item.count and item.count > 1 %} ×{{ item.count }}{% endif %}</span><span class="i18n-en">{{ item.title_en }}{% if item.count and item.count > 1 %} ×{{ item.count }}{% endif %}</span></li>
+    {% endfor %}</ol>
   </div>
+
   <div class="student-subsection">
-    <h3><span class="i18n-zh">学生</span><span class="i18n-en">Students</span></h3>
-    <div class="student-group">
-      <h4><span class="i18n-zh">研究生</span><span class="i18n-en">Graduate Students</span></h4>
-      <p class="i18n-zh">{{ site.data.students.graduate.intro_zh }}</p>
-      <p class="i18n-en">{{ site.data.students.graduate.intro_en }}</p>
-    </div>
-    <div class="student-group">
-      <h4><span class="i18n-zh">本科生</span><span class="i18n-en">Undergraduate Students</span></h4>
-      {% for grade in site.data.students.undergraduate %}
-      <div class="student-grade">
-        <h5><span class="i18n-zh">{{ grade.grade_zh }}</span><span class="i18n-en">{{ grade.grade_en }}</span></h5>
-        {% if grade.profiles.size > 0 %}
-        <ul class="student-profile-list">{% for student in grade.profiles %}
-          <li class="student-profile"><strong><span class="i18n-zh">{{ student.name_zh }}</span><span class="i18n-en">{{ student.name_en }}</span></strong><span class="i18n-zh">{{ student.status_zh }}</span><span class="i18n-en">{{ student.status_en }}</span></li>
+    <h3><span class="i18n-zh"><span class="student-subsection-dot" aria-hidden="true">●</span>学生培养</span><span class="i18n-en"><span class="student-subsection-dot" aria-hidden="true">●</span>Student Development</span></h3>
+    <ol class="student-person-list">{% for student in site.data.students.students %}
+      <li class="student-person">
+        <div class="student-person-title"><span class="i18n-zh">{{ student.grade_zh }}{{ student.level_zh }} {{ student.name_zh }}</span><span class="i18n-en">{{ student.name_en }}, {{ student.level_en }}, {{ student.grade_en }}</span></div>
+        <ul class="student-achievement-list">{% for achievement in student.achievements %}
+          <li><span class="i18n-zh">{{ achievement.text_zh }}{% if achievement.count and achievement.count > 1 %} ×{{ achievement.count }}{% endif %}</span><span class="i18n-en">{{ achievement.text_en }}{% if achievement.count and achievement.count > 1 %} ×{{ achievement.count }}{% endif %}</span></li>
         {% endfor %}</ul>
-        {% endif %}
-      </div>
-      {% endfor %}
-    </div>
+      </li>
+    {% endfor %}</ol>
   </div>
 </section>

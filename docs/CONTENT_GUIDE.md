@@ -121,29 +121,32 @@ semesters:
         name_en: Course title
 ```
 
-### 指导学生：students.yml
+### 人才培养：students.yml
 
-保留顶层的三个字段，可分别增加竞赛、修改研究生介绍、增加本科生：
+`competition_awards` 维护竞赛获奖，`students` 按学生维护培养成果。`count` 大于 1 时，页面自动显示“×数量”：
 
 ```yaml
-competitions:
+competition_awards:
   - year: 2026
     title_zh: 竞赛奖项
     title_en: Competition award
-graduate:
-  intro_zh: 研究生介绍
-  intro_en: Graduate student introduction
-undergraduate:
-  - grade_zh: 2026 级
+
+students:
+  - grade_zh: 2026级
     grade_en: Class of 2026
-    profiles:
-      - name_zh: 学生姓名
-        name_en: Student name
-        status_zh: 学生去向或研究方向
-        status_en: Destination or research interests
+    level_zh: 本科生
+    level_en: Undergraduate
+    name_zh: 学生姓名
+    name_en: Student name
+    achievements:
+      - text_zh: 培养成果
+        text_en: Student achievement
+      - text_zh: 同类成果
+        text_en: Repeated achievement
+        count: 2
 ```
 
-某年级暂无学生时可用 `profiles: []`，不需要删除整个年级。
+新增学生时复制一个完整的 `students` 条目；新增成果时在该学生的 `achievements` 下追加一项。
 
 ### 开源软件：opensource.yml
 
